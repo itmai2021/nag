@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-});
+Route::get('/', [LandingController::class, 'index'])->name('home');
+Route::get('/news', [LandingController::class, 'news'])->name('news');
+Route::get('/news_detail', [LandingController::class, 'news_detail'])->name('news_detail');
+Route::get('/about_us', [LandingController::class, 'about_us'])->name('about_us');

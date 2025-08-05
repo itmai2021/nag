@@ -1,78 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-        rel="stylesheet" />
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link
-        href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-        rel="stylesheet" />
-
-    <link rel="stylesheet" href="{{asset('/assets/css/app.css')}}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-    <title>New Armada Group</title>
-</head>
-
-<body>
-    <nav>
-        <div class="nav__header">
-            <div class="nav__logo">
-                <a href="#" class="logo"><img src="{{asset('/assets/images/NAG.png')}}" style="width: 50vh;" alt=""></a>
-            </div>
-            <div class="nav__menu__btn" id="menu-btn">
-                <i class="ri-menu-line"></i>
-            </div>
-        </div>
-        <ul class="nav__links" id="nav-links">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#pilar">PILAR</a></li>
-            <li><a href="#news">NEWS</a></li>
-            <li><a href="#location">LOCATION</a></li>
-            <li><a href="#"></a></li>
-        </ul>
-        <div class="nav__btns">
-            <!-- <button class="btn">BOOK TRIP</button> -->
-        </div>
-    </nav>
-
-    <section class="section__container destination__container p-2" id="Home">
+    @extends('layouts.app_landing')
+    @section('content')
+    <!-- Hero Section (Carousel) -->
+    <section id="Home" class="p-0">
         <div id="carouselHeader" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-
                 <!-- Slide 1 -->
                 <div class="carousel-item active">
-                    <img src="https://picsum.photos/1200/500?random=1" class="d-block w-100" alt="Slide 1">
+                    <img src="{{ asset('/assets/images/gedung_mai.png') }}" class="d-block w-100" alt="Slide 1">
                     <div class="carousel-caption d-none d-md-block text-white">
-                        <p class="fw-bold text-uppercase">Bus Your Travel Journey</p>
-                        <h1 class="display-5 fw-bold">Where Every Bus Ride Feels Magical!</h1>
+                        <p class="fw-bold text-uppercase">Mekar Armada Investama</p>
+                        <!-- <h1 class="display-5 fw-bold">Mekar Armada Investama</h1> -->
                     </div>
                 </div>
 
                 <!-- Slide 2 -->
                 <div class="carousel-item">
-                    <img src="https://picsum.photos/1200/500?random=2" class="d-block w-100" alt="Slide 2">
+                    <img src="{{ asset('/assets/images/gedung_bra.jpg') }}" class="d-block w-100" alt="Slide 2">
                     <div class="carousel-caption d-none d-md-block text-white">
-                        <p class="fw-bold text-uppercase">Adventure Awaits</p>
-                        <h1 class="display-5 fw-semibold">Explore Comfort and Style</h1>
+                        <p class="fw-bold text-uppercase">Bumen Redja Abadi</p>
+                        <!-- <h1 class="display-5 fw-semibold">Bumen Redja Abadi</h1> -->
                     </div>
                 </div>
-
-                <!-- Slide 3 -->
-                <div class="carousel-item">
-                    <img src="https://picsum.photos/1200/500?random=3" class="d-block w-100" alt="Slide 3">
-                    <div class="carousel-caption d-none d-md-block text-white">
-                        <p class="fw-bold text-uppercase">Safe & Affordable</p>
-                        <h1 class="display-5 fw-semibold">Start Your Magical Ride Today</h1>
-                    </div>
-                </div>
-
             </div>
 
             <!-- Carousel Controls -->
@@ -85,8 +33,10 @@
         </div>
     </section>
 
+
+
     <!-- <section class="section__container destination__container" id="about">
-        <h2 class="section__header">NEWS</h2>
+        <h2 class="section__header">Berita</h2>
         <p class="section__description">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ipsa.
         </p>
@@ -143,302 +93,476 @@
         </div>
     </section> -->
 
-    <section class="section__container destination__container" id="pilar">
-        <h2 class="section__header">PILAR</h2>
+    <section class="section__container destination__container mt-4 mb-5" id="pilar">
+        <h2 class="section__header">Sektor Bisnis</h2>
         <p class="section__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Sektor Bisnis usaha utama kami dalam berbagai sektor industri.
         </p>
+        <div class="grid-wrapper">
+            <div class="grid-no-gap">
+                <div class="grid-item automotive" id="open-automotive">
+                    <i class="ri-roadster-fill icon-center"></i>
+                    <div class="label">AUTOMOTIVE TRADING</div>
+                </div>
+                <div class="grid-item manufacture" id="open-manufacture">
+                    <i class="ri-building-4-fill icon-center"></i>
+                    <div class="label">MANUFACTURE</div>
+                </div>
+                <div class="grid-item finance" id="open-finance">
+                    <i class="ri-bank-card-fill icon-center"></i>
+                    <div class="label">FINANCIAL SERVICES</div>
+                </div>
+                <div class="grid-item others" id="open-other">
+                    <i class="ri-service-fill icon-center"></i>
+                    <div class="label">OTHER SERVICES</div>
+                </div>
+            </div>
 
-        <div class="header-banner position-relative rounded overflow-hidden" style="border-radius: 20px;">
-            <img src="https://picsum.photos/1200/500?random=1" class="d-block w-100" alt="Banner" style="border-radius: 20px; object-fit: cover;">
-            <div class="carousel-caption d-none d-md-block text-white position-absolute top-50 start-50 translate-middle text-center">
-                <p class="fw-bold text-uppercase">Bus Your Travel Journey</p>
-                <h1 class="display-5 fw-bold">Where Every Bus Ride Feels Magical!</h1>
+
+            <div class="circle-container">
+                <div class="circle-item top-left">
+                    <i class="fas fa-car"></i>
+                    <span id="automotive-smalltext">AUTOMOTIVE<br>TRADING</span>
+                </div>
+                <div class="circle-item top-right">
+                    <i class="fas fa-industry"></i>
+                    <span id="manufacture-smalltext">MANUFACTURE</span>
+                </div>
+                <div class="circle-item bottom-left">
+                    <i class="fas fa-university"></i>
+                    <span id="financial-smalltext">FINANCIAL<br>SERVICES</span>
+                </div>
+                <div class="circle-item bottom-right">
+                    <i class="fas fa-concierge-bell"></i>
+                    <span id="other-smalltext">OTHERS</span>
+                </div>
             </div>
         </div>
+    </section>
 
+    <!-- AUTOMOTIVE -->
+    <section class="section__container destination__container mt-5 d-none" id="automotive" style="margin-bottom: 20vh;">
+        <h2 class="section__header mb-5 text-center">Automotive Trading</h2>
+        <div class="text-left mb-4 ml-4">
+            <p class="mb-0 text-start" id="back-to-pilar" style="cursor: pointer;margin-left: 10vh;">
+                <i class="ri-arrow-left-line"></i>Back
+            </p>
+        </div>
+        <div class="timeline-container d-flex flex-wrap justify-content-center gap-5 mb-4">
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-primary text-white">1982</div>
+                <div class="col">
+                    <img src="/assets/images/bra-logo.jpg" alt="Berita 1"
+                        style="max-width: 80px; height: auto; display: block; margin: 0 auto; cursor:pointer"
+                        data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-danger text-white">1983</div>
+                <div class="col mt-4">
+                    <img src="/assets/images/TM.png" alt="Berita 1"
+                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;cursor:pointer" data-bs-toggle="modal" data-bs-target="#imageModal2">
+                </div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-success text-white">1988</div>
+                <div class="col mt-5">
+                    <img src="/assets/images/AIM.png" alt="Berita 1"
+                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-warning text-white">1994</div>
+                <div class="col mt-2">
+                    <img src="/assets/images/aat.jpg" alt="Berita 1"
+                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-info text-white">1995</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-primary text-white">1996</div>
+            </div>
+        </div>
+        <div class="timeline-container d-flex flex-wrap justify-content-center gap-5">
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-danger text-white">2009</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-primary text-white">2007</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-info text-white">2003</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-warning text-white">2000</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-success text-white">1998</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-danger text-white">1997</div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Bumen Redja Abadi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <section class="section__container showcase__container" id="package">
+                        <div class="showcase__image">
+                            <img src="{{asset('/assets/images/bra-logo.jpg')}}" alt="showcase" />
+                        </div>
+                        <div class="showcase__content">
+                            <p style="text-align: left;">
+                                PT Bumen Redja Abadi adalah perusahaan otomotif yang berdiri pada tahun 1981 yang berfokus pada penjualan, distribusi, serta layanan purna jual kendaraan Mitsubishi di Indonesia.
+                            </p>
+                            <div class="showcase__btn">
+                                <button class="btn" style="margin-left:12rem">
+                                    <a href="https://bumenredjaabadi.co.id/"></a>
+                                    Read More
+                                    <span><i class="ri-arrow-right-line"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="imageModal2" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Tunas Mobil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <section class="section__container showcase__container" id="package">
+                        <div class="showcase__image">
+                            <img src="{{asset('/assets/images/TM.png')}}" alt="showcase" />
+                        </div>
+                        <div class="showcase__content">
+                            <p style="text-align: left;">
+                                PT Tunas Mobil adalah sebuah perusahaan yang bergerak di bidang otomotif. Menjalankan usahanya sejak tahun 1988. PT Tunas Mobil merupakan Dealer Resmi mobil Honda yang yang sudah memenuhi standar untuk 3S : Sales, Service dan Sparepart.
+                            </p>
+                            <div class="showcase__btn">
+                                <button class="btn" style="margin-left:12rem">
+                                    Read More
+                                    <span><i class="ri-arrow-right-line"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MANUFACTURE -->
+    <section class="section__container destination__container mt-5 d-none" id="manufacture" style="margin-bottom: 20vh;">
+        <h2 class="section__header mb-5 text-center">Manufacture</h2>
+        <div class="text-left mb-4 ml-4">
+            <p class="mb-0 text-start" id="back-to-pilar2" style="cursor: pointer;margin-left: 10vh;">
+                <i class="ri-arrow-left-line"></i>Back
+            </p>
+        </div>
+        <div class="timeline-container d-flex flex-wrap justify-content-center gap-5 mb-4">
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-primary text-white">1982</div>
+                <div class="col">
+                    <img src="/assets/images/bra-logo.jpg" alt="Berita 1"
+                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-danger text-white">1983</div>
+                <div class="col mt-4">
+                    <img src="/assets/images/TM.png" alt="Berita 1"
+                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-success text-white">1988</div>
+                <div class="col mt-5">
+                    <img src="/assets/images/AIM.png" alt="Berita 1"
+                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-warning text-white">1994</div>
+                <div class="col mt-2">
+                    <img src="/assets/images/aat.jpg" alt="Berita 1"
+                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-info text-white">1995</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-primary text-white">1996</div>
+            </div>
+        </div>
+        <div class="timeline-container d-flex flex-wrap justify-content-center gap-5">
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-danger text-white">2009</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-primary text-white">2007</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-info text-white">2003</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-warning text-white">2000</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-success text-white">1998</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-danger text-white">1997</div>
+            </div>
+        </div>
+    </section>
+    <!-- FINANCE -->
+    <section class="section__container destination__container mt-5 d-none" id="finance" style="margin-bottom: 20vh;">
+        <h2 class="section__header mb-5 text-center">Financial Services</h2>
+        <div class="text-left mb-4 ml-4">
+            <p class="mb-0 text-start" id="back-to-pilar3" style="cursor: pointer;margin-left: 10vh;">
+                <i class="ri-arrow-left-line"></i>Back
+            </p>
+        </div>
+        <div class="timeline-container d-flex flex-wrap justify-content-center gap-5 mb-4">
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-primary text-white">1982</div>
+                <div class="col">
+                    <img src="/assets/images/bra-logo.jpg" alt="Berita 1"
+                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-danger text-white">1983</div>
+                <div class="col mt-4">
+                    <img src="/assets/images/TM.png" alt="Berita 1"
+                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-success text-white">1988</div>
+                <div class="col mt-5">
+                    <img src="/assets/images/AIM.png" alt="Berita 1"
+                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-warning text-white">1994</div>
+                <div class="col mt-2">
+                    <img src="/assets/images/aat.jpg" alt="Berita 1"
+                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-info text-white">1995</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-primary text-white">1996</div>
+            </div>
+        </div>
+        <div class="timeline-container d-flex flex-wrap justify-content-center gap-5">
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-danger text-white">2009</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-primary text-white">2007</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-info text-white">2003</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-warning text-white">2000</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-success text-white">1998</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-danger text-white">1997</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OTHER -->
+    <section class="section__container destination__container mt-5 d-none" id="other" style="margin-bottom: 20vh;">
+        <h2 class="section__header mb-5 text-center">Other Services</h2>
+        <div class="text-left mb-4 ml-4">
+            <p class="mb-0 text-start" id="back-to-pilar4" style="cursor: pointer;margin-left: 10vh;">
+                <i class="ri-arrow-left-line"></i>Back
+            </p>
+        </div>
+        <div class="timeline-container d-flex flex-wrap justify-content-center gap-5 mb-4">
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-primary text-white">1982</div>
+                <div class="col">
+                    <img src="/assets/images/bra-logo.jpg" alt="Berita 1"
+                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-danger text-white">1983</div>
+                <div class="col mt-4">
+                    <img src="/assets/images/TM.png" alt="Berita 1"
+                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-success text-white">1988</div>
+                <div class="col mt-5">
+                    <img src="/assets/images/AIM.png" alt="Berita 1"
+                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-warning text-white">1994</div>
+                <div class="col mt-2">
+                    <img src="/assets/images/aat.jpg" alt="Berita 1"
+                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-info text-white">1995</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-primary text-white">1996</div>
+            </div>
+        </div>
+        <div class="timeline-container d-flex flex-wrap justify-content-center gap-5">
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-danger text-white">2009</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-primary text-white">2007</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-info text-white">2003</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-warning text-white">2000</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-success text-white">1998</div>
+            </div>
+            <div class="timeline-block text-center">
+                <div class="timeline-circle bg-danger text-white">1997</div>
+            </div>
+        </div>
     </section>
 
 
-    <section class="section__container destination__container" id="news">
-        <h2 class="section__header">NEWS</h2>
-        <p class="section__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-        <div class="destination__grid">
-            <div class="destination__card">
-                <img src="{{ asset('/assets/images/card.jpg') }}" alt="destination" />
-                <div class="destination__card__details">
-                    <div>
-                        <h4>Sacred Calm at Badrinath Temple.</h4>
-                        <p>Badrinath, Uttarakhand, India</p>
+    <!-- Berita -->
+    <div style="background-color: #f5f5f5;padding-bottom:10vh"> <!-- Ganti warna sesuai keinginan -->
+        <section class="container py-5" id="news">
+            <h2 class="text-left mb-3 fw-bold">Berita</h2>
+            <div class="d-flex justify-content-between text-muted mb-5">
+                <p class="mb-0">
+                    Update terbaru mengenai aktivitas, berita, dan informasi menarik dari kami.
+                </p>
+                <p class="mb-0 text-end" style="cursor:pointer;">
+                    <a href="{{route('news')}}" style="text-decoration: none; color: #343a40;">Semua Berita <i class="ri-arrow-right-line"></i></a>
+                </p>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- card 1 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="/assets/images/card.jpg" class="card-img-top news-img" alt="Berita 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Pembangunan Gedung Baru Dimulai</h5>
+                            <p class="card-text text-muted">30 Juli 2025</p>
+                            <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Read More <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card 2 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="/assets/images/card2.jpg" class="card-img-top news-img" alt="Berita 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Kegiatan Bakti Sosial di Desa Cibuntu</h5>
+                            <p class="card-text text-muted">Senin, 28 Juli 2025</p>
+                            <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Read More <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card 3 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="/assets/images/card3.webp" class="card-img-top news-img" alt="Berita 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Pelatihan Kewirausahaan untuk Remaja</h5>
+                            <p class="card-text text-muted">Jumat, 25 Juli 2025</p>
+                            <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Read More <i class="ri-arrow-right-line"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="destination__card">
-                <img src="{{ asset('/assets/images/card2.jpg') }}" alt="destination" />
-                <div class="destination__card__details">
-                    <div>
-                        <h4>Divine Majesty at Jagannath Temple.</h4>
-                        <p>Puri, Odisha, India</p>
+        </section>
+    </div>
+
+    <!-- <section class="container-fluid py-5" id="location">
+        <div class="container mb-4">
+            <h2 class="text-left mb-3 fw-bold">LOCATION</h2>
+            <p class="text-muted mb-4">
+                Lokasi Head Office bisnis unit kami
+            </p>
+        </div>
+
+        <div class="container px-3">
+            <div class="ratio ratio-16x9 rounded overflow-hidden shadow">
+                <iframe
+                    class="w-100 h-100 border-0"
+                    src="https://www.google.com/maps/d/embed?mid=1eTcaRB8-9AdtXlDKo4zzJ_6WH2tmyu4&ehbc=2E312F"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="container-fluid py-5" id="location">
+        <div class="container mb-4">
+            <h2 class="text-left mb-3 fw-bold">Lokasi</h2>
+            <p class="text-muted mb-4">
+                Lokasi Head Office bisnis unit kami
+            </p>
+        </div>
+
+        <div class="container position-relative">
+            <!-- Titik Tanah Abang -->
+            <div class="position-relative">
+                <img src="{{ asset('/assets/images/maps.png') }}" class="img-fluid rounded shadow" alt="Peta Indonesia" />
+                <!-- Pin: Tanah Abang (Jakarta Pusat) -->
+                <div class="map-pin" style="top: 71%; left: 26.5%;">
+                    <div class="tooltip-custom">
+                        <b>PT MAI (Holding Company)</b><br>Jl. Tanah Abang II No.104, RT.9/RW.3, Cideng, <br>Kecamatan Gambir, Kota Jakarta Pusat
+                    </div>
+                </div>
+
+                <!-- Pin: Tebet (Jakarta Selatan) -->
+                <div class="map-pin" style="top: 71%; left: 27.5%;">
+                    <div class="tooltip-custom">
+                        <b>PT Bumen Redja Abadi</b><br>Jl. Dr. Saharjo No.321 10, RT.10/RW.1, Tebet Bar., <br>Kec. Tebet, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 13610
                     </div>
                 </div>
             </div>
-            <div class="destination__card">
-                <img src="{{ asset('/assets/images/card3.webp') }}" alt="destination" />
-                <div class="destination__card__details">
-                    <div>
-                        <h4>Spiritual Serenity at Neem Karoli Temple.</h4>
-                        <p>Dehradun, India</p>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </section>
 
-
-    <section class="section__container journey__container" id="tour">
-        <h2 class="section__header">Bus Travel, the Easy Way!</h2>
-        <p class="section__description">
-            Effortless planning for Your Next Adventure
-        </p>
-        <div class="journey__grid">
-            <div class="journey__card">
-                <div class="journey__card__bg">
-                    <span><i class="ri-bookmark-3-line"></i></span>
-                    <h4>Seamless Booking Process</h4>
-                </div>
-                <div class="journey__card__content">
-                    <span><i class="ri-bookmark-3-line"></i></span>
-                    <h4>Seat Booking, one Click Away</h4>
-                    <p>
-                        From booking tickets to tracking your bus in real-time, everything
-                        is just a click away. No more long queues or last-minute confusion
-                        — plan, book, and board with complete ease. Your journey,
-                        simplified.
-                    </p>
-                </div>
-            </div>
-
-            <div class="journey__card">
-                <div class="journey__card__bg">
-                    <span><i class="ri-landscape-fill"></i></span>
-                    <h4>Tailored Itineraries</h4>
-                </div>
-                <div class="journey__card__content">
-                    <span><i class="ri-landscape-fill"></i></span>
-                    <h4>Customized Plans Just for You</h4>
-                    <p>
-                        Everyone travels differently — that’s why we create plans just for
-                        you. From preferred timings to budget-friendly options and seat
-                        choices, enjoy a trip designed around your lifestyle.
-                    </p>
-                </div>
-            </div>
-
-            <div class="journey__card">
-                <div class="journey__card__bg">
-                    <span><i class="ri-map-2-line"></i></span>
-                    <h4>Expert Local Insights</h4>
-                </div>
-                <div class="journey__card__content">
-                    <span><i class="ri-map-2-line"></i></span>
-                    <h4>Insider Tips and Recommendations</h4>
-                    <p>
-                        From the best boarding points to local travel hacks, our insights
-                        are powered by real people who know the roads. It’s local
-                        knowledge, delivered straight to your screen.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section__container showcase__container" id="package">
-        <div class="showcase__image">
-            <img src="{{asset('/assets/images/showcase.webp')}}" alt="showcase" />
-        </div>
-        <div class="showcase__content">
-            <h4>Ignite Your Wanderlust with Every Bus Ride</h4>
-            <p>
-                Traveling by bus offers comfort and stunning views on your way to
-                amazing destinations. With spacious seats and air conditioning, you
-                can relax and enjoy the ride, whether you're heading to a vibrant city
-                or a peaceful getaway. It’s the perfect way to travel affordably and
-                conveniently while experiencing the beauty of the journey.
-            </p>
-            <p>
-                Explore the World by Bus with Ease Hop on a bus and experience the joy
-                of travel at your own pace. From comfortable seating to scenic routes,
-                our buses offer the perfect way to explore cities, nature, and
-                everything in between. Whether it's a quick trip or a long adventure,
-                sit back, relax, and enjoy the ride.
-            </p>
-            <div class="showcase__btn">
-                <button class="btn">
-                    BOOK A Bus Now
-                    <span><i class="ri-arrow-right-line"></i></span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <section class="section__container banner__container">
-        <div class="banner__card">
-            <h4>10+</h4>
-            <p>Years Experience</p>
-        </div>
-        <div class="banner__card">
-            <h4>12k</h4>
-            <p>Happy Clients</p>
-        </div>
-        <div class="banner__card">
-            <h4>4.8</h4>
-            <p>Overrall Ratings</p>
-        </div>
-    </section>
-
-    <section class="section__container discover__container">
-        <h2 class="section__header">
-            Discover Peace, Culture, and Devotion with Our Temple Bus Travels
-        </h2>
-        <p class="section__description">
-            Witness Stunning Landscapes from the Comfort of Your Bus Seat"
-        </p>
-        <div class="discover__grid">
-            <div class="discover__card">
-                <span><i class="ri-camera-lens-line"></i></span>
-                <h4>Your Road, Your Story</h4>
-                <p>
-                    Experience the freedom of travel with our comfortable and reliable
-                    bus trips. Enjoy stunning views along the way while relaxing in
-                    spacious seats. Whether it's a short trip or a long journey, our
-                    buses ensure a smooth and enjoyable ride.
-                </p>
-            </div>
-            <div class="discover__card">
-                <span><i class="ri-ship-line"></i></span>
-                <h4>Coastal Wonders</h4>
-                <p>
-                    Embark on a journey through the mesmerizing coastal wonders. Enjoy
-                    the serene beauty of pristine beaches, stunning cliffs, and
-                    breathtaking ocean views, all from the comfort of our bus. Let the
-                    coastal breeze guide you to unforgettable destinations.
-                </p>
-            </div>
-            <div class="discover__card">
-                <span><i class="ri-landscape-line"></i></span>
-                <h4>Historic Landmarks</h4>
-                <p>
-                    Explore the charm of historic landmarks on our specially curated bus
-                    tours. Our comfortable buses will take you through iconic sites,
-                    offering insights into their fascinating stories. Sit back, relax,
-                    and immerse yourself in the rich history that each destination
-                    holds.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="section__container footer__container">
-            <div class="footer__col">
-                <div class="footer__logo">
-                    <a href="#" class="logo">BusTraveller</a>
-                </div>
-                <p>
-                    Explore the world with ease and excitement through our all-in-one
-                    bus travel platform. Your journey begins here — where smooth
-                    planning meets unforgettable road experiences.
-                </p>
-                <ul class="footer__socials">
-                    <li>
-                        <a href="#!"><i class="ri-facebook-fill"></i></a>
-                    </li>
-                    <li>
-                        <a href="#!"><i class="ri-instagram-line"></i></a>
-                    </li>
-                    <li>
-                        <a href="#!"><i class="ri-youtube-line"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer__col">
-                <h4>Quick Links</h4>
-                <ul class="footer__links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Bus</a></li>
-                    <li><a href="#">Hotels</a></li>
-                    <li><a href="#">Cruise</a></li>
-                </ul>
-            </div>
-            <div class="footer__col">
-                <h4>Contact Us</h4>
-                <ul class="footer__links">
-                    <li>
-                        <a href="#">
-                            <span><i class="ri-phone-fill"></i></span>+91 12345 67890
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span><i class="ri-record-mail-line"></i></span>
-                            info@BusTraveller
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span><i class="ri-map-pin-2-fill"></i></span> Agra, India
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer__col">
-                <h4>Subscribe</h4>
-                <form action="#!">
-                    <input type="text" placeholder="Enter your email" />
-                    <button class="btn">Subscribe</button>
-                </form>
-            </div>
-        </div>
-        <div class="footer__bar">
-            Copyright © 2025 Code Prashtt. All rights reserved.
-            <p>
-                Distributed by
-                <a
-                    class="text-white"
-                    href="https://www.themewagon.com"
-                    target="_blank">ThemeWagon</a>
-            </p>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        const scrollContainer = document.getElementById("scrollContainer");
-        const scrollLeftBtn = document.getElementById("scrollLeftBtn");
-        const scrollRightBtn = document.getElementById("scrollRightBtn");
-
-        scrollLeftBtn.addEventListener("click", () => {
-            scrollContainer.scrollBy({
-                left: -320,
-                behavior: 'smooth'
-            });
-        });
-
-        scrollRightBtn.addEventListener("click", () => {
-            scrollContainer.scrollBy({
-                left: 320,
-                behavior: 'smooth'
-            });
-        });
-    </script>
-
-
-</body>
-
-</html>
+    @endsection
