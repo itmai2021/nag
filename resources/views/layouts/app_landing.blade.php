@@ -8,6 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="{{ asset('/assets/css/app.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #mapid {
+            height: 600px;
+        }
+    </style>
     <title>New Armada Group</title>
 </head>
 
@@ -56,10 +62,13 @@
                 <p>Together We Are Strong!</p>
             </div>
             <div class="footer__col mt-4">
-                <h4>Contact Us</h4>
+                <h4>Hubungi Kami</h4>
                 <ul class="footer__links p-0">
                     <li>
                         <a href="#"><i class="ri-phone-fill"></i> (021) 3841061</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-mail-fill"></i>secretariat@mai.nag.co.id</a>
                     </li>
                     <li>
                         <a href="#"><i class="ri-map-pin-2-fill"></i> Jl. Tanah Abang II No.104, Cideng, Jakarta Pusat</a>
@@ -67,11 +76,10 @@
                 </ul>
             </div>
             <div class="footer__col mt-4">
-                <h4>Follow Me</h4>
+                <h4>Ikuti Kami</h4>
                 <ul class="footer__socials p-0">
-                    <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
-                    <li><a href="#"><i class="ri-instagram-line"></i></a></li>
-                    <li><a href="#"><i class="ri-youtube-line"></i></a></li>
+                    <li><a href="https://www.instagram.com/newarmadagroup?igsh=eDB2dm9zbHQ2ejFy" target="_blank"><i class="ri-instagram-line"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/pt-mekar-armada-investama-new-armada-group/posts/?feedView=all" target="_blank"><i class="ri-linkedin-line"></i></a></li>
                 </ul>
             </div>
         </div>

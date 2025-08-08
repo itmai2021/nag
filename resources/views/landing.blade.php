@@ -7,92 +7,22 @@
                 <!-- Slide 1 -->
                 <div class="carousel-item active">
                     <img src="{{ asset('/assets/images/gedung_mai.png') }}" class="d-block w-100" alt="Slide 1">
-                    <div class="carousel-caption d-none d-md-block text-white">
-                        <p class="fw-bold text-uppercase">Mekar Armada Investama</p>
-                        <!-- <h1 class="display-5 fw-bold">Mekar Armada Investama</h1> -->
-                    </div>
                 </div>
 
                 <!-- Slide 2 -->
                 <div class="carousel-item">
                     <img src="{{ asset('/assets/images/gedung_bra.jpg') }}" class="d-block w-100" alt="Slide 2">
-                    <div class="carousel-caption d-none d-md-block text-white">
-                        <p class="fw-bold text-uppercase">Bumen Redja Abadi</p>
-                        <!-- <h1 class="display-5 fw-semibold">Bumen Redja Abadi</h1> -->
-                    </div>
                 </div>
-            </div>
 
-            <!-- Carousel Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeader" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselHeader" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeader" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselHeader" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
     </section>
-
-
-
-    <!-- <section class="section__container destination__container" id="about">
-        <h2 class="section__header">Berita</h2>
-        <p class="section__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ipsa.
-        </p>
-
-        <div class="position-relative d-flex align-items-center">
-
-            <button
-                id="scrollLeftBtn"
-                class="scroll-arrow btn btn-light rounded-circle shadow position-absolute start-0"
-                style="z-index: 10; left: -25px;">
-                &#8592;
-            </button>
-
-            <div id="scrollContainer" class="destination__scroll-wrapper">
-                <div class="destination__grid scrollable-cards">
-                    @for ($i = 0; $i < 2; $i++)
-                        <div class="destination__card">
-                        <img src="{{ asset('/assets/images/card.jpg') }}" alt="destination" />
-                        <div class="destination__card__details">
-                            <div>
-                                <h4>Sacred Calm at Badrinath Temple.</h4>
-                                <p>Badrinath, Uttarakhand, India</p>
-                            </div>
-                        </div>
-                </div>
-                <div class="destination__card">
-                    <img src="{{ asset('/assets/images/card2.jpg') }}" alt="destination" />
-                    <div class="destination__card__details">
-                        <div>
-                            <h4>Divine Majesty at Jagannath Temple.</h4>
-                            <p>Puri, Odisha, India</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="destination__card">
-                    <img src="{{ asset('/assets/images/card3.webp') }}" alt="destination" />
-                    <div class="destination__card__details">
-                        <div>
-                            <h4>Spiritual Serenity at Neem Karoli Temple.</h4>
-                            <p>Dehradun, India</p>
-                        </div>
-                    </div>
-                </div>
-                @endfor
-            </div>
-        </div>
-
-        <button
-            id="scrollRightBtn"
-            class="scroll-arrow btn btn-light rounded-circle shadow position-absolute end-0"
-            style="z-index: 10; right: -25px;">
-            &#8594;
-        </button>
-        </div>
-    </section> -->
-
     <section class="section__container destination__container mt-4 mb-5" id="pilar">
         <h2 class="section__header">Sektor Bisnis</h2>
         <p class="section__description">
@@ -100,26 +30,29 @@
         </p>
         <div class="grid-wrapper">
             <div class="grid-no-gap">
-                <div class="grid-item automotive" id="open-automotive">
-                    <i class="ri-roadster-fill icon-center"></i>
+                <div class="grid-item automotive" id="open-automotive" style="background-color: #327a83;">
+                    <img src="{{ asset('/assets/images/1.png') }}" alt="">
                     <div class="label">AUTOMOTIVE TRADING</div>
                 </div>
-                <div class="grid-item manufacture" id="open-manufacture">
-                    <i class="ri-building-4-fill icon-center"></i>
+                <div class="grid-item manufacture" id="open-manufacture" style="background-color: #fcb916;">
+                    <img src="{{ asset('/assets/images/2.png') }}" alt="">
                     <div class="label">MANUFACTURE</div>
                 </div>
-                <div class="grid-item finance" id="open-finance">
-                    <i class="ri-bank-card-fill icon-center"></i>
+                <div class="grid-item finance" id="open-finance" style="background-color: #259a48;">
+                    <img src="{{ asset('/assets/images/3.png') }}" alt="">
                     <div class="label">FINANCIAL SERVICES</div>
                 </div>
-                <div class="grid-item others" id="open-other">
-                    <i class="ri-service-fill icon-center"></i>
+                <div class="grid-item others" id="open-other" style="background-color: #e81f28;">
+                    <img src="{{ asset('/assets/images/4.png') }}" alt="">
                     <div class="label">OTHER SERVICES</div>
                 </div>
             </div>
 
+            <div class="nag-logo">
+                <img src="{{ asset('/assets/images/NAG.png') }}" alt="">
+            </div>
 
-            <div class="circle-container">
+            <!-- <div class="circle-container">
                 <div class="circle-item top-left">
                     <i class="fas fa-car"></i>
                     <span id="automotive-smalltext">AUTOMOTIVE<br>TRADING</span>
@@ -136,98 +69,60 @@
                     <i class="fas fa-concierge-bell"></i>
                     <span id="other-smalltext">OTHERS</span>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
     <!-- AUTOMOTIVE -->
     <section class="section__container destination__container mt-5 d-none" id="automotive" style="margin-bottom: 20vh;">
         <h2 class="section__header mb-5 text-center">Automotive Trading</h2>
-        <div class="text-left mb-4 ml-4">
-            <p class="mb-0 text-start" id="back-to-pilar" style="cursor: pointer;margin-left: 10vh;">
-                <i class="ri-arrow-left-line"></i>Back
+
+        <div class="text-left mb-4">
+            <p class="mb-0 text-start" id="back-to-pilar" style="cursor: pointer; margin-left: 10vh;">
+                <i class="ri-arrow-left-line"></i> Kembali
             </p>
         </div>
-        <div class="timeline-container d-flex flex-wrap justify-content-center gap-5 mb-4">
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-primary text-white">1982</div>
-                <div class="col">
-                    <img src="/assets/images/bra-logo.jpg" alt="Berita 1"
-                        style="max-width: 80px; height: auto; display: block; margin: 0 auto; cursor:pointer"
-                        data-bs-toggle="modal" data-bs-target="#imageModal">
+        <div class="container py-4" style=" margin-left: 11vh;">
+            <div class="custom-grid justify-content-center">
+                @foreach($automotive as $auto)
+                <div class="logo-item text-center">
+                    <img src="{{ asset('assets/images/' . $auto->logo) }}"
+                        alt="Logo {{ $auto->company_shortname }}"
+                        class="logo-click"
+                        data-bs-toggle="modal"
+                        data-bs-target="#imageModal{{ $auto->id }}"
+                        style="cursor: pointer; max-height: 100px;">
                 </div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-danger text-white">1983</div>
-                <div class="col mt-4">
-                    <img src="/assets/images/TM.png" alt="Berita 1"
-                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;cursor:pointer" data-bs-toggle="modal" data-bs-target="#imageModal2">
-                </div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-success text-white">1988</div>
-                <div class="col mt-5">
-                    <img src="/assets/images/AIM.png" alt="Berita 1"
-                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
-                </div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-warning text-white">1994</div>
-                <div class="col mt-2">
-                    <img src="/assets/images/aat.jpg" alt="Berita 1"
-                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
-                </div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-info text-white">1995</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-primary text-white">1996</div>
-            </div>
-        </div>
-        <div class="timeline-container d-flex flex-wrap justify-content-center gap-5">
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-danger text-white">2009</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-primary text-white">2007</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-info text-white">2003</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-warning text-white">2000</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-success text-white">1998</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-danger text-white">1997</div>
+                @endforeach
             </div>
         </div>
     </section>
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+
+    @foreach($automotive as $auto)
+    <div class="modal fade" id="imageModal{{ $auto->id }}" tabindex="-1" aria-labelledby="imageModalLabel{{ $auto->id }}" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel">Bumen Redja Abadi</h5>
+                    <h5 class="modal-title" id="imageModalLabel{{ $auto->id }}">{{ $auto->company_name }}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
                 </div>
                 <div class="modal-body text-center">
-                    <section class="section__container showcase__container" id="package">
+                    <section class="section__container showcase__container">
                         <div class="showcase__image">
-                            <img src="{{asset('/assets/images/bra-logo.jpg')}}" alt="showcase" />
+                            <img src="{{ asset('assets/images/' . $auto->logo) }}" alt="Logo" />
                         </div>
                         <div class="showcase__content">
                             <p style="text-align: left;">
-                                PT Bumen Redja Abadi adalah perusahaan otomotif yang berdiri pada tahun 1981 yang berfokus pada penjualan, distribusi, serta layanan purna jual kendaraan Mitsubishi di Indonesia.
+                                {{ $auto->description }}
                             </p>
-                            <div class="showcase__btn">
-                                <button class="btn" style="margin-left:12rem">
-                                    <a href="https://bumenredjaabadi.co.id/"></a>
-                                    Read More
+                            <div class="showcase__btn" style="position: relative; height: 200px;">
+                                @if($auto->web_url)
+                                <a href="{{ $auto->web_url }}" target="_blank"
+                                    style="position: absolute; bottom: 0; right: 0; color: black; text-decoration: none; display: flex; align-items: center; gap: 5px;">
+                                    Selengkapnya
                                     <span><i class="ri-arrow-right-line"></i></span>
-                                </button>
+                                </a>
+                                @endif
                             </div>
                         </div>
                     </section>
@@ -235,236 +130,187 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="imageModal2" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel">Tunas Mobil</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
-                </div>
-                <div class="modal-body text-center">
-                    <section class="section__container showcase__container" id="package">
-                        <div class="showcase__image">
-                            <img src="{{asset('/assets/images/TM.png')}}" alt="showcase" />
-                        </div>
-                        <div class="showcase__content">
-                            <p style="text-align: left;">
-                                PT Tunas Mobil adalah sebuah perusahaan yang bergerak di bidang otomotif. Menjalankan usahanya sejak tahun 1988. PT Tunas Mobil merupakan Dealer Resmi mobil Honda yang yang sudah memenuhi standar untuk 3S : Sales, Service dan Sparepart.
-                            </p>
-                            <div class="showcase__btn">
-                                <button class="btn" style="margin-left:12rem">
-                                    Read More
-                                    <span><i class="ri-arrow-right-line"></i></span>
-                                </button>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </div>
+    @endforeach
 
     <!-- MANUFACTURE -->
     <section class="section__container destination__container mt-5 d-none" id="manufacture" style="margin-bottom: 20vh;">
         <h2 class="section__header mb-5 text-center">Manufacture</h2>
         <div class="text-left mb-4 ml-4">
             <p class="mb-0 text-start" id="back-to-pilar2" style="cursor: pointer;margin-left: 10vh;">
-                <i class="ri-arrow-left-line"></i>Back
+                <i class="ri-arrow-left-line"></i>Kembali
             </p>
         </div>
-        <div class="timeline-container d-flex flex-wrap justify-content-center gap-5 mb-4">
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-primary text-white">1982</div>
-                <div class="col">
-                    <img src="/assets/images/bra-logo.jpg" alt="Berita 1"
-                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
+        <div class="container py-4" style=" margin-left: 11vh;">
+            <div class="custom-grid justify-content-center">
+                @foreach($manufacture as $manuf)
+                <div class="logo-item text-center">
+                    <img src="{{ asset('assets/images/' . $manuf->logo) }}"
+                        alt="Logo {{ $manuf->company_shortname }}"
+                        class="logo-click"
+                        data-bs-toggle="modal"
+                        data-bs-target="#imageModal2{{ $manuf->id }}"
+                        data-id="{{ $manuf->id }}"
+                        data-logo="{{ asset('assets/images/' . $manuf->logo) }}"
+                        style="cursor: pointer; max-height: 100px;">
                 </div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-danger text-white">1983</div>
-                <div class="col mt-4">
-                    <img src="/assets/images/TM.png" alt="Berita 1"
-                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
-                </div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-success text-white">1988</div>
-                <div class="col mt-5">
-                    <img src="/assets/images/AIM.png" alt="Berita 1"
-                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
-                </div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-warning text-white">1994</div>
-                <div class="col mt-2">
-                    <img src="/assets/images/aat.jpg" alt="Berita 1"
-                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
-                </div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-info text-white">1995</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-primary text-white">1996</div>
-            </div>
-        </div>
-        <div class="timeline-container d-flex flex-wrap justify-content-center gap-5">
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-danger text-white">2009</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-primary text-white">2007</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-info text-white">2003</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-warning text-white">2000</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-success text-white">1998</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-danger text-white">1997</div>
+                @endforeach
             </div>
         </div>
     </section>
+    @foreach($manufacture as $manuf)
+    <div class="modal fade" id="imageModal2{{ $manuf->id }}" tabindex="-1" aria-labelledby="imageModalLabel{{ $manuf->id }}" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel{{ $manuf->id }}">{{ $manuf->company_name }}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <section class="section__container showcase__container">
+                        <div class="showcase__image">
+                            <img src="{{ asset('assets/images/' . $manuf->logo) }}" alt="Logo" />
+                        </div>
+                        <div class="showcase__content">
+                            <p style="text-align: left;">
+                                {{ $manuf->description }}
+                            </p>
+                            <div class="showcase__btn" style="position: relative; height: 200px;">
+                                @if($manuf->web_url)
+                                <a href="{{ $manuf->web_url }}" target="_blank"
+                                    style="position: absolute; bottom: 0; right: 0; color: black; text-decoration: none; display: flex; align-items: center; gap: 5px;">
+                                    Selengkapnya
+                                    <span><i class="ri-arrow-right-line"></i></span>
+                                </a>
+                                @endif
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endforeach
     <!-- FINANCE -->
     <section class="section__container destination__container mt-5 d-none" id="finance" style="margin-bottom: 20vh;">
         <h2 class="section__header mb-5 text-center">Financial Services</h2>
         <div class="text-left mb-4 ml-4">
             <p class="mb-0 text-start" id="back-to-pilar3" style="cursor: pointer;margin-left: 10vh;">
-                <i class="ri-arrow-left-line"></i>Back
+                <i class="ri-arrow-left-line"></i>Kembali
             </p>
         </div>
-        <div class="timeline-container d-flex flex-wrap justify-content-center gap-5 mb-4">
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-primary text-white">1982</div>
-                <div class="col">
-                    <img src="/assets/images/bra-logo.jpg" alt="Berita 1"
-                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
+        <div class="container py-4" style=" margin-left: 11vh;">
+            <div class="custom-grid justify-content-center">
+                @foreach($finance as $fn)
+                <div class="logo-item text-center">
+                    <img src="{{ asset('assets/images/' . $fn->logo) }}"
+                        alt="Logo {{ $fn->company_shortname }}"
+                        class="logo-click"
+                        data-bs-toggle="modal"
+                        data-bs-target="#imageModal3{{ $fn->id }}"
+                        data-id="{{ $fn->id }}"
+                        data-logo="{{ asset('assets/images/' . $fn->logo) }}"
+                        style="cursor: pointer; max-height: 100px;">
                 </div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-danger text-white">1983</div>
-                <div class="col mt-4">
-                    <img src="/assets/images/TM.png" alt="Berita 1"
-                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
-                </div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-success text-white">1988</div>
-                <div class="col mt-5">
-                    <img src="/assets/images/AIM.png" alt="Berita 1"
-                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
-                </div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-warning text-white">1994</div>
-                <div class="col mt-2">
-                    <img src="/assets/images/aat.jpg" alt="Berita 1"
-                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
-                </div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-info text-white">1995</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-primary text-white">1996</div>
-            </div>
-        </div>
-        <div class="timeline-container d-flex flex-wrap justify-content-center gap-5">
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-danger text-white">2009</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-primary text-white">2007</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-info text-white">2003</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-warning text-white">2000</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-success text-white">1998</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-danger text-white">1997</div>
+                @endforeach
             </div>
         </div>
     </section>
+    @foreach($finance as $fnc)
+    <div class="modal fade" id="imageModal3{{ $fnc->id }}" tabindex="-1" aria-labelledby="imageModalLabel{{ $fnc->id }}" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel{{ $fnc->id }}">{{ $fnc->company_name }}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <section class="section__container showcase__container">
+                        <div class="showcase__image">
+                            <img src="{{ asset('assets/images/' . $fnc->logo) }}" alt="Logo" />
+                        </div>
+                        <div class="showcase__content">
+                            <p style="text-align: left;">
+                                {{ $fnc->description }}
+                            </p>
+                            <div class="showcase__btn" style="position: relative; height: 200px;">
+                                @if($fnc->web_url)
+                                <a href="{{ $fnc->web_url }}" target="_blank"
+                                    style="position: absolute; bottom: 0; right: 0; color: black; text-decoration: none; display: flex; align-items: center; gap: 5px;">
+                                    Selengkapnya
+                                    <span><i class="ri-arrow-right-line"></i></span>
+                                </a>
+                                @endif
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endforeach
 
     <!-- OTHER -->
     <section class="section__container destination__container mt-5 d-none" id="other" style="margin-bottom: 20vh;">
         <h2 class="section__header mb-5 text-center">Other Services</h2>
         <div class="text-left mb-4 ml-4">
             <p class="mb-0 text-start" id="back-to-pilar4" style="cursor: pointer;margin-left: 10vh;">
-                <i class="ri-arrow-left-line"></i>Back
+                <i class="ri-arrow-left-line"></i>Kembali
             </p>
         </div>
-        <div class="timeline-container d-flex flex-wrap justify-content-center gap-5 mb-4">
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-primary text-white">1982</div>
-                <div class="col">
-                    <img src="/assets/images/bra-logo.jpg" alt="Berita 1"
-                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
+        <div class="container py-4" style=" margin-left: 11vh;">
+            <div class="custom-grid justify-content-center">
+                @foreach($others as $other)
+                <div class="logo-item text-center">
+                    <img src="{{ asset('assets/images/' . $other->logo) }}"
+                        alt="Logo {{ $other->company_shortname }}"
+                        class="logo-click"
+                        data-bs-toggle="modal"
+                        data-bs-target="#imageModal4{{ $other->id }}"
+                        data-id="{{ $other->id }}"
+                        data-logo="{{ asset('assets/images/' . $other->logo) }}"
+                        style="cursor: pointer; max-height: 100px;">
                 </div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-danger text-white">1983</div>
-                <div class="col mt-4">
-                    <img src="/assets/images/TM.png" alt="Berita 1"
-                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
-                </div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-success text-white">1988</div>
-                <div class="col mt-5">
-                    <img src="/assets/images/AIM.png" alt="Berita 1"
-                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
-                </div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-warning text-white">1994</div>
-                <div class="col mt-2">
-                    <img src="/assets/images/aat.jpg" alt="Berita 1"
-                        style="max-width: 80px; height: auto; display: block; margin: 0 auto;">
-                </div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-info text-white">1995</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-primary text-white">1996</div>
-            </div>
-        </div>
-        <div class="timeline-container d-flex flex-wrap justify-content-center gap-5">
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-danger text-white">2009</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-primary text-white">2007</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-info text-white">2003</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-warning text-white">2000</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-success text-white">1998</div>
-            </div>
-            <div class="timeline-block text-center">
-                <div class="timeline-circle bg-danger text-white">1997</div>
+                @endforeach
             </div>
         </div>
     </section>
-
+    @foreach($others as $other)
+    <div class="modal fade" id="imageModal4{{ $other->id }}" tabindex="-1" aria-labelledby="imageModalLabel{{ $other->id }}" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel{{ $other->id }}">{{ $other->company_name }}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <section class="section__container showcase__container">
+                        <div class="showcase__image">
+                            <img src="{{ asset('assets/images/' . $other->logo) }}" alt="Logo" />
+                        </div>
+                        <div class="showcase__content">
+                            <p style="text-align: left;">
+                                {{ $other->description }}
+                            </p>
+                            <div class="showcase__btn" style="position: relative; height: 200px;">
+                                @if($other->web_url)
+                                <a href="{{ $other->web_url }}" target="_blank"
+                                    style="position: absolute; bottom: 0; right: 0; color: black; text-decoration: none; display: flex; align-items: center; gap: 5px;">
+                                    Selengkapnya
+                                    <span><i class="ri-arrow-right-line"></i></span>
+                                </a>
+                                @endif
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endforeach
 
     <!-- Berita -->
     <div style="background-color: #f5f5f5;padding-bottom:10vh"> <!-- Ganti warna sesuai keinginan -->
-        <section class="container py-5" id="news">
+        <section class="container py-5">
             <h2 class="text-left mb-3 fw-bold">Berita</h2>
             <div class="d-flex justify-content-between text-muted mb-5">
                 <p class="mb-0">
@@ -480,10 +326,12 @@
                 <div class="col">
                     <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
                         <img src="/assets/images/card.jpg" class="card-img-top news-img" alt="Berita 1">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Pembangunan Gedung Baru Dimulai</h5>
                             <p class="card-text text-muted">30 Juli 2025</p>
-                            <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Read More <i class="ri-arrow-right-line"></i></a>
+                            <a href="{{route('news_detail')}}" class="text-dark text-decoration-none fw-medium mt-auto">
+                                Selengkapnya <i class="ri-arrow-right-line"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -492,10 +340,12 @@
                 <div class="col">
                     <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
                         <img src="/assets/images/card2.jpg" class="card-img-top news-img" alt="Berita 2">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Kegiatan Bakti Sosial di Desa Cibuntu</h5>
                             <p class="card-text text-muted">Senin, 28 Juli 2025</p>
-                            <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Read More <i class="ri-arrow-right-line"></i></a>
+                            <a href="{{route('news_detail')}}" class="text-dark text-decoration-none fw-medium mt-auto">
+                                Selengkapnya <i class="ri-arrow-right-line"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -504,65 +354,67 @@
                 <div class="col">
                     <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
                         <img src="/assets/images/card3.webp" class="card-img-top news-img" alt="Berita 3">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Pelatihan Kewirausahaan untuk Remaja</h5>
                             <p class="card-text text-muted">Jumat, 25 Juli 2025</p>
-                            <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Read More <i class="ri-arrow-right-line"></i></a>
+                            <a href="{{route('news_detail')}}" class="text-dark text-decoration-none fw-medium mt-auto">
+                                Selengkapnya <i class="ri-arrow-right-line"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
     </div>
-
-    <!-- <section class="container-fluid py-5" id="location">
-        <div class="container mb-4">
-            <h2 class="text-left mb-3 fw-bold">LOCATION</h2>
-            <p class="text-muted mb-4">
-                Lokasi Head Office bisnis unit kami
-            </p>
-        </div>
-
-        <div class="container px-3">
-            <div class="ratio ratio-16x9 rounded overflow-hidden shadow">
-                <iframe
-                    class="w-100 h-100 border-0"
-                    src="https://www.google.com/maps/d/embed?mid=1eTcaRB8-9AdtXlDKo4zzJ_6WH2tmyu4&ehbc=2E312F"
-                    allowfullscreen
-                    loading="lazy">
-                </iframe>
-            </div>
-        </div>
-    </section> -->
 
     <section class="container-fluid py-5" id="location">
         <div class="container mb-4">
             <h2 class="text-left mb-3 fw-bold">Lokasi</h2>
             <p class="text-muted mb-4">
-                Lokasi Head Office bisnis unit kami
+                Lokasi Bisnis Unit Kami
             </p>
         </div>
 
         <div class="container position-relative">
             <!-- Titik Tanah Abang -->
             <div class="position-relative">
-                <img src="{{ asset('/assets/images/maps.png') }}" class="img-fluid rounded shadow" alt="Peta Indonesia" />
-                <!-- Pin: Tanah Abang (Jakarta Pusat) -->
-                <div class="map-pin" style="top: 71%; left: 26.5%;">
-                    <div class="tooltip-custom">
-                        <b>PT MAI (Holding Company)</b><br>Jl. Tanah Abang II No.104, RT.9/RW.3, Cideng, <br>Kecamatan Gambir, Kota Jakarta Pusat
-                    </div>
-                </div>
+                <div id="map" style="height: 500px; width: 100%;"></div>
 
-                <!-- Pin: Tebet (Jakarta Selatan) -->
-                <div class="map-pin" style="top: 71%; left: 27.5%;">
-                    <div class="tooltip-custom">
-                        <b>PT Bumen Redja Abadi</b><br>Jl. Dr. Saharjo No.321 10, RT.10/RW.1, Tebet Bar., <br>Kec. Tebet, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 13610
-                    </div>
-                </div>
             </div>
-
         </div>
     </section>
 
     @endsection
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Inisialisasi peta
+            var map = L.map('map').setView([-6.200000, 106.816666], 10); // Contoh: Jakarta
+
+            // Tambahkan tile layer (OpenStreetMap)
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+            // Data titik (bisa dari database via Blade atau API)
+            var titik = <?php echo $lokasi; ?>;
+
+            // Tambahkan marker satu per satu
+            titik.forEach(function(t) {
+                L.marker([t.lat, t.lng]).addTo(map).bindPopup(t.label);
+            });
+
+            titik.forEach(function(t) {
+                var popupContent = `
+        <div class="text-center">
+            <strong>${t.label}</strong><br>
+            <a href="https://www.google.com/maps?q=${t.lat},${t.lng}" target="_blank">Visit</a>
+        </div>
+    `;
+                L.marker([t.lat, t.lng]).addTo(map).bindPopup(popupContent);
+            });
+
+        });
+    </script>
