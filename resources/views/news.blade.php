@@ -13,7 +13,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Pembangunan Gedung Baru Dimulai</h5>
                         <p class="card-text text-muted">30 Juli 2025</p>
-                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Read More <i class="ri-arrow-right-line"></i></a>
+                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Selengkapnya <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Kegiatan Bakti Sosial di Desa Cibuntu</h5>
                         <p class="card-text text-muted">Senin, 28 Juli 2025</p>
-                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Read More <i class="ri-arrow-right-line"></i></a>
+                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Selengkapnya <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Pelatihan Kewirausahaan untuk Remaja</h5>
                         <p class="card-text text-muted">Jumat, 25 Juli 2025</p>
-                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Read More <i class="ri-arrow-right-line"></i></a>
+                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Selengkapnya <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Pembangunan Gedung Baru Dimulai</h5>
                         <p class="card-text text-muted">30 Juli 2025</p>
-                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Read More <i class="ri-arrow-right-line"></i></a>
+                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Selengkapnya <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Kegiatan Bakti Sosial di Desa Cibuntu</h5>
                         <p class="card-text text-muted">Senin, 28 Juli 2025</p>
-                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Read More <i class="ri-arrow-right-line"></i></a>
+                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Selengkapnya <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Pelatihan Kewirausahaan untuk Remaja</h5>
                         <p class="card-text text-muted">Jumat, 25 Juli 2025</p>
-                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Read More <i class="ri-arrow-right-line"></i></a>
+                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Selengkapnya <i class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
             </div>

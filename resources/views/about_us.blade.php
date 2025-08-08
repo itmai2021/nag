@@ -78,7 +78,7 @@
 <section class="py-5 bg-white">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold">Company Core Values</h2>
+            <h2 class="fw-bold">Nilai Inti Perusahaan</h2>
             <div class="custom-gradient-line"></div>
 
         </div>
@@ -88,6 +88,7 @@
             ['title' => 'Integritas', 'icon' => 'bi-shield-check'],
             ['title' => 'Akuntabilitas', 'icon' => 'bi-clipboard-check'],
             ['title' => 'Rasa Hormat', 'icon' => 'bi-emoji-smile'],
+            ['title' => 'Rasa Memiliki', 'icon' => 'bi-emoji-smile'],
             ['title' => 'Kepedulian', 'icon' => 'bi-heart'],
             ['title' => 'Perbaikan', 'icon' => 'bi-bar-chart-line'],
             ];
@@ -95,15 +96,17 @@
 
             @foreach ($core_values as $value)
             <div class="col-6 col-md-4 col-lg-3">
-                <div class="d-flex flex-column justify-content-center align-items-center text-center p-4 bg-light border rounded shadow-sm h-100" style="min-height: 100px;">
-                    <div class="text-primary mb-2">
-                        <i class="bi {{ $value['icon'] }} fs-1"></i>
-                    </div>
-                    <h5 class="fw-bold mb-0">{{ $value['title'] }}</h5>
+                <div class="banner__card">
+                    <h6><b>{{ $value['title'] }}</b></h6>
                 </div>
-
             </div>
+            <!-- <section class="section__container banner__container">
+                <div class="banner__card">
+                    <h6>{{ $value['title'] }}</h4>
+                </div>
+            </section> -->
             @endforeach
+
         </div>
     </div>
 </section>
