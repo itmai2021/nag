@@ -222,9 +222,10 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('#table1').DataTable({
-            responsive: true,
-            pageLength: 10,
-            lengthChange: true,
+            responsive: true, // mode responsif
+            scrollX: true, // bisa scroll horizontal
+            pageLength: 10, // opsional: jumlah baris default
+            lengthMenu: [5, 10, 25, 50]
         });
     });
 

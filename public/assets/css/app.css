@@ -199,6 +199,81 @@ body {
     height: auto;
 }
 
+.goal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.goal-card {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: #1d237e;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goal-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.goal-img {
+    width: 25vh;
+    height: 23vh;
+    margin-right: 1.5rem;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.goal-card:hover .goal-img {
+    transform: scale(1.05);
+}
+
+.goal-text h4 {
+    margin: 0;
+    font-weight: 600;
+    color: white;
+}
+
+.goal-text p {
+    margin: 0.25rem 0 0;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .goal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .goal-img {
+        width: 20vh;
+        height: 18vh;
+    }
+}
+
+/* HP */
+@media (max-width: 576px) {
+    .goal-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .goal-img {
+        width: 18vh;
+        height: auto;
+        margin: 0 0 1rem 0;
+    }
+}
+
+
+
 
 
 .grid-item {
@@ -614,8 +689,14 @@ body {
 }
 
 .custom-navbar a:hover {
-    color: #ffd700;
+    color: #2887ff;
+    /* warna teks biru */
+    /* text-shadow: 0 0 3px rgb(255, 255, 255); */
+
+    /* hitam tipis */
 }
+
+
 
 /* Untuk memberikan ruang atas agar carousel-caption tidak tertutup navbar */
 .carousel-caption {
@@ -997,7 +1078,8 @@ header::before {
 }
 
 footer {
-    background-color: var(--extra-light);
+    background-color: #1d237e;
+
 }
 
 .footer__container {
@@ -3091,4 +3173,26 @@ a {
     background-color: #001f4d !important;
     /* navy gelap untuk efek hover */
     border-color: #001f4d !important;
+}
+
+.shadow-sm {
+    box-shadow: none !important;
+}
+
+.modal-footer {
+    padding-bottom: 20px !important;
+    /* tambah jarak bawah */
+}
+
+.goal-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* vertical center */
+    align-items: center;
+    /* horizontal center */
+}
+
+.modal .btn {
+    margin-bottom: 15px;
 }

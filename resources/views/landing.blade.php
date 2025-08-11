@@ -23,7 +23,7 @@
                 </button>
             </div>
     </section>
-    <section class="section__container destination__container mt-4 mb-5" id="pilar">
+    <!-- <section class="section__container destination__container mt-4 mb-5" id="pilar">
         <h2 class="section__header">Sektor Bisnis</h2>
         <p class="section__description">
             Sektor Bisnis usaha utama kami dalam berbagai sektor industri.
@@ -52,7 +52,7 @@
                 <img src="{{ asset('/assets/images/NAG.png') }}" alt="">
             </div>
 
-            <!-- <div class="circle-container">
+            <div class="circle-container">
                 <div class="circle-item top-left">
                     <i class="fas fa-car"></i>
                     <span id="automotive-smalltext">AUTOMOTIVE<br>TRADING</span>
@@ -69,9 +69,46 @@
                     <i class="fas fa-concierge-bell"></i>
                     <span id="other-smalltext">OTHERS</span>
                 </div>
-            </div> -->
+            </div>
+        </div>
+    </section> -->
+    <section class="section__container destination__container mt-4 mb-5" id="pilar">
+        <h2 class="section__header">Sektor Bisnis</h2>
+        <p class="section__description">
+            Sektor Bisnis usaha utama kami dalam berbagai sektor industri.
+        </p>
+        <div class="goal-grid">
+            <div class="goal-card" id="open-automotive" data-aos="fade-up">
+                <img src="{{ asset('/assets/images/1.png') }}" alt="Goal 1" class="goal-img">
+                <div class="goal-text">
+                    <h4 class="text-center">Automotive Trading</h4>
+                </div>
+            </div>
+
+            <div class="goal-card" id="open-manufacture" data-aos="fade-up" data-aos-delay="100">
+                <img src="{{ asset('/assets/images/2.png') }}" alt="Goal 2" class="goal-img">
+                <div class="goal-text">
+                    <h4 class="text-center">Manufacture</h4>
+                </div>
+            </div>
+
+            <div class="goal-card" id="open-finance" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('/assets/images/3.png') }}" alt="Goal 4" class="goal-img">
+                <div class="goal-text">
+                    <h4 class="text-center">Financial</h4>
+                </div>
+            </div>
+
+            <div class="goal-card" id="open-other" data-aos="fade-up" data-aos-delay="300">
+                <img src="{{ asset('/assets/images/4.png') }}" alt="Goal 4" class="goal-img">
+                <div class="goal-text">
+                    <h4 class="text-center">Others</h4>
+                </div>
+            </div>
         </div>
     </section>
+
+
 
     <!-- AUTOMOTIVE -->
     <section class="section__container destination__container mt-5 d-none" id="automotive" style="margin-bottom: 20vh;">
@@ -86,7 +123,7 @@
             <div class="custom-grid justify-content-center">
                 @foreach($automotive as $auto)
                 <div class="logo-item text-center">
-                    <img src="{{ asset('assets/images/' . $auto->logo) }}"
+                    <img src="{{ asset('storage/logo/' . $auto->logo) }}"
                         alt="Logo {{ $auto->company_shortname }}"
                         class="logo-click"
                         data-bs-toggle="modal"
@@ -101,31 +138,36 @@
     @foreach($automotive as $auto)
     <div class="modal fade" id="imageModal{{ $auto->id }}" tabindex="-1" aria-labelledby="imageModalLabel{{ $auto->id }}" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel{{ $auto->id }}">{{ $auto->company_name }}</h5>
+            <div class="modal-content shadow-lg rounded-3">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="imageModalLabel{{ $auto->id }}">
+                        {{ $auto->company_name }}
+                    </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
                 </div>
-                <div class="modal-body text-center">
-                    <section class="section__container showcase__container">
-                        <div class="showcase__image">
-                            <img src="{{ asset('assets/images/' . $auto->logo) }}" alt="Logo" />
+                <div class="modal-body" style="min-height: 250px; display: flex; align-items: center;justify-content: center;gap: 20px;">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-md-4 text-center">
+                            <img src="{{ asset('storage/logo/' . $auto->logo) }}"
+                                alt="Logo"
+                                class="img-fluid rounded shadow-sm"
+                                style="max-height: 200px; object-fit: contain;">
                         </div>
-                        <div class="showcase__content">
-                            <p style="text-align: left;">
+                        <!-- Deskripsi -->
+                        <div class="col-md-8">
+                            <p class="text-muted mb-0" style="text-align: justify;">
                                 {{ $auto->description }}
                             </p>
-                            <div class="showcase__btn" style="position: relative; height: 200px;">
-                                @if($auto->web_url)
-                                <a href="{{ $auto->web_url }}" target="_blank"
-                                    style="position: absolute; bottom: 0; right: 0; color: black; text-decoration: none; display: flex; align-items: center; gap: 5px;">
-                                    Selengkapnya
-                                    <span><i class="ri-arrow-right-line"></i></span>
+                            @if($auto->web_url)
+                            <div class="text-end mt-3">
+                                <a href="{{ $auto->web_url }}" target="_blank" class="text-decoration-none fw-semibold">
+                                    Selengkapnya <i class="ri-arrow-right-line"></i>
                                 </a>
-                                @endif
                             </div>
+                            @endif
                         </div>
-                    </section>
+                    </div>
                 </div>
             </div>
         </div>
@@ -144,13 +186,13 @@
             <div class="custom-grid justify-content-center">
                 @foreach($manufacture as $manuf)
                 <div class="logo-item text-center">
-                    <img src="{{ asset('assets/images/' . $manuf->logo) }}"
+                    <img src="{{ asset('storage/logo/' . $manuf->logo) }}"
                         alt="Logo {{ $manuf->company_shortname }}"
                         class="logo-click"
                         data-bs-toggle="modal"
                         data-bs-target="#imageModal2{{ $manuf->id }}"
                         data-id="{{ $manuf->id }}"
-                        data-logo="{{ asset('assets/images/' . $manuf->logo) }}"
+                        data-logo="{{ asset('storage/logo/' . $manuf->logo) }}"
                         style="cursor: pointer; max-height: 100px;">
                 </div>
                 @endforeach
@@ -160,31 +202,36 @@
     @foreach($manufacture as $manuf)
     <div class="modal fade" id="imageModal2{{ $manuf->id }}" tabindex="-1" aria-labelledby="imageModalLabel{{ $manuf->id }}" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel{{ $manuf->id }}">{{ $manuf->company_name }}</h5>
+            <div class="modal-content shadow-lg rounded-3">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="imageModalLabel{{ $manuf->id }}">
+                        {{ $manuf->company_name }}
+                    </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
                 </div>
-                <div class="modal-body text-center">
-                    <section class="section__container showcase__container">
-                        <div class="showcase__image">
-                            <img src="{{ asset('assets/images/' . $manuf->logo) }}" alt="Logo" />
+                <div class="modal-body" style="min-height: 250px; display: flex; align-items: center;justify-content: center;gap: 20px;">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-md-4 text-center">
+                            <img src="{{ asset('storage/logo/' . $manuf->logo) }}"
+                                alt="Logo"
+                                class="img-fluid rounded shadow-sm"
+                                style="max-height: 200px; object-fit: contain;">
                         </div>
-                        <div class="showcase__content">
-                            <p style="text-align: left;">
+                        <!-- Deskripsi -->
+                        <div class="col-md-8">
+                            <p class="text-muted mb-0" style="text-align: justify;">
                                 {{ $manuf->description }}
                             </p>
-                            <div class="showcase__btn" style="position: relative; height: 200px;">
-                                @if($manuf->web_url)
-                                <a href="{{ $manuf->web_url }}" target="_blank"
-                                    style="position: absolute; bottom: 0; right: 0; color: black; text-decoration: none; display: flex; align-items: center; gap: 5px;">
-                                    Selengkapnya
-                                    <span><i class="ri-arrow-right-line"></i></span>
+                            @if($manuf->web_url)
+                            <div class="text-end mt-3">
+                                <a href="{{ $manuf->web_url }}" target="_blank" class="text-decoration-none fw-semibold">
+                                    Selengkapnya <i class="ri-arrow-right-line"></i>
                                 </a>
-                                @endif
                             </div>
+                            @endif
                         </div>
-                    </section>
+                    </div>
                 </div>
             </div>
         </div>
@@ -192,7 +239,7 @@
     @endforeach
     <!-- FINANCE -->
     <section class="section__container destination__container mt-5 d-none" id="finance" style="margin-bottom: 20vh;">
-        <h2 class="section__header mb-5 text-center">Financial Services</h2>
+        <h2 class="section__header mb-5 text-center">Financial</h2>
         <div class="text-left mb-4 ml-4">
             <p class="mb-0 text-start" id="back-to-pilar3" style="cursor: pointer;margin-left: 10vh;">
                 <i class="ri-arrow-left-line"></i>Kembali
@@ -202,13 +249,13 @@
             <div class="custom-grid justify-content-center">
                 @foreach($finance as $fn)
                 <div class="logo-item text-center">
-                    <img src="{{ asset('assets/images/' . $fn->logo) }}"
+                    <img src="{{ asset('storage/logo/' . $fn->logo) }}"
                         alt="Logo {{ $fn->company_shortname }}"
                         class="logo-click"
                         data-bs-toggle="modal"
                         data-bs-target="#imageModal3{{ $fn->id }}"
                         data-id="{{ $fn->id }}"
-                        data-logo="{{ asset('assets/images/' . $fn->logo) }}"
+                        data-logo="{{ asset('storage/logo/' . $fn->logo) }}"
                         style="cursor: pointer; max-height: 100px;">
                 </div>
                 @endforeach
@@ -218,31 +265,36 @@
     @foreach($finance as $fnc)
     <div class="modal fade" id="imageModal3{{ $fnc->id }}" tabindex="-1" aria-labelledby="imageModalLabel{{ $fnc->id }}" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel{{ $fnc->id }}">{{ $fnc->company_name }}</h5>
+            <div class="modal-content shadow-lg rounded-3">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="imageModalLabel{{ $fnc->id }}">
+                        {{ $fnc->company_name }}
+                    </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
                 </div>
-                <div class="modal-body text-center">
-                    <section class="section__container showcase__container">
-                        <div class="showcase__image">
-                            <img src="{{ asset('assets/images/' . $fnc->logo) }}" alt="Logo" />
+                <div class="modal-body" style="min-height: 250px; display: flex; align-items: center;justify-content: center;gap: 20px;">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-md-4 text-center">
+                            <img src="{{ asset('storage/logo/' . $fnc->logo) }}"
+                                alt="Logo"
+                                class="img-fluid rounded shadow-sm"
+                                style="max-height: 200px; object-fit: contain;">
                         </div>
-                        <div class="showcase__content">
-                            <p style="text-align: left;">
+                        <!-- Deskripsi -->
+                        <div class="col-md-8">
+                            <p class="text-muted mb-0" style="text-align: justify;">
                                 {{ $fnc->description }}
                             </p>
-                            <div class="showcase__btn" style="position: relative; height: 200px;">
-                                @if($fnc->web_url)
-                                <a href="{{ $fnc->web_url }}" target="_blank"
-                                    style="position: absolute; bottom: 0; right: 0; color: black; text-decoration: none; display: flex; align-items: center; gap: 5px;">
-                                    Selengkapnya
-                                    <span><i class="ri-arrow-right-line"></i></span>
+                            @if($fnc->web_url)
+                            <div class="text-end mt-3">
+                                <a href="{{ $fnc->web_url }}" target="_blank" class="text-decoration-none fw-semibold">
+                                    Selengkapnya <i class="ri-arrow-right-line"></i>
                                 </a>
-                                @endif
                             </div>
+                            @endif
                         </div>
-                    </section>
+                    </div>
                 </div>
             </div>
         </div>
@@ -251,7 +303,7 @@
 
     <!-- OTHER -->
     <section class="section__container destination__container mt-5 d-none" id="other" style="margin-bottom: 20vh;">
-        <h2 class="section__header mb-5 text-center">Other Services</h2>
+        <h2 class="section__header mb-5 text-center">Others</h2>
         <div class="text-left mb-4 ml-4">
             <p class="mb-0 text-start" id="back-to-pilar4" style="cursor: pointer;margin-left: 10vh;">
                 <i class="ri-arrow-left-line"></i>Kembali
@@ -261,13 +313,13 @@
             <div class="custom-grid justify-content-center">
                 @foreach($others as $other)
                 <div class="logo-item text-center">
-                    <img src="{{ asset('assets/images/' . $other->logo) }}"
+                    <img src="{{ asset('storage/logo/' . $other->logo) }}"
                         alt="Logo {{ $other->company_shortname }}"
                         class="logo-click"
                         data-bs-toggle="modal"
                         data-bs-target="#imageModal4{{ $other->id }}"
                         data-id="{{ $other->id }}"
-                        data-logo="{{ asset('assets/images/' . $other->logo) }}"
+                        data-logo="{{ asset('storage/logo/' . $other->logo) }}"
                         style="cursor: pointer; max-height: 100px;">
                 </div>
                 @endforeach
@@ -277,31 +329,36 @@
     @foreach($others as $other)
     <div class="modal fade" id="imageModal4{{ $other->id }}" tabindex="-1" aria-labelledby="imageModalLabel{{ $other->id }}" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel{{ $other->id }}">{{ $other->company_name }}</h5>
+            <div class="modal-content shadow-lg rounded-3">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="imageModalLabel{{ $other->id }}">
+                        {{ $other->company_name }}
+                    </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
                 </div>
-                <div class="modal-body text-center">
-                    <section class="section__container showcase__container">
-                        <div class="showcase__image">
-                            <img src="{{ asset('assets/images/' . $other->logo) }}" alt="Logo" />
+                <div class="modal-body" style="min-height: 250px; display: flex; align-items: center;justify-content: center;gap: 20px;">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-md-4 text-center">
+                            <img src="{{ asset('storage/logo/' . $other->logo) }}"
+                                alt="Logo"
+                                class="img-fluid rounded shadow-sm"
+                                style="max-height: 200px; object-fit: contain;">
                         </div>
-                        <div class="showcase__content">
-                            <p style="text-align: left;">
+                        <!-- Deskripsi -->
+                        <div class="col-md-8">
+                            <p class="text-muted mb-0" style="text-align: justify;">
                                 {{ $other->description }}
                             </p>
-                            <div class="showcase__btn" style="position: relative; height: 200px;">
-                                @if($other->web_url)
-                                <a href="{{ $other->web_url }}" target="_blank"
-                                    style="position: absolute; bottom: 0; right: 0; color: black; text-decoration: none; display: flex; align-items: center; gap: 5px;">
-                                    Selengkapnya
-                                    <span><i class="ri-arrow-right-line"></i></span>
+                            @if($other->web_url)
+                            <div class="text-end mt-3">
+                                <a href="{{ $other->web_url }}" target="_blank" class="text-decoration-none fw-semibold">
+                                    Selengkapnya <i class="ri-arrow-right-line"></i>
                                 </a>
-                                @endif
                             </div>
+                            @endif
                         </div>
-                    </section>
+                    </div>
                 </div>
             </div>
         </div>
@@ -379,7 +436,7 @@
         <div class="container position-relative">
             <!-- Titik Tanah Abang -->
             <div class="position-relative">
-                <div id="map" style="height: 500px; width: 100%;"></div>
+                <div id="map" style="height: 500px; width: 100%;border-radius:15px"></div>
 
             </div>
         </div>
@@ -388,8 +445,13 @@
     @endsection
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            AOS.init({
+                duration: 800, // durasi animasi
+                once: true // animasi hanya sekali
+            });
             // Inisialisasi peta
             var map = L.map('map').setView([-6.200000, 106.816666], 10); // Contoh: Jakarta
 
@@ -410,7 +472,7 @@
                 var popupContent = `
         <div class="text-center">
             <strong>${t.label}</strong><br>
-            <a href="https://www.google.com/maps?q=${t.lat},${t.lng}" target="_blank">Visit</a>
+            <a href="${t.link}" target="_blank">Visit</a>
         </div>
     `;
                 L.marker([t.lat, t.lng]).addTo(map).bindPopup(popupContent);

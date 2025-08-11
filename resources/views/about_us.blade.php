@@ -3,14 +3,13 @@
 @section('content')
 
 <!-- Tentang Kami -->
-<section class="py-5 bg-light mt-5">
+<section class="py-5 bg-light mt-5" data-aos="fade-up">
     <div class="container">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">
             <h2 class="fw-bold">Tentang Kami</h2>
             <div class="custom-gradient-line"></div>
-
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <div class="col-lg-10">
                 <p class="lead text-justify">
                     New Armada Group pertama kali didirikan pada tahun 1974 oleh Bapak David Herman Jaya sebagai auto body manufacture di Magelang, Jawa Tengah. Selama 51 tahun, New Armada Group terus berkembang menjadi salah satu perusahaan nasional bernilai tinggi yang didukung lebih dari 10.000 karyawan yang tersebar di kota besar di Indonesia.
@@ -25,21 +24,20 @@
 </section>
 
 <!-- Visi & Misi -->
-<section class="py-5 bg-white">
+<section class="py-5 bg-white" data-aos="fade-up">
     <div class="container">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">
             <h2 class="fw-bold">Visi & Misi</h2>
             <div class="custom-gradient-line"></div>
-
         </div>
         <div class="row g-4">
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
                 <div class="p-4 shadow-sm border-start border-5 border-primary bg-light h-100">
                     <h4 class="text-primary fw-bold">Visi</h4>
                     <p class="mb-0">Menjadi perusahaan kelas global dengan kompetensi dan inovasi yang unggul.</p>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-left" data-aos-delay="300">
                 <div class="p-4 shadow-sm border-start border-5 border-primary bg-light h-100">
                     <h4 class="text-primary fw-bold">Misi</h4>
                     <ul class="mb-0 ps-3">
@@ -52,14 +50,13 @@
 </section>
 
 <!-- Filosofi -->
-<section class="py-5 bg-light">
+<section class="py-5 bg-light" data-aos="fade-up">
     <div class="container">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">
             <h2 class="fw-bold">Filosofi</h2>
             <div class="custom-gradient-line"></div>
-
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <div class="col-lg-10">
                 <ul class="list-group list-group-flush fs-5">
                     <li class="list-group-item">1. Kepuasan pelanggan adalah komitmen kami</li>
@@ -75,12 +72,11 @@
 </section>
 
 <!-- Company Core Values -->
-<section class="py-5 bg-white">
+<section class="py-5 bg-white" data-aos="fade-up">
     <div class="container">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">
             <h2 class="fw-bold">Nilai Inti Perusahaan</h2>
             <div class="custom-gradient-line"></div>
-
         </div>
         <div class="row g-4 justify-content-center">
             @php
@@ -94,21 +90,28 @@
             ];
             @endphp
 
-            @foreach ($core_values as $value)
-            <div class="col-6 col-md-4 col-lg-3">
+            @foreach ($core_values as $index => $value)
+            <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="{{ 150 + ($index * 100) }}">
                 <div class="banner__card">
                     <h6><b>{{ $value['title'] }}</b></h6>
                 </div>
             </div>
-            <!-- <section class="section__container banner__container">
-                <div class="banner__card">
-                    <h6>{{ $value['title'] }}</h4>
-                </div>
-            </section> -->
             @endforeach
-
         </div>
     </div>
 </section>
 
+@endsection
+@section('script')
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        once: false,
+        mirror: true,
+        duration: 800,
+    });
+</script>
 @endsection

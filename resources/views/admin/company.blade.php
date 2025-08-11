@@ -19,11 +19,10 @@
                 </div>
                 <section class="section">
                     <div class="card-body">
-                        <table class="table table-striped" id="table1">
+                        <table class="table table-striped w-100" id="table1">
                             <thead>
                                 <tr>
                                     <th class="text-center">No</th>
-                                    <th class="text-center">Company Code</th>
                                     <th class="text-center">Company Name</th>
                                     <th class="text-center">Company Short Name</th>
                                     <th class="text-center">Action</th>
@@ -33,18 +32,11 @@
                                 @foreach($data['companies'] as $key => $company)
                                 <tr>
                                     <td class="text-center">{{$key+1}}</td>
-                                    <td class="text-center">{{$company->company_code}}</td>
                                     <td class="text-center">{{$company->company_name}}</td>
                                     <td class="text-center">{{$company->company_shortname}}</td>
                                     <td class="text-center">
                                         <button class="btn btn-sm btn-primary" data-bs-toggle="modal"
                                             data-bs-target="#edit-data{{$company->id}}">Edit</button>
-                                        <!-- <form action="{{ route('company.delete', $company->id) }}" method="POST" class="d-inline">
-                                            @method('delete')
-                                            @csrf
-                                            <input name="_method" type="hidden" value="DELETE">
-                                            <button type="submit" class="btn btn-sm btn-danger show_confirm" data-toggle="tooltip" title='Delete'>Delete</button>
-                                        </form> -->
                                     </td>
                                 </tr>
                                 @endforeach
@@ -65,11 +57,6 @@
                                     <form action="{{ route('company.store') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="modal-body overflow-auto" style="max-height: 60vh;">
-                                            <div class="mb-3">
-                                                <label>Company Code:</label>
-                                                <input type="text" class="form-control" name="company_code" required>
-                                            </div>
-
                                             <div class="mb-3">
                                                 <label>Company Name:</label>
                                                 <input type="text" class="form-control" name="company_name" required>
@@ -140,12 +127,6 @@
                                         @csrf
                                         @method('PUT')
                                         <div class="modal-body overflow-auto" style="max-height: 60vh;">
-                                            <label>Company Code:</label>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" name="company_code"
-                                                    value="{{ old('company_code', $company->company_code) }}" placeholder="Company Code">
-                                            </div>
-
                                             <label>Company Name:</label>
                                             <div class="form-group">
                                                 <input type="text" class="form-control" name="company_name"
@@ -186,16 +167,16 @@
                                             <label>Logo (Upload Baru jika ingin ganti):</label>
                                             <div class="form-group">
                                                 <input type="file" name="logo" class="form-control">
-                                                @if ($company->logo)
-                                                <small class="text-muted">Current: {{ $company->logo }}</small>
+                                                @if($company->logo)
+                                                <small class="d-block mt-1">Current: <img style="width:25%" src="{{ asset('storage/logo/'.$company->logo) }}"></small>
                                                 @endif
                                             </div>
 
                                             <label>Building Photo (Upload Baru jika ingin ganti):</label>
                                             <div class="form-group">
                                                 <input type="file" name="building_photo" class="form-control">
-                                                @if ($company->building_photo)
-                                                <small class="text-muted">Current: {{ $company->building_photo }}</small>
+                                                @if($company->building_photo)
+                                                <small class="d-block mt-1">Current: <img style="width:25%" src="{{ asset('storage/buildings/'.$company->building_photo) }}"></small>
                                                 @endif
                                             </div>
                                         </div>
@@ -220,13 +201,14 @@
 
 @section('addon-script')
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('#table1').DataTable({
-            responsive: true,
-            pageLength: 10,
-            lengthChange: true,
-        });
+    $('#table1').DataTable({
+        responsive: true,
+        scrollX: true,
+        pageLength: 10,
+        lengthMenu: [5, 10, 25, 50],
+        stripeClasses: ['table-striped-row', ''] // custom
     });
+
 
     $('.show_confirm').click(function(event) {
 

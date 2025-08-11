@@ -20,7 +20,7 @@
                 <section class="section">
                     <div class="card-body">
 
-                        <table class="table table-striped" id="table1">
+                        <table class="table table-striped" id="table2">
                             <thead>
                                 <tr>
                                     <th class="text-center">No</th>
@@ -28,6 +28,7 @@
                                     <th>Branch Name</th>
                                     <th>Address</th>
                                     <th>Location Point</th>
+                                    <th>Link Maps</th>
                                     <th>Active</th>
                                     <th class="text-center">Action</th>
                                 </tr>
@@ -38,8 +39,10 @@
                                     <td class="text-center">{{ $index + 1 }}</td>
                                     <td>{{ $bussines_unit->company->company_name }}</td>
                                     <td>{{ $bussines_unit->branch_name }}</td>
-                                    <td>{{ $bussines_unit->address }}</td>
+                                    <td>{{ \Illuminate\Support\Str::limit($bussines_unit->address, 10) }}</td>
+
                                     <td>{{ $bussines_unit->location_point }}</td>
+                                    <td>{{ \Illuminate\Support\Str::limit($bussines_unit->link_maps, 12) }}</td>
                                     <td class="text-center">
                                         {{ $bussines_unit->is_active ? 'Yes' : 'No' }}
                                     </td>
@@ -101,6 +104,11 @@
                                                 <label for="location_point" class="form-label">Location Point</label>
                                                 <!-- <div id="map" style="height: 300px;"></div> -->
                                                 <input type="text" name="location_point" id="location_point" class="form-control mt-2" required>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="link_maps" class="form-label">Link Maps</label>
+                                                <input name="link_maps" class="form-control" id="link_maps" rows="3" required>
                                             </div>
 
                                             <!-- Active -->
@@ -174,6 +182,11 @@
                                                 <!-- <div id="map" style="height: 300px;"></div> -->
                                                 <input type="text" name="location_point" id="location_point" class="form-control mt-2"
                                                     value="{{ $bussines_unit->location_point }}" required>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="link_maps" class="form-label">Link Maps</label>
+                                                <input name="link_maps" class="form-control" id="link_maps" rows="3" required value="{{ $bussines_unit->link_maps }}">
                                             </div>
 
                                             <!-- Active -->
@@ -262,9 +275,14 @@
 
 
     $(document).ready(function() {
-        new DataTable("#table1");
-
+        $('#table2').DataTable({
+            responsive: true, // mode responsif
+            scrollX: true, // bisa scroll horizontal
+            pageLength: 10, // opsional: jumlah baris default
+            lengthMenu: [5, 10, 25, 50]
+        });
     });
+
 
     $('.show_confirm').click(function(event) {
 

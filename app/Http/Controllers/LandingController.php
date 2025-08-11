@@ -28,9 +28,10 @@ class LandingController extends Controller
 
             // Tambahkan ke array $loc
             $loc[] = [
-                'label' => $item->company->company_name . ' ' . $item->branch_name,
+                'label' => $item->company->company_name . ' (' . $item->branch_name . ')',
                 'lat' => $lat,
                 'lng' => $lng,
+                'link' => $item->link_maps,
             ];
         }
 

@@ -38,15 +38,14 @@ class CompanyController extends Controller
     {
         // Validasi input
         $request->validate([
-            'company_code' => 'required|string|max:255',
             'company_name' => 'required|string|max:255',
             'company_shortname' => 'nullable|string|max:255',
             'pilar' => 'required|string|max:255',
             'web_url' => 'nullable|url',
             'description' => 'nullable|string',
             'is_active' => 'required|boolean',
-            'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'building_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:5048',
+            'building_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:5048',
         ]);
 
         // Upload file jika ada
@@ -63,7 +62,6 @@ class CompanyController extends Controller
         // Simpan data
         $model                      = new Company(); // ganti `Company` sesuai model yang kamu pakai
         $model->id                  = Str::uuid();
-        $model->company_code        = $request->company_code;
         $model->company_name        = $request->company_name;
         $model->company_shortname   = $request->company_shortname;
         $model->pilar               = $request->pilar;
@@ -115,19 +113,17 @@ class CompanyController extends Controller
         $company = Company::findOrFail($id);
 
         $request->validate([
-            'company_code' => 'required|string|max:255',
             'company_name' => 'required|string|max:255',
             'company_shortname' => 'required|string|max:255',
             'pilar' => 'nullable|string|max:255',
             'web_url' => 'nullable|url|max:255',
             'description' => 'nullable|string',
             'is_active' => 'required|boolean',
-            'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'building_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
+            'building_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
         ]);
 
         // Update data
-        $company->company_code = $request->company_code;
         $company->company_name = $request->company_name;
         $company->company_shortname = $request->company_shortname;
         $company->pilar = $request->pilar;

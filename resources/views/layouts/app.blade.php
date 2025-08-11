@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
 
 </head>
+@if(Auth::user())
 
 <body>
     <div id="app">
@@ -126,6 +127,12 @@
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
     @yield('addon-script')
 </body>
+@else
+@dd('NO')
+<script>
+    window.location.href = "{{ route('login.index') }}";
+</script>
+@endif
 
 </html>
 <script>

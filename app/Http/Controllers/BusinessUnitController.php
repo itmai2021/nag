@@ -46,6 +46,7 @@ class BusinessUnitController extends Controller
             'company_id'    => 'required',
             'branch_name'     => 'required|string|max:100',
             'address'         => 'required|string',
+            'link_maps'         => 'required|string',
             'location_point'  => 'required|string', // format: "lat,lng"
             'is_active'       => 'required|in:1,0',
         ]);
@@ -56,6 +57,7 @@ class BusinessUnitController extends Controller
             'company_id'      => $validated['company_id'],
             'branch_name'     => $validated['branch_name'],
             'address'         => $validated['address'],
+            'link_maps'       => $validated['link_maps'],
             'location_point'  => $validated['location_point'],
             'is_active'       => $validated['is_active'],
             'created_at'      => now(),
@@ -104,6 +106,7 @@ class BusinessUnitController extends Controller
             'company_id'     => 'required',
             'branch_name'    => 'required|string|max:100',
             'address'        => 'required|string',
+            'link_maps'      => 'required|string',
             'location_point' => 'required|string',
             'is_active'      => 'required|boolean',
         ]);
@@ -113,6 +116,7 @@ class BusinessUnitController extends Controller
         $businessUnit->company_id     = $request->company_id;
         $businessUnit->branch_name    = $request->branch_name;
         $businessUnit->address        = $request->address;
+        $businessUnit->link_maps        = $request->link_maps;
         $businessUnit->location_point = $request->location_point;
         $businessUnit->is_active      = $request->is_active;
 

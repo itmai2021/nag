@@ -9,6 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="{{ asset('/assets/css/app.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
         #mapid {
             height: 600px;
@@ -59,42 +61,49 @@
                 <div class="footer__logo">
                     <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="img-fluid" style="max-width: 70vh;">
                 </div>
-                <p>Together We Are Strong!</p>
+                <p class="text-white">Together We Are Strong!</p>
             </div>
             <div class="footer__col mt-4">
-                <h4>Hubungi Kami</h4>
+                <h4 class="text-white">Hubungi Kami</h4>
                 <ul class="footer__links p-0">
                     <li>
-                        <a href="#"><i class="ri-phone-fill"></i> (021) 3841061</a>
+                        <a href="#" class="text-white"><i class="ri-phone-fill"></i> (021) 3841061</a>
                     </li>
                     <li>
-                        <a href="#"><i class="ri-mail-fill"></i>secretariat@mai.nag.co.id</a>
+                        <a href="#" class="text-white"><i class="ri-mail-fill"></i>secretariat@mai.nag.co.id</a>
                     </li>
                     <li>
-                        <a href="#"><i class="ri-map-pin-2-fill"></i> Jl. Tanah Abang II No.104, Cideng, Jakarta Pusat</a>
+                        <a href="#" class="text-white"><i class="ri-map-pin-2-fill"></i> Jl. Tanah Abang II No.104, Cideng, Jakarta Pusat</a>
                     </li>
                 </ul>
             </div>
             <div class="footer__col mt-4">
-                <h4>Ikuti Kami</h4>
+                <h4 class="text-white">Ikuti Kami</h4>
                 <ul class="footer__socials p-0">
                     <li><a href="https://www.instagram.com/newarmadagroup?igsh=eDB2dm9zbHQ2ejFy" target="_blank"><i class="ri-instagram-line"></i></a></li>
                     <li><a href="https://www.linkedin.com/company/pt-mekar-armada-investama-new-armada-group/posts/?feedView=all" target="_blank"><i class="ri-linkedin-line"></i></a></li>
                 </ul>
             </div>
         </div>
-        <div class="footer__bar">2025 © New Armada Group</div>
+        <hr class="text-light m-0">
+        <div class="footer__bar text-white">2025 © New Armada Group</div>
     </footer>
 
     <!-- Tombol Kembali ke Atas -->
-    <button id="scrollToTopBtn" class="btn btn-primary rounded-circle shadow" style="position: fixed; bottom: 30px; right: 30px; display: none; z-index: 999;">
+    <button id="scrollToTopBtn" class="btn btn-primary rounded-circle shadow" style="position: fixed; bottom: 30px; right: 30px; display: none; z-index: 999; background-color:#2887ff !important">
         ↑
     </button>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // durasi animasi
+            once: true // animasi hanya sekali
+        });
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // Navbar scroll hide/show
