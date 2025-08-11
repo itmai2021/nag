@@ -36,7 +36,7 @@
                     <div class="d-flex justify-content-between">
                         <div class="logo d-flex justify-content-center align-items-center w-100">
 
-                            <a href="index.html" class="d-flex justify-content-center align-items-center">
+                            <a href="#" class="d-flex justify-content-center align-items-center">
                                 <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" style="height: 20px; width: auto;">
                             </a>
                         </div>
