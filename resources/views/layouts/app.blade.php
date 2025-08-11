@@ -50,20 +50,20 @@
                 <div class="sidebar-menu">
                     <ul class="menu">
                         <!-- <li class="sidebar-title">Menu</li> -->
-                        <li class="sidebar-item" id="dashboard">
-                            <a href="{{route('company.index')}}" class='sidebar-link' id="a-dashboard">
+                        <li class="sidebar-item" id="company">
+                            <a href="{{route('company.index')}}" class='sidebar-link' id="a-company">
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Company</span>
                             </a>
                         </li>
-                        <li class="sidebar-item" id="dashboard">
-                            <a href="{{route('business_unit.index')}}" class='sidebar-link' id="a-dashboard">
+                        <li class="sidebar-item" id="business_unit">
+                            <a href="{{route('business_unit.index')}}" class='sidebar-link' id="a-business_unit">
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Business Unit</span>
                             </a>
                         </li>
-                        <li class="sidebar-item" id="dashboard">
-                            <a href="{{route('news.index')}}" class='sidebar-link' id="a-dashboard">
+                        <li class="sidebar-item" id="news">
+                            <a href="{{route('news.index')}}" class='sidebar-link' id="a-news">
                                 <i class="bi bi-grid-fill"></i>
                                 <span>News</span>
                             </a>
@@ -74,9 +74,9 @@
                                 <span>{{ Auth::user()->name ?? 'Admin' }}</span>
                             </a>
                             <ul class="submenu ">
-                                <li class="submenu-item ">
+                                <!-- <li class="submenu-item ">
                                     <a href="">Change Password</a>
-                                </li>
+                                </li> -->
                                 <li class="submenu-item ">
                                     <a href="{{ route('logout') }}"
                                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -139,9 +139,15 @@
     $(document).ready(function() {
         var url = window.location.href.split("/");
         console.log(url[3]);
-        switch (url[3]) {
-            case 'dashboard':
-                $("#dashboard").addClass('active');
+        switch (url[4]) {
+            case 'company':
+                $("#company").addClass('active');
+                break;
+            case 'business_unit':
+                $("#business_unit").addClass('active');
+                break;
+            case 'news':
+                $("#news").addClass('active');
                 break;
             default:
                 break;
