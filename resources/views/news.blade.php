@@ -9,11 +9,14 @@
             <!-- card 1 -->
             <div class="col">
                 <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                    <img src="/assets/images/card.jpg" class="card-img-top news-img" alt="Berita 1">
-                    <div class="card-body">
+                    <img src="{{ asset('assets/images/card.jpg') }}" class="card-img-top news-img" alt="Berita 1">
+
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Pembangunan Gedung Baru Dimulai</h5>
                         <p class="card-text text-muted">30 Juli 2025</p>
-                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Selengkapnya <i class="ri-arrow-right-line"></i></a>
+                        <a href="{{route('news_detail')}}" class="text-dark text-decoration-none fw-medium mt-auto">
+                            Selengkapnya <i class="ri-arrow-right-line"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -21,11 +24,13 @@
             <!-- card 2 -->
             <div class="col">
                 <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                    <img src="/assets/images/card2.jpg" class="card-img-top news-img" alt="Berita 2">
-                    <div class="card-body">
+                    <img src="{{ asset('assets/images/card2.jpg') }}" class="card-img-top news-img" alt="Berita 2">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Kegiatan Bakti Sosial di Desa Cibuntu</h5>
                         <p class="card-text text-muted">Senin, 28 Juli 2025</p>
-                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Selengkapnya <i class="ri-arrow-right-line"></i></a>
+                        <a href="{{route('news_detail')}}" class="text-dark text-decoration-none fw-medium mt-auto">
+                            Selengkapnya <i class="ri-arrow-right-line"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -33,11 +38,13 @@
             <!-- card 3 -->
             <div class="col">
                 <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                    <img src="/assets/images/card3.webp" class="card-img-top news-img" alt="Berita 3">
-                    <div class="card-body">
+                    <img src="{{ asset('assets/images/card3.webp') }}" class="card-img-top news-img" alt="Berita 3">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Pelatihan Kewirausahaan untuk Remaja</h5>
                         <p class="card-text text-muted">Jumat, 25 Juli 2025</p>
-                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Selengkapnya <i class="ri-arrow-right-line"></i></a>
+                        <a href="{{route('news_detail')}}" class="text-dark text-decoration-none fw-medium mt-auto">
+                            Selengkapnya <i class="ri-arrow-right-line"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -46,11 +53,14 @@
             <!-- card 1 -->
             <div class="col">
                 <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                    <img src="/assets/images/card.jpg" class="card-img-top news-img" alt="Berita 1">
-                    <div class="card-body">
+                    <img src="{{ asset('assets/images/card.jpg') }}" class="card-img-top news-img" alt="Berita 1">
+
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Pembangunan Gedung Baru Dimulai</h5>
                         <p class="card-text text-muted">30 Juli 2025</p>
-                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Selengkapnya <i class="ri-arrow-right-line"></i></a>
+                        <a href="{{route('news_detail')}}" class="text-dark text-decoration-none fw-medium mt-auto">
+                            Selengkapnya <i class="ri-arrow-right-line"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -58,11 +68,13 @@
             <!-- card 2 -->
             <div class="col">
                 <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                    <img src="/assets/images/card2.jpg" class="card-img-top news-img" alt="Berita 2">
-                    <div class="card-body">
+                    <img src="{{ asset('assets/images/card2.jpg') }}" class="card-img-top news-img" alt="Berita 2">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Kegiatan Bakti Sosial di Desa Cibuntu</h5>
                         <p class="card-text text-muted">Senin, 28 Juli 2025</p>
-                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Selengkapnya <i class="ri-arrow-right-line"></i></a>
+                        <a href="{{route('news_detail')}}" class="text-dark text-decoration-none fw-medium mt-auto">
+                            Selengkapnya <i class="ri-arrow-right-line"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -70,11 +82,13 @@
             <!-- card 3 -->
             <div class="col">
                 <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                    <img src="/assets/images/card3.webp" class="card-img-top news-img" alt="Berita 3">
-                    <div class="card-body">
+                    <img src="{{ asset('assets/images/card3.webp') }}" class="card-img-top news-img" alt="Berita 3">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Pelatihan Kewirausahaan untuk Remaja</h5>
                         <p class="card-text text-muted">Jumat, 25 Juli 2025</p>
-                        <a href="{{route('news_detail')}}" style="text-decoration: none; color: #343a40;font-weight:500">Selengkapnya <i class="ri-arrow-right-line"></i></a>
+                        <a href="{{route('news_detail')}}" class="text-dark text-decoration-none fw-medium mt-auto">
+                            Selengkapnya <i class="ri-arrow-right-line"></i>
+                        </a>
                     </div>
                 </div>
             </div>

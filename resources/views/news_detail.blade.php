@@ -11,7 +11,7 @@
 
                 <!-- Gambar Utama -->
                 <div class="mb-4">
-                    <img src="/assets/images/card.jpg" alt="Pembangunan Gedung" class="img-fluid rounded-4 shadow-sm w-100">
+                    <img src="{{ asset('assets/images/card.jpg') }}" alt="Pembangunan Gedung" class="img-fluid rounded-4 shadow-sm w-100">
                 </div>
 
                 <!-- Isi Berita -->
@@ -41,7 +41,8 @@
                         <!-- card 1 -->
                         <div class="col">
                             <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                                <img src="/assets/images/card.jpg" class="card-img-top news-img" alt="Berita 1">
+                                <img src="{{ asset('assets/images/card.jpg') }}" class="card-img-top news-img" alt="Berita 1">
+
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Pembangunan Gedung Baru Dimulai</h5>
                                     <p class="card-text text-muted">30 Juli 2025</p>
@@ -55,7 +56,7 @@
                         <!-- card 2 -->
                         <div class="col">
                             <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                                <img src="/assets/images/card2.jpg" class="card-img-top news-img" alt="Berita 2">
+                                <img src="{{ asset('assets/images/card2.jpg') }}" class="card-img-top news-img" alt="Berita 2">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Kegiatan Bakti Sosial di Desa Cibuntu</h5>
                                     <p class="card-text text-muted">Senin, 28 Juli 2025</p>
@@ -69,7 +70,7 @@
                         <!-- card 3 -->
                         <div class="col">
                             <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                                <img src="/assets/images/card3.webp" class="card-img-top news-img" alt="Berita 3">
+                                <img src="{{ asset('assets/images/card3.webp') }}" class="card-img-top news-img" alt="Berita 3">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Pelatihan Kewirausahaan untuk Remaja</h5>
                                     <p class="card-text text-muted">Jumat, 25 Juli 2025</p>

@@ -11,7 +11,7 @@
 
                 <!-- Slide 2 -->
                 <div class="carousel-item">
-                    <img src="{{ asset('/assets/images/gedung_bra.jpg') }}" class="d-block w-100" alt="Slide 2">
+                    <img src="{{ asset('/assets/images/gedungBRA.jpeg') }}" class="d-block w-100" alt="Slide 2">
                 </div>
 
                 <!-- Carousel Controls -->
@@ -382,7 +382,8 @@
                 <!-- card 1 -->
                 <div class="col">
                     <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                        <img src="/assets/images/card.jpg" class="card-img-top news-img" alt="Berita 1">
+                        <img src="{{ asset('assets/images/card.jpg') }}" class="card-img-top news-img" alt="Berita 1">
+
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Pembangunan Gedung Baru Dimulai</h5>
                             <p class="card-text text-muted">30 Juli 2025</p>
@@ -396,7 +397,7 @@
                 <!-- card 2 -->
                 <div class="col">
                     <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                        <img src="/assets/images/card2.jpg" class="card-img-top news-img" alt="Berita 2">
+                        <img src="{{ asset('assets/images/card2.jpg') }}" class="card-img-top news-img" alt="Berita 2">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Kegiatan Bakti Sosial di Desa Cibuntu</h5>
                             <p class="card-text text-muted">Senin, 28 Juli 2025</p>
@@ -410,7 +411,7 @@
                 <!-- card 3 -->
                 <div class="col">
                     <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                        <img src="/assets/images/card3.webp" class="card-img-top news-img" alt="Berita 3">
+                        <img src="{{ asset('assets/images/card3.webp') }}" class="card-img-top news-img" alt="Berita 3">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Pelatihan Kewirausahaan untuk Remaja</h5>
                             <p class="card-text text-muted">Jumat, 25 Juli 2025</p>
