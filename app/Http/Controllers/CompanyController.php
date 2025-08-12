@@ -51,13 +51,20 @@ class CompanyController extends Controller
         // Upload file jika ada
         $logoPath = null;
         if ($request->hasFile('logo')) {
-            $logoPath = $request->file('logo')->store('logos', 'public');
+            $logoFile = $request->file('logo');
+            $logoName = time() . '_' . $logoFile->getClientOriginalName();
+            $logoFile->move(public_path('assets/file/logo'), $logoName);
+            $logoPath = 'assets/file/logo/' . $logoName; // path yang bisa dipakai untuk disimpan di DB
         }
 
         $buildingPhotoPath = null;
         if ($request->hasFile('building_photo')) {
-            $buildingPhotoPath = $request->file('building_photo')->store('buildings', 'public');
+            $buildingFile = $request->file('building_photo');
+            $buildingName = time() . '_' . $buildingFile->getClientOriginalName();
+            $buildingFile->move(public_path('assets/file/buildings'), $buildingName);
+            $buildingPhotoPath = 'assets/file/buildings/' . $buildingName;
         }
+
 
         // Simpan data
         $model                      = new Company(); // ganti `Company` sesuai model yang kamu pakai
@@ -134,25 +141,36 @@ class CompanyController extends Controller
         // Handle logo upload
         if ($request->hasFile('logo')) {
             // Optional: hapus file lama jika ada
-            if ($company->logo && file_exists(public_path('storage/logo/' . $company->logo))) {
-                unlink(public_path('storage/logo/' . $company->logo));
+            if ($company->logo && file_exists(public_path('assets/file/logo/' . $company->logo))) {
+                unlink(public_path('assets/file/logo/' . $company->logo));
+            }
+
+            // Pastikan folder ada
+            if (!file_exists(public_path('assets/file/logo'))) {
+                mkdir(public_path('assets/file/logo'), 0777, true);
             }
 
             $logoName = time() . '_logo.' . $request->logo->extension();
-            $request->logo->move(public_path('storage/logo'), $logoName);
+            $request->logo->move(public_path('assets/file/logo'), $logoName);
             $company->logo = $logoName;
         }
 
         // Handle building photo upload
         if ($request->hasFile('building_photo')) {
-            if ($company->building_photo && file_exists(public_path('storage/buildings/' . $company->building_photo))) {
-                unlink(public_path('storage/buildings/' . $company->building_photo));
+            if ($company->building_photo && file_exists(public_path('assets/file/buildings/' . $company->building_photo))) {
+                unlink(public_path('assets/file/buildings/' . $company->building_photo));
+            }
+
+            // Pastikan folder ada
+            if (!file_exists(public_path('assets/file/buildings'))) {
+                mkdir(public_path('assets/file/buildings'), 0777, true);
             }
 
             $photoName = time() . '_building.' . $request->building_photo->extension();
-            $request->building_photo->move(public_path('storage/buildings'), $photoName);
+            $request->building_photo->move(public_path('assets/file/buildings'), $photoName);
             $company->building_photo = $photoName;
         }
+
 
         $company->save();
 

@@ -49,8 +49,17 @@ class NewsController extends Controller
 
         // Upload gambar jika ada
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('news', 'public');
+            // Pastikan folder ada
+            if (!file_exists(public_path('assets/file/news'))) {
+                mkdir(public_path('assets/file/news'), 0777, true);
+            }
+
+            $imageName = time() . '_' . $request->image->getClientOriginalName();
+            $request->image->move(public_path('assets/file/news'), $imageName);
+
+            $data['image'] = 'assets/file/news/' . $imageName; // simpan path relatif
         }
+
 
         // Simpan ke database
         News::create($data);

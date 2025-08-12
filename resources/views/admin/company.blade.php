@@ -168,7 +168,7 @@
                                             <div class="form-group">
                                                 <input type="file" name="logo" class="form-control">
                                                 @if($company->logo)
-                                                <small class="d-block mt-1">Current: <img style="width:25%" src="{{ asset('storage/logo/'.$company->logo) }}"></small>
+                                                <small class="d-block mt-1">Current: <img style="width:25%" src="{{ asset('assets/file/logo/'.$company->logo) }}"></small>
                                                 @endif
                                             </div>
 
@@ -176,7 +176,11 @@
                                             <div class="form-group">
                                                 <input type="file" name="building_photo" class="form-control">
                                                 @if($company->building_photo)
-                                                <small class="d-block mt-1">Current: <img style="width:25%" src="{{ asset('storage/buildings/'.$company->building_photo) }}"></small>
+                                                <small class="d-block mt-1">
+                                                    Current:
+                                                    <img style="width:25%" src="{{ asset('assets/file/buildings/' . $company->building_photo) }}">
+                                                </small>
+
                                                 @endif
                                             </div>
                                         </div>

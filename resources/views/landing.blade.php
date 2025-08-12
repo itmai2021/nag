@@ -123,7 +123,7 @@
             <div class="custom-grid justify-content-center">
                 @foreach($automotive as $auto)
                 <div class="logo-item text-center">
-                    <img src="{{ asset('storage/logo/' . $auto->logo) }}"
+                    <img src="{{ asset('assets/file/logo/' . $auto->logo) }}"
                         alt="Logo {{ $auto->company_shortname }}"
                         class="logo-click"
                         data-bs-toggle="modal"
@@ -149,7 +149,7 @@
                     <div class="row align-items-center">
                         <!-- Logo -->
                         <div class="col-md-4 text-center">
-                            <img src="{{ asset('storage/logo/' . $auto->logo) }}"
+                            <img src="{{ asset('assets/file/logo/' . $auto->logo) }}"
                                 alt="Logo"
                                 class="img-fluid rounded shadow-sm"
                                 style="max-height: 200px; object-fit: contain;">
@@ -186,13 +186,13 @@
             <div class="custom-grid justify-content-center">
                 @foreach($manufacture as $manuf)
                 <div class="logo-item text-center">
-                    <img src="{{ asset('storage/logo/' . $manuf->logo) }}"
+                    <img src="{{ asset('assets/file/logo/' . $manuf->logo) }}"
                         alt="Logo {{ $manuf->company_shortname }}"
                         class="logo-click"
                         data-bs-toggle="modal"
                         data-bs-target="#imageModal2{{ $manuf->id }}"
                         data-id="{{ $manuf->id }}"
-                        data-logo="{{ asset('storage/logo/' . $manuf->logo) }}"
+                        data-logo="{{ asset('assets/file/logo/' . $manuf->logo) }}"
                         style="cursor: pointer; max-height: 100px;">
                 </div>
                 @endforeach
@@ -213,7 +213,7 @@
                     <div class="row align-items-center">
                         <!-- Logo -->
                         <div class="col-md-4 text-center">
-                            <img src="{{ asset('storage/logo/' . $manuf->logo) }}"
+                            <img src="{{ asset('assets/file/logo/' . $manuf->logo) }}"
                                 alt="Logo"
                                 class="img-fluid rounded shadow-sm"
                                 style="max-height: 200px; object-fit: contain;">
@@ -249,13 +249,13 @@
             <div class="custom-grid justify-content-center">
                 @foreach($finance as $fn)
                 <div class="logo-item text-center">
-                    <img src="{{ asset('storage/logo/' . $fn->logo) }}"
+                    <img src="{{ asset('assets/file/logo/' . $fn->logo) }}"
                         alt="Logo {{ $fn->company_shortname }}"
                         class="logo-click"
                         data-bs-toggle="modal"
                         data-bs-target="#imageModal3{{ $fn->id }}"
                         data-id="{{ $fn->id }}"
-                        data-logo="{{ asset('storage/logo/' . $fn->logo) }}"
+                        data-logo="{{ asset('assets/file/logo/' . $fn->logo) }}"
                         style="cursor: pointer; max-height: 100px;">
                 </div>
                 @endforeach
@@ -276,7 +276,7 @@
                     <div class="row align-items-center">
                         <!-- Logo -->
                         <div class="col-md-4 text-center">
-                            <img src="{{ asset('storage/logo/' . $fnc->logo) }}"
+                            <img src="{{ asset('assets/file/logo/' . $fnc->logo) }}"
                                 alt="Logo"
                                 class="img-fluid rounded shadow-sm"
                                 style="max-height: 200px; object-fit: contain;">
@@ -313,13 +313,13 @@
             <div class="custom-grid justify-content-center">
                 @foreach($others as $other)
                 <div class="logo-item text-center">
-                    <img src="{{ asset('storage/logo/' . $other->logo) }}"
+                    <img src="{{ asset('assets/file/logo/' . $other->logo) }}"
                         alt="Logo {{ $other->company_shortname }}"
                         class="logo-click"
                         data-bs-toggle="modal"
                         data-bs-target="#imageModal4{{ $other->id }}"
                         data-id="{{ $other->id }}"
-                        data-logo="{{ asset('storage/logo/' . $other->logo) }}"
+                        data-logo="{{ asset('assets/file/logo/' . $other->logo) }}"
                         style="cursor: pointer; max-height: 100px;">
                 </div>
                 @endforeach
@@ -340,7 +340,7 @@
                     <div class="row align-items-center">
                         <!-- Logo -->
                         <div class="col-md-4 text-center">
-                            <img src="{{ asset('storage/logo/' . $other->logo) }}"
+                            <img src="{{ asset('assets/file/logo/' . $other->logo) }}"
                                 alt="Logo"
                                 class="img-fluid rounded shadow-sm"
                                 style="max-height: 200px; object-fit: contain;">
