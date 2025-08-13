@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\BusinessUnit;
 use App\Models\Company;
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class LandingController extends Controller
@@ -41,7 +42,9 @@ class LandingController extends Controller
         $finance = Company::where('pilar', 'Finance')->get();
         $others = Company::where('pilar', 'Others')->get();
 
-        return view('landing', compact('lokasi', 'automotive', 'manufacture', 'finance', 'others'));
+        $data['news'] = News::get();
+
+        return view('landing', compact('lokasi', 'automotive', 'manufacture', 'finance', 'others', 'data'));
     }
 
     public function news()

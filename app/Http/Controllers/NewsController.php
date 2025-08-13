@@ -57,7 +57,7 @@ class NewsController extends Controller
             $imageName = time() . '_' . $request->image->getClientOriginalName();
             $request->image->move(public_path('assets/file/news'), $imageName);
 
-            $data['image'] = 'assets/file/news/' . $imageName; // simpan path relatif
+            $data['image'] = $imageName; // simpan path relatif
         }
 
 
@@ -75,9 +75,11 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function show(News $news)
+    public function show(News $news, $id)
     {
-        //
+        $data['newsdetail'] = News::where('id', $id)->first();
+
+        return view('news_detail', compact('data'));
     }
 
     /**
@@ -98,9 +100,11 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, News $news)
+    public function update(Request $request, $id)
     {
-        //
+        $news = News::findOrFail($id);
+        $news->update($request->all());
+        return redirect()->route('news.index');
     }
 
     /**
@@ -112,5 +116,20 @@ class NewsController extends Controller
     public function destroy(News $news)
     {
         //
+    }
+
+    public function upload(Request $request)
+    {
+        if ($request->hasFile('upload')) {
+            $file = $request->file('upload');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads'), $filename);
+
+            $url = asset('uploads/' . $filename);
+
+            return response()->json([
+                'url' => $url
+            ]);
+        }
     }
 }
