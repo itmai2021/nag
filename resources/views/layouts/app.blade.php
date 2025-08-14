@@ -25,7 +25,9 @@
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
 
-    <script src="https://cdn.ckeditor.com/ckeditor5/41.2.0/classic/ckeditor.js"></script>
+    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/41.2.0/classic/ckeditor.js"></script> --}}
+    {{-- <script src="https://cdn.jsdelivr.net/npm/ckeditor5-build-classic-with-image-resize@latest/build/ckeditor.js"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/ckeditor5-classic-plus@41.3.0/build/ckeditor.js"></script>
 
 </head>
 @if (Auth::user())
@@ -186,11 +188,12 @@
         };
     }
 
-    document.querySelectorAll('.editor').forEach((element) => {
+    document.querySelectorAll('.editor').forEach(element => {
         ClassicEditor
             .create(element, {
                 extraPlugins: [MyCustomUploadAdapterPlugin],
                 image: {
+                    resizeUnit: '%',
                     resizeOptions: [{
                             name: 'resizeImage:original',
                             label: 'Original',
@@ -208,21 +211,31 @@
                         }
                     ],
                     toolbar: [
-                        'imageTextAlternative',
+                        'imageStyle:alignLeft',
+                        'imageStyle:alignCenter',
+                        'imageStyle:alignRight',
                         '|',
                         'resizeImage:50',
                         'resizeImage:75',
-                        'resizeImage:original'
-                    ]
-                }
+                        'resizeImage:original',
+                        '|',
+                        'imageTextAlternative'
+                    ],
+                    styles: ['alignLeft', 'alignCenter', 'alignRight']
+                },
+                toolbar: [
+                    'heading', '|',
+                    'bold', 'italic', '|',
+                    'link', 'bulletedList', 'numberedList', '|',
+                    'uploadImage', 'blockQuote', '|',
+                    'undo', 'redo'
+                ]
             })
             .then(editor => {
                 editor.model.document.on('change:data', () => {
                     element.value = editor.getData();
                 });
             })
-            .catch(error => {
-                console.error(error);
-            });
+            .catch(console.error);
     });
 </script>

@@ -14,11 +14,22 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.5/leaflet.awesome-markers.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.5/leaflet.awesome-markers.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
     <style>
         #mapid {
             height: 600px;
+        }
+
+        .image_resized {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        img {
+            height: auto;
         }
     </style>
     <title>New Armada Group</title>
@@ -40,8 +51,8 @@
                     <li><a href="https://career.mekararmadainvestama.co.id/" target="_blank">Karir</a></li>
                 </ul>
                 @php
-                $currentLang = request('lang') ?? session('locale', 'id');
-                $flag = $currentLang === 'en' ? 'EN' : 'ID';
+                    $currentLang = request('lang') ?? session('locale', 'id');
+                    $flag = $currentLang === 'en' ? 'EN' : 'ID';
                 @endphp
                 <div class="dropdown">
                     <a href="#" class="dropdown-toggle text-white text-decoration-none" id="languageDropdown"
@@ -66,7 +77,8 @@
             <!-- Kolom Logo -->
             <div class="footer__col mt-4">
                 <div class="footer__logo">
-                    <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="img-fluid" style="max-width: 70vh;">
+                    <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="img-fluid"
+                        style="max-width: 70vh;">
                 </div>
                 <p class="text-white">Together We Are Strong!</p>
             </div>
@@ -82,12 +94,15 @@
                         <a href="#" class="text-white"><i class="ri-mail-fill"></i> secretariat@mai.nag.co.id</a>
                     </li>
                     <li>
-                        <a href="#" class="text-white"><i class="ri-map-pin-2-fill"></i> Jl. Tanah Abang II No.104, Cideng, Jakarta Pusat</a>
+                        <a href="#" class="text-white"><i class="ri-map-pin-2-fill"></i> Jl. Tanah Abang II
+                            No.104, Cideng, Jakarta Pusat</a>
                     </li>
                 </ul>
                 <ul class="footer__socials p-0">
-                    <li><a href="https://www.instagram.com/newarmadagroup?igsh=eDB2dm9zbHQ2ejFy" target="_blank"><i class="ri-instagram-line"></i></a></li>
-                    <li><a href="https://www.linkedin.com/company/pt-mekar-armada-investama-new-armada-group/posts/?feedView=all" target="_blank"><i class="ri-linkedin-line"></i></a></li>
+                    <li><a href="https://www.instagram.com/newarmadagroup?igsh=eDB2dm9zbHQ2ejFy" target="_blank"><i
+                                class="ri-instagram-line"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/pt-mekar-armada-investama-new-armada-group/posts/?feedView=all"
+                            target="_blank"><i class="ri-linkedin-line"></i></a></li>
                 </ul>
             </div>
 

@@ -78,6 +78,7 @@ class NewsController extends Controller
     public function show(News $news, $id)
     {
         $data['newsdetail'] = News::where('id', $id)->first();
+        $data['othersnews'] = News::where('id', '!=', $id)->orderBy('publication_date', 'desc')->limit(4)->get();
 
         return view('news_detail', compact('data'));
     }
