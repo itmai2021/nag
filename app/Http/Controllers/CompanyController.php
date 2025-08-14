@@ -69,6 +69,7 @@ class CompanyController extends Controller
         // Simpan data
         $model                      = new Company(); // ganti `Company` sesuai model yang kamu pakai
         $model->id                  = Str::uuid();
+        $model->company_number        = $request->company_number;
         $model->company_name        = $request->company_name;
         $model->company_shortname   = $request->company_shortname;
         $model->pilar               = $request->pilar;
@@ -131,6 +132,7 @@ class CompanyController extends Controller
         ]);
 
         // Update data
+        $company->company_number = $request->company_number;
         $company->company_name = $request->company_name;
         $company->company_shortname = $request->company_shortname;
         $company->pilar = $request->pilar;

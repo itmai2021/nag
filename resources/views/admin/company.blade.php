@@ -25,6 +25,8 @@
                                     <th class="text-center">No</th>
                                     <th class="text-center">Company Name</th>
                                     <th class="text-center">Company Short Name</th>
+                                    <th class="text-center">Company Number</th>
+                                    <th class="text-center">Pilar</th>
                                     <th class="text-center">Action</th>
                                 </tr>
                             </thead>
@@ -34,6 +36,8 @@
                                     <td class="text-center">{{$key+1}}</td>
                                     <td class="text-center">{{$company->company_name}}</td>
                                     <td class="text-center">{{$company->company_shortname}}</td>
+                                    <td class="text-center">{{$company->company_number}}</td>
+                                    <td class="text-center">{{$company->pilar}}</td>
                                     <td class="text-center">
                                         <button class="btn btn-sm btn-primary" data-bs-toggle="modal"
                                             data-bs-target="#edit-data{{$company->id}}">Edit</button>
@@ -57,6 +61,10 @@
                                     <form action="{{ route('company.store') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="modal-body overflow-auto" style="max-height: 60vh;">
+                                            <div class="mb-3">
+                                                <label>Company Number:</label>
+                                                <input type="text" class="form-control" name="company_number" required>
+                                            </div>
                                             <div class="mb-3">
                                                 <label>Company Name:</label>
                                                 <input type="text" class="form-control" name="company_name" required>
@@ -127,6 +135,11 @@
                                         @csrf
                                         @method('PUT')
                                         <div class="modal-body overflow-auto" style="max-height: 60vh;">
+                                            <label>Company Number:</label>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="company_number"
+                                                    value="{{ old('company_number', $company->company_number) }}" placeholder="Company Number">
+                                            </div>
                                             <label>Company Name:</label>
                                             <div class="form-group">
                                                 <input type="text" class="form-control" name="company_name"

@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="{{ asset('/assets/images/NAG.png') }}" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.5/leaflet.awesome-markers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
     <style>
         #mapid {
             height: 600px;
@@ -36,8 +40,8 @@
                     <li><a href="https://career.mekararmadainvestama.co.id/" target="_blank">Karir</a></li>
                 </ul>
                 @php
-                    $currentLang = request('lang') ?? session('locale', 'id');
-                    $flag = $currentLang === 'en' ? 'EN' : 'ID';
+                $currentLang = request('lang') ?? session('locale', 'id');
+                $flag = $currentLang === 'en' ? 'EN' : 'ID';
                 @endphp
                 <div class="dropdown">
                     <a href="#" class="dropdown-toggle text-white text-decoration-none" id="languageDropdown"
@@ -105,6 +109,10 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.5/leaflet.awesome-markers.js"></script>
+    @yield('script')
     <script>
         AOS.init({
             duration: 800, // durasi animasi

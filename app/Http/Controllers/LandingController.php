@@ -20,6 +20,25 @@ class LandingController extends Controller
         $loc = [];
 
         foreach ($locs as $item) {
+            $color = '';
+            switch ($item->company->pilar) {
+                case 'Manufacture':
+                    $color = '#003366';
+                    break;
+                case 'Automotive Trading':
+                    $color = '#C00000';
+                    break;
+                case 'Finance':
+                    $color = '#007F5C';
+                    break;
+                case 'Others':
+                    $color = '#FF8C42';
+                    break;
+                default:
+                    # code...
+                    break;
+            }
+            ($item->company->pilar);
             // Pisahkan location_point menjadi lat dan lng
             [$lat, $lng] = explode(',', $item->location_point);
 
@@ -33,15 +52,15 @@ class LandingController extends Controller
                 'lat' => $lat,
                 'lng' => $lng,
                 'link' => $item->link_maps,
+                'color' => $color
             ];
         }
 
         $lokasi = json_encode($loc);
-        $automotive = Company::where('pilar', 'Automotive Trading')->get();
-        $manufacture = Company::where('pilar', 'Manufacture')->get();
-        $finance = Company::where('pilar', 'Finance')->get();
-        $others = Company::where('pilar', 'Others')->get();
-
+        $automotive = Company::where('pilar', 'Automotive Trading')->whereNotNull('company_number')->orderBy('company_number', 'ASC')->get();
+        $manufacture = Company::where('pilar', 'Manufacture')->whereNotNull('company_number')->orderBy('company_number', 'ASC')->get();
+        $finance = Company::where('pilar', 'Finance')->whereNotNull('company_number')->orderBy('company_number', 'ASC')->get();
+        $others = Company::where('pilar', 'Others')->whereNotNull('company_number')->orderBy('company_number', 'ASC')->get();
         $data['news'] = News::get();
 
         return view('landing', compact('lokasi', 'automotive', 'manufacture', 'finance', 'others', 'data'));

@@ -27,6 +27,7 @@ Route::get('/login', [LoginController::class, 'index'])->name('login.index');
 Route::post('/login/auth', [LoginController::class, 'auth'])->name('login.auth');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
+Route::get('/show/{id}', [NewsController::class, 'show'])->name('news.show');
 
 Route::middleware(['auth'])->group(function () {
 
@@ -44,7 +45,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/admin/news/store', [NewsController::class, 'store'])->name('news.store');
     Route::put('/admin/news/update/{id}', [NewsController::class, 'update'])->name('news.update');
     Route::delete('/admin/news/delete/{id}', [NewsController::class, 'destroy'])->name('news.delete');
-    Route::get('/show/{id}', [NewsController::class, 'show'])->name('news.show');
 
     Route::post('/upload-image', [NewsController::class, 'upload'])->name('news.upload');
 });

@@ -528,12 +528,26 @@ body {
 
 .custom-gradient-line {
     height: 4px;
-    width: 25%;
-    margin: 1rem auto;
+    width: 50%;
+    /* margin: 1rem auto; */
     background: linear-gradient(to right, #ff3c3c, #007bff);
     border-radius: 4px;
 }
 
+.carousel-item img {
+    object-fit: cover;
+    /* memastikan gambar menutupi area */
+    object-position: top 20px;
+    /* geser posisi gambar ke bawah */
+    height: 500px;
+    /* sesuaikan tinggi carousel */
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
 
 
 .grid-no-gap {
@@ -612,11 +626,7 @@ body {
     /* Atau 600px jika kamu ingin lebih pendek */
 }
 
-.carousel-item img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
+
 
 .section__container {
     width: 100%;
@@ -3193,6 +3203,20 @@ a {
     /* horizontal center */
 }
 
+.fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.6s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 /* .modal .btn {
-    margin-bottom: 15px;
+margin-bottom: 15px;
 } */
