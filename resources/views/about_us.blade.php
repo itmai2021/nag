@@ -38,7 +38,7 @@
         <div style="
             position:absolute;
             right:0;
-            top:50%;
+            top:45%;
             transform:translateY(-50%);
             width:320px;
             background:#1d237e;
@@ -47,7 +47,7 @@
             border-radius:20px;
             box-shadow:0 4px 20px rgba(0,0,0,0.08);
             min-height:260px;
-        " data-aos="fade-left" data-aos-delay="300">
+        " data-aos="fade-left" data-aos-delay="350">
             <!-- Tab -->
             <div style="
                 display:flex;

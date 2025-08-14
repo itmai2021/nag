@@ -63,13 +63,15 @@
     <!-- Footer -->
     <footer id="contact">
         <div class="section__container footer__container">
+            <!-- Kolom Logo -->
             <div class="footer__col mt-4">
                 <div class="footer__logo">
-                    <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="img-fluid"
-                        style="max-width: 70vh;">
+                    <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="img-fluid" style="max-width: 70vh;">
                 </div>
                 <p class="text-white">Together We Are Strong!</p>
             </div>
+
+            <!-- Kolom Kontak -->
             <div class="footer__col mt-4">
                 <h4 class="text-white">Hubungi Kami</h4>
                 <ul class="footer__links p-0">
@@ -77,27 +79,49 @@
                         <a href="#" class="text-white"><i class="ri-phone-fill"></i> (021) 3841061</a>
                     </li>
                     <li>
-                        <a href="#" class="text-white"><i class="ri-mail-fill"></i>secretariat@mai.nag.co.id</a>
+                        <a href="#" class="text-white"><i class="ri-mail-fill"></i> secretariat@mai.nag.co.id</a>
                     </li>
                     <li>
-                        <a href="#" class="text-white"><i class="ri-map-pin-2-fill"></i> Jl. Tanah Abang II
-                            No.104, Cideng, Jakarta Pusat</a>
+                        <a href="#" class="text-white"><i class="ri-map-pin-2-fill"></i> Jl. Tanah Abang II No.104, Cideng, Jakarta Pusat</a>
                     </li>
                 </ul>
-            </div>
-            <div class="footer__col mt-4">
-                <h4 class="text-white">Ikuti Kami</h4>
                 <ul class="footer__socials p-0">
-                    <li><a href="https://www.instagram.com/newarmadagroup?igsh=eDB2dm9zbHQ2ejFy" target="_blank"><i
-                                class="ri-instagram-line"></i></a></li>
-                    <li><a href="https://www.linkedin.com/company/pt-mekar-armada-investama-new-armada-group/posts/?feedView=all"
-                            target="_blank"><i class="ri-linkedin-line"></i></a></li>
+                    <li><a href="https://www.instagram.com/newarmadagroup?igsh=eDB2dm9zbHQ2ejFy" target="_blank"><i class="ri-instagram-line"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/pt-mekar-armada-investama-new-armada-group/posts/?feedView=all" target="_blank"><i class="ri-linkedin-line"></i></a></li>
                 </ul>
             </div>
+
+            <!-- Kolom Sosial Media -->
+            <!-- <div class="footer__col mt-4">
+                <h4 class="text-white">Ikuti Kami</h4>
+                <ul class="footer__socials p-0">
+                    <li><a href="https://www.instagram.com/newarmadagroup?igsh=eDB2dm9zbHQ2ejFy" target="_blank"><i class="ri-instagram-line"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/pt-mekar-armada-investama-new-armada-group/posts/?feedView=all" target="_blank"><i class="ri-linkedin-line"></i></a></li>
+                </ul>
+            </div> -->
+
+            <!-- Kolom Form Contact Us -->
+            <div class="footer__col mt-4 mb-4">
+                <h4 class="text-white">Kirim Pesan</h4>
+                <form action="#" method="POST" class="footer__form">
+                    <div class="mb-1">
+                        <input type="text" name="name" class="form-control" placeholder="Nama" required>
+                    </div>
+                    <div class="mb-1">
+                        <input type="email" name="email" class="form-control" placeholder="Email" required>
+                    </div>
+                    <div class="mb-1">
+                        <textarea name="message" rows="3" class="form-control" placeholder="Pesan" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-kirim">Kirim</button>
+                </form>
+            </div>
         </div>
+
         <hr class="text-light m-0">
         <div class="footer__bar text-white">2025 © New Armada Group</div>
     </footer>
+
 
     <!-- Tombol Kembali ke Atas -->
     <button id="scrollToTopBtn" class="btn btn-primary rounded-circle shadow"

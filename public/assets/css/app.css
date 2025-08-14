@@ -1112,16 +1112,23 @@ footer {
 
 .footer__socials a {
     display: inline-block;
-    padding: 7px 10px;
-    font-size: 1.25rem;
+    padding: 6px 9px;
+    font-size: 0.9rem;
     color: var(--white);
-    background-color: var(--primary-color);
-    border-radius: 100%;
+    border-radius: 50%;
+    /* Membuat lingkaran */
+    border: 1.5px solid white;
+    /* Garis lingkaran putih */
+    transition: background-color 0.3s, color 0.3s;
 }
 
+
 .footer__socials a:hover {
-    background-color: var(--primary-color-dark);
+    background-color: white;
+    color: #1d237e;
+    /* Ganti dengan warna utama brand kamu */
 }
+
 
 .footer__col h4 {
     margin-bottom: 2rem;
@@ -1432,7 +1439,7 @@ footer {
 
     .footer__container {
         display: grid;
-        grid-template-columns: 2fr 1.5fr 1fr;
+        grid-template-columns: 2fr 1.5fr 1.5fr;
         /* kolom 1 lebih besar */
         gap: 4rem 2rem;
     }
@@ -3216,6 +3223,46 @@ a {
     }
 }
 
+.btn-kirim {
+    background-color: white;
+    color: #1d237e;
+    border: 2px solid #1d237e;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-kirim:hover {
+    background-color: white;
+    color: #1d237e;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.staggered-inline>span {
+    opacity: 0;
+    display: inline-block;
+    transition: all 0.8s ease;
+}
+
+.aos-animate .staggered-inline>span:nth-child(1) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+.aos-animate .staggered-inline>span:nth-child(2) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+.aos-animate .staggered-inline>span:nth-child(3) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.9s;
+}
 
 /* .modal .btn {
 margin-bottom: 15px;
