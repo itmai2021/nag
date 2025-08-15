@@ -44,15 +44,22 @@
             </a>
             <div class="d-flex align-items-center gap-4">
                 <ul class="nav-links d-flex gap-4 m-0">
-                    <li><a href="{{ route('about_us') }}">Tentang Kami</a></li>
-                    <li><a href="{{ route('home') }}#pilar">Sektor Bisnis</a></li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle">Tentang Kami</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ route('about_us') }}">Profil</a></li>
+                            <li><a href="{{ route('home') }}#pilar">Sektor Bisnis</a></li>
+                        </ul>
+                    </li>
                     <li><a href="{{ route('news') }}">Berita</a></li>
                     <li><a href="{{ route('home') }}#location">Lokasi</a></li>
+                    <li><a href="{{ route('contact_us') }}#location">Hubungi Kami</a></li>
                     <li><a href="https://career.mekararmadainvestama.co.id/" target="_blank">Karir</a></li>
                 </ul>
+
                 @php
-                    $currentLang = request('lang') ?? session('locale', 'id');
-                    $flag = $currentLang === 'en' ? 'EN' : 'ID';
+                $currentLang = request('lang') ?? session('locale', 'id');
+                $flag = $currentLang === 'en' ? 'EN' : 'ID';
                 @endphp
                 <div class="dropdown">
                     <a href="#" class="dropdown-toggle text-white text-decoration-none" id="languageDropdown"
@@ -98,38 +105,17 @@
                             No.104, Cideng, Jakarta Pusat</a>
                     </li>
                 </ul>
+            </div>
+
+            <!-- Kolom Sosial Media -->
+            <div class="footer__col mt-4">
+                <h4 class="text-white">Ikuti Kami</h4>
                 <ul class="footer__socials p-0">
                     <li><a href="https://www.instagram.com/newarmadagroup?igsh=eDB2dm9zbHQ2ejFy" target="_blank"><i
                                 class="ri-instagram-line"></i></a></li>
                     <li><a href="https://www.linkedin.com/company/pt-mekar-armada-investama-new-armada-group/posts/?feedView=all"
                             target="_blank"><i class="ri-linkedin-line"></i></a></li>
                 </ul>
-            </div>
-
-            <!-- Kolom Sosial Media -->
-            <!-- <div class="footer__col mt-4">
-                <h4 class="text-white">Ikuti Kami</h4>
-                <ul class="footer__socials p-0">
-                    <li><a href="https://www.instagram.com/newarmadagroup?igsh=eDB2dm9zbHQ2ejFy" target="_blank"><i class="ri-instagram-line"></i></a></li>
-                    <li><a href="https://www.linkedin.com/company/pt-mekar-armada-investama-new-armada-group/posts/?feedView=all" target="_blank"><i class="ri-linkedin-line"></i></a></li>
-                </ul>
-            </div> -->
-
-            <!-- Kolom Form Contact Us -->
-            <div class="footer__col mt-4 mb-4">
-                <h4 class="text-white">Kirim Pesan</h4>
-                <form action="#" method="POST" class="footer__form">
-                    <div class="mb-1">
-                        <input type="text" name="name" class="form-control" placeholder="Nama" required>
-                    </div>
-                    <div class="mb-1">
-                        <input type="email" name="email" class="form-control" placeholder="Email" required>
-                    </div>
-                    <div class="mb-1">
-                        <textarea name="message" rows="3" class="form-control" placeholder="Pesan" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-kirim">Kirim</button>
-                </form>
             </div>
         </div>
 

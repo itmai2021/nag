@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BusinessUnitController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NewsController;
@@ -22,6 +23,8 @@ Route::get('/', [LandingController::class, 'index'])->name('home');
 Route::get('/news', [LandingController::class, 'news'])->name('news');
 Route::get('/news_detail', [LandingController::class, 'news_detail'])->name('news_detail');
 Route::get('/about_us', [LandingController::class, 'about_us'])->name('about_us');
+Route::get('/contact_us', [ContactUsController::class, 'index'])->name('contact_us');
+Route::post('/contact_us/store', [ContactUsController::class, 'store'])->name('contact_us.store');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login.index');
 Route::post('/login/auth', [LoginController::class, 'auth'])->name('login.auth');
@@ -31,6 +34,7 @@ Route::get('/show/{id}', [NewsController::class, 'show'])->name('news.show');
 
 Route::middleware(['auth'])->group(function () {
 
+    Route::get('/admin/contact_us', [ContactUsController::class, 'index_admin'])->name('contact_us.index_admin');
     Route::get('/admin/company', [CompanyController::class, 'index'])->name('company.index');
     Route::post('/admin/company/store', [CompanyController::class, 'store'])->name('company.store');
     Route::put('/admin/company/update/{id}', [CompanyController::class, 'update'])->name('company.update');

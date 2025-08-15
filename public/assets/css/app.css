@@ -1439,7 +1439,7 @@ footer {
 
     .footer__container {
         display: grid;
-        grid-template-columns: 2fr 1.5fr 1.5fr;
+        grid-template-columns: 2fr 1.5fr 1fr;
         /* kolom 1 lebih besar */
         gap: 4rem 2rem;
     }
@@ -3263,6 +3263,48 @@ a {
     transform: translateY(0);
     transition-delay: 0.9s;
 }
+
+/* Style dasar dropdown */
+.nav-links .dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* tampil di bawah menu utama */
+    left: 0;
+    background-color: white;
+    padding: 0.5rem 0;
+    list-style: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 200px;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* putih transparan */
+    backdrop-filter: blur(8px);
+    /* opsional: blur di belakang */
+}
+
+/* Tampilkan saat hover */
+.nav-links .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style link dropdown */
+.nav-links .dropdown-menu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-links .dropdown-menu li a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    /* sedikit highlight saat hover */
+}
+
 
 /* .modal .btn {
 margin-bottom: 15px;

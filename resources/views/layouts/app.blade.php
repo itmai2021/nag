@@ -32,111 +32,117 @@
 </head>
 @if (Auth::user())
 
-    <body>
-        <div id="app">
-            <div id="sidebar" class="active">
-                <div class="sidebar-wrapper active">
-                    <div class="sidebar-header">
-                        <div class="d-flex justify-content-between">
-                            <div class="logo d-flex justify-content-center align-items-center w-100">
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo d-flex justify-content-center align-items-center w-100">
 
-                                <a href="#" class="d-flex justify-content-center align-items-center">
-                                    <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo"
-                                        style="height: 20px; width: auto;">
-                                </a>
-                            </div>
+                            <a href="#" class="d-flex justify-content-center align-items-center">
+                                <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo"
+                                    style="height: 20px; width: auto;">
+                            </a>
+                        </div>
 
-                            <div class="toggler">
-                                <a href="#" class="sidebar-hide d-xl-none d-block"><i
-                                        class="bi bi-x bi-middle"></i></a>
-                            </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i
+                                    class="bi bi-x bi-middle"></i></a>
                         </div>
                     </div>
-                    <div class="sidebar-menu">
-                        <ul class="menu">
-                            <!-- <li class="sidebar-title">Menu</li> -->
-                            <li class="sidebar-item" id="company">
-                                <a href="{{ route('company.index') }}" class='sidebar-link' id="a-company">
-                                    <i class="bi bi-grid-fill"></i>
-                                    <span>Company</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-item" id="business_unit">
-                                <a href="{{ route('business_unit.index') }}" class='sidebar-link' id="a-business_unit">
-                                    <i class="bi bi-grid-fill"></i>
-                                    <span>Business Unit</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-item" id="news">
-                                <a href="{{ route('news.index') }}" class='sidebar-link' id="a-news">
-                                    <i class="bi bi-grid-fill"></i>
-                                    <span>News</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-item  has-sub">
-                                <a href="#" class='sidebar-link'>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <!-- <li class="sidebar-title">Menu</li> -->
+                        <li class="sidebar-item" id="company">
+                            <a href="{{ route('company.index') }}" class='sidebar-link' id="a-company">
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Company</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item" id="business_unit">
+                            <a href="{{ route('business_unit.index') }}" class='sidebar-link' id="a-business_unit">
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Business Unit</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item" id="news">
+                            <a href="{{ route('news.index') }}" class='sidebar-link' id="a-news">
+                                <i class="bi bi-grid-fill"></i>
+                                <span>News</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item" id="contact_us">
+                            <a href="{{ route('contact_us.index_admin') }}" class='sidebar-link' id="a-contact_us">
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Message</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
 
-                                    <span>{{ Auth::user()->name ?? 'Admin' }}</span>
-                                </a>
-                                <ul class="submenu ">
-                                    <!-- <li class="submenu-item ">
+                                <span>{{ Auth::user()->name ?? 'Admin' }}</span>
+                            </a>
+                            <ul class="submenu ">
+                                <!-- <li class="submenu-item ">
                                     <a href="">Change Password</a>
                                 </li> -->
-                                    <li class="submenu-item ">
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                            <span>Logout</span></a>
-                                        </a>
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                            style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+                                <li class="submenu-item ">
+                                    <a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <span>Logout</span></a>
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                        style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div id="main">
-                <header class="mb-3">
-                    <a href="#" class="burger-btn d-block d-xl-none">
-                        <i class="bi bi-justify fs-3"></i>
-                    </a>
-                </header>
-
-                <div class="page-heading">
-                    @yield('content')
-                    @include('sweetalert::alert')
-                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
             </div>
         </div>
-        <script src="{{ asset('/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
-        <script src="{{ asset('/assets/js/bootstrap.bundle.min.js') }}"></script>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
 
-        <script src="{{ asset('/assets/vendors/apexcharts/apexcharts.js') }}"></script>
-        <script src="{{ asset('/assets/js/pages/dashboard.js') }}"></script>
+            <div class="page-heading">
+                @yield('content')
+                @include('sweetalert::alert')
+            </div>
+        </div>
+    </div>
+    <script src="{{ asset('/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/bootstrap.bundle.min.js') }}"></script>
 
-        <script src="{{ asset('/assets/js/main.js') }}"></script>
+    <script src="{{ asset('/assets/vendors/apexcharts/apexcharts.js') }}"></script>
+    <script src="{{ asset('/assets/js/pages/dashboard.js') }}"></script>
 
-        <script src="{{ asset('/assets/extensions/simple-datatables/umd/simple-datatables.js') }}"></script>
-        <script src="{{ asset('/assets/vendors/simple-datatables/simple-datatables.js') }}"></script>
-        <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
-        <!-- Select2 JS -->
-        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="{{ asset('/assets/js/main.js') }}"></script>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
-        @yield('addon-script')
-    </body>
+    <script src="{{ asset('/assets/extensions/simple-datatables/umd/simple-datatables.js') }}"></script>
+    <script src="{{ asset('/assets/vendors/simple-datatables/simple-datatables.js') }}"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    @yield('addon-script')
+</body>
 @else
-    @dd('NO')
-    <script>
-        window.location.href = "{{ route('login.index') }}";
-    </script>
+@dd('NO')
+<script>
+    window.location.href = "{{ route('login.index') }}";
+</script>
 @endif
 
 </html>
@@ -154,6 +160,9 @@
             case 'news':
                 $("#news").addClass('active');
                 break;
+            case 'contact_us':
+                $("#contact_us").addClass('active');
+                break;
             default:
                 break;
         }
@@ -169,7 +178,7 @@
                             const data = new FormData();
                             data.append('upload', file);
 
-                            return fetch('{{ route('news.upload') }}', {
+                            return fetch("{{ route('news.upload') }}", {
                                     method: 'POST',
                                     headers: {
                                         'X-CSRF-TOKEN': '{{ csrf_token() }}'
