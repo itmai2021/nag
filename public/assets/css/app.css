@@ -107,7 +107,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 999;
-    background-color: transparent;
+    /* background-color: transparent; */
     /* default awal */
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
@@ -522,7 +522,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 999;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
     transition: background 0.3s, box-shadow 0.3s;
 }
 
@@ -699,12 +699,29 @@ body {
 }
 
 .custom-navbar a:hover {
-    color: #2887ff;
+    /* color: #2887ff; */
     /* warna teks biru */
     /* text-shadow: 0 0 3px rgb(255, 255, 255); */
 
     /* hitam tipis */
 }
+
+.nav-links li a,
+#languageDropdown {
+    color: white;
+    font-weight: bold;
+    /* Sudah bold dari awal */
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover,
+#languageDropdown {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+
 
 
 
@@ -1131,7 +1148,7 @@ footer {
 
 
 .footer__col h4 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--text-dark);
@@ -1139,7 +1156,7 @@ footer {
 
 .footer__links {
     display: grid;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .footer__links a {
@@ -1439,7 +1456,7 @@ footer {
 
     .footer__container {
         display: grid;
-        grid-template-columns: 2fr 1.5fr 1fr;
+        grid-template-columns: 2fr 1.8fr 0.8fr;
         /* kolom 1 lebih besar */
         gap: 4rem 2rem;
     }
@@ -3304,6 +3321,21 @@ a {
     background-color: rgba(0, 0, 0, 0.05);
     /* sedikit highlight saat hover */
 }
+
+.card-trans {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-trans:hover {
+    transform: translateY(-5px) scale(1.0);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2) !important;
+}
+
+.card-trans:hover .card-title {
+    font-weight: 700;
+}
+
+
 
 
 /* .modal .btn {

@@ -31,37 +31,39 @@
 
 
 
-<section class="section__container destination__container mt-4 mb-5" id="pilar">
-    <h2 class="section__header">Sektor Bisnis</h2>
-    <p class="section__description">
-        Sektor Bisnis usaha utama kami dalam berbagai sektor industri.
-    </p>
-    <div class="goal-grid">
-        <div class="goal-card" id="open-automotive" data-aos="fade-up">
-            <img src="{{ asset('/assets/images/1.png') }}" alt="Goal 1" class="goal-img">
-            <div class="goal-text">
-                <h4 class="text-center">Automotive Trading</h4>
+<section class="py-5" style="background-color: white;" id="pilar">
+    <div class="section__container destination__container">
+        <h2 class="section__header">Sektor Bisnis</h2>
+        <p class="section__description">
+            Sektor Bisnis usaha utama kami dalam berbagai sektor industri.
+        </p>
+        <div class="goal-grid">
+            <div class="goal-card" id="open-automotive" data-aos="fade-up">
+                <img src="{{ asset('/assets/images/1.png') }}" alt="Goal 1" class="goal-img">
+                <div class="goal-text">
+                    <h4 class="text-center">Automotive Trading</h4>
+                </div>
             </div>
-        </div>
 
-        <div class="goal-card" id="open-manufacture" data-aos="fade-up" data-aos-delay="100">
-            <img src="{{ asset('/assets/images/2.png') }}" alt="Goal 2" class="goal-img">
-            <div class="goal-text">
-                <h4 class="text-center">Manufacture</h4>
+            <div class="goal-card" id="open-manufacture" data-aos="fade-up" data-aos-delay="100">
+                <img src="{{ asset('/assets/images/2.png') }}" alt="Goal 2" class="goal-img">
+                <div class="goal-text">
+                    <h4 class="text-center">Manufacture</h4>
+                </div>
             </div>
-        </div>
 
-        <div class="goal-card" id="open-finance" data-aos="fade-up" data-aos-delay="200">
-            <img src="{{ asset('/assets/images/3.png') }}" alt="Goal 4" class="goal-img">
-            <div class="goal-text">
-                <h4 class="text-center">Financial</h4>
+            <div class="goal-card" id="open-finance" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ asset('/assets/images/3.png') }}" alt="Goal 4" class="goal-img">
+                <div class="goal-text">
+                    <h4 class="text-center">Financial</h4>
+                </div>
             </div>
-        </div>
 
-        <div class="goal-card" id="open-other" data-aos="fade-up" data-aos-delay="300">
-            <img src="{{ asset('/assets/images/4.png') }}" alt="Goal 4" class="goal-img">
-            <div class="goal-text">
-                <h4 class="text-center">Others</h4>
+            <div class="goal-card" id="open-other" data-aos="fade-up" data-aos-delay="300">
+                <img src="{{ asset('/assets/images/4.png') }}" alt="Goal 4" class="goal-img">
+                <div class="goal-text">
+                    <h4 class="text-center">Others</h4>
+                </div>
             </div>
         </div>
     </div>
@@ -445,7 +447,7 @@
 @endforeach
 
 <!-- Berita -->
-<div style="background-color: #f5f5f5;padding-bottom:10vh"> <!-- Ganti warna sesuai keinginan -->
+<div> <!-- Ganti warna sesuai keinginan -->
     <section class="container py-5">
         <h2 class="text-left mb-3 fw-bold">Berita</h2>
         <div class="d-flex justify-content-between text-muted mb-5">
@@ -462,7 +464,7 @@
             @foreach ($data['news'] as $a)
             <!-- card 1 -->
             <div class="col">
-                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                <div class="card card-trans h-100 shadow-sm border-0 rounded-4 overflow-hidden">
                     <img src="{{ asset('assets/file/news/' . $a->image) }}" class="card-img-top news-img"
                         alt="Berita 1">
 
@@ -483,7 +485,7 @@
     </section>
 </div>
 
-<section class="container-fluid py-5" id="location">
+<section class="container-fluid py-5" style="background-color: white;" id="location">
     <div class="container mb-4">
         <h2 class="text-left mb-3 fw-bold">Lokasi</h2>
         <p class="text-muted mb-4">

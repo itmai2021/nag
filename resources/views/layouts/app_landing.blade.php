@@ -35,7 +35,7 @@
     <title>New Armada Group</title>
 </head>
 
-<body>
+<body style="background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1))">
     <!-- Navbar -->
     <nav id="mainNavbar" class="custom-navbar w-100">
         <div class="container-fluid d-flex justify-content-between align-items-center py-2 px-4">
@@ -61,16 +61,20 @@
                 $currentLang = request('lang') ?? session('locale', 'id');
                 $flag = $currentLang === 'en' ? 'EN' : 'ID';
                 @endphp
-                <div class="dropdown">
-                    <a href="#" class="dropdown-toggle text-white text-decoration-none" id="languageDropdown"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        {{ $flag }}
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                        <li><a class="dropdown-item text-dark" href="?lang=id">Indonesia</a></li>
-                        <li><a class="dropdown-item text-dark" href="?lang=en">English</a></li>
-                    </ul>
-                </div>
+
+                <ul class="nav-links d-flex gap-4 m-0" style="margin-left:auto; margin-right:20px;">
+                    <li class="dropdown" style="position:relative;">
+                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" style="text-decoration:none;">
+                            {{ $flag }}
+                        </a>
+                        <ul class="dropdown-menu"
+                            style="right:0; left:auto; min-width:120px; text-align:left;">
+                            <li><a href="?lang=id">Indonesia</a></li>
+                            <li><a href="?lang=en">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </nav>

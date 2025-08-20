@@ -23,6 +23,13 @@ class NewsController extends Controller
         return view('admin.news', compact('data'));
     }
 
+    public function news()
+    {
+        $data['news'] = News::with('company')->get();
+
+        return view('news', compact('data'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -104,9 +111,34 @@ class NewsController extends Controller
     public function update(Request $request, $id)
     {
         $news = News::findOrFail($id);
-        $news->update($request->all());
+
+        // Ambil semua data request kecuali image (supaya tidak overwrite null)
+        $data = $request->except('image');
+
+        if ($request->hasFile('image')) {
+            // Pastikan folder ada
+            $folder = public_path('assets/file/news');
+            if (!file_exists($folder)) {
+                mkdir($folder, 0777, true);
+            }
+
+            // Hapus file lama kalau ada
+            if ($news->image && file_exists($folder . '/' . $news->image)) {
+                unlink($folder . '/' . $news->image);
+            }
+
+            // Simpan file baru
+            $imageName = time() . '_' . $request->file('image')->getClientOriginalName();
+            $request->file('image')->move($folder, $imageName);
+
+            $data['image'] = $imageName;
+        }
+
+        $news->update($data);
+        Alert::success('Success', 'Update News Successfully.');
         return redirect()->route('news.index');
     }
+
 
     /**
      * Remove the specified resource from storage.
