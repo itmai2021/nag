@@ -26,9 +26,9 @@ class NewsController extends Controller
     public function news()
     {
         $data['news'] = News::with('company')
+            ->where('is_active', TRUE)
             ->orderBy('publication_date', 'desc')
-            ->paginate(9); // <-- JANGAN pakai ->get()
-
+            ->paginate(9);
         return view('news', compact('data'));
     }
 
