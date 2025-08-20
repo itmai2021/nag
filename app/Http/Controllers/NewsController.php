@@ -88,7 +88,7 @@ class NewsController extends Controller
     {
         $data['newsdetail'] = News::where('id', $id)->where('is_active', TRUE)->first();
         if (!$data['newsdetail']) {
-            return redirect()->route('news.index');
+            return redirect()->route('news');
         }
         $data['othersnews'] = News::where('id', '!=', $id)->where('is_active', TRUE)->orderBy('publication_date', 'desc')->limit(4)->get();
 
