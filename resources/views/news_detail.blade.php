@@ -40,7 +40,7 @@
                         <div class="row mb-2">
                             <div class="col mb-3">
                                 <a href="{{ route('news.show', $a->id) }}">
-                                    <div class="card card-trans shadow-sm border-0 rounded-4 overflow-hidden">
+                                    <div class="card card-trans-small shadow-sm border-0 rounded-4 overflow-hidden">
                                         <img src="{{ asset('assets/file/news/' . $a->image) }}"
                                             class="card-img-top news-img" alt="Berita 1" style="height: 120px">
 

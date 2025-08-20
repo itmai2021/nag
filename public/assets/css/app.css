@@ -3322,7 +3322,8 @@ a {
     /* sedikit highlight saat hover */
 }
 
-.card-trans {
+.card-trans,
+.card-trans-small {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -3332,6 +3333,10 @@ a {
 }
 
 .card-trans:hover .card-title {
+    font-weight: 700;
+}
+
+.card-trans-small:hover .card-title {
     font-weight: 700;
 }
 
