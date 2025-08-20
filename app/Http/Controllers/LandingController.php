@@ -61,7 +61,7 @@ class LandingController extends Controller
         $manufacture = Company::where('pilar', 'Manufacture')->whereNotNull('company_number')->orderBy('company_number', 'ASC')->get();
         $finance = Company::where('pilar', 'Finance')->whereNotNull('company_number')->orderBy('company_number', 'ASC')->get();
         $others = Company::where('pilar', 'Others')->whereNotNull('company_number')->orderBy('company_number', 'ASC')->get();
-        $data['news'] = News::where('is_highlight', '1')->limit(3)->get();
+        $data['news'] = News::where('is_highlight', TRUE)->where('is_active', TRUE)->limit(3)->get();
         $tjhmg['atj'] = Company::where('company_shortname', 'ATJ')->first();
         $tjhmg['tjma'] = Company::where('company_shortname', 'TJMA')->first();
         $tjhmg['lgc'] = Company::where('company_shortname', 'LGC')->first();
