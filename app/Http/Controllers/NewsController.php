@@ -25,7 +25,9 @@ class NewsController extends Controller
 
     public function news()
     {
-        $data['news'] = News::with('company')->get();
+        $data['news'] = News::with('company')
+            ->orderBy('publication_date', 'desc')
+            ->paginate(9); // <-- JANGAN pakai ->get()
 
         return view('news', compact('data'));
     }
