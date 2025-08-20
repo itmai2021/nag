@@ -99,14 +99,14 @@
                 <h4 class="text-white">Hubungi Kami</h4>
                 <ul class="footer__links p-0">
                     <li>
-                        <a href="#" class="text-white"><i class="ri-phone-fill"></i> (021) 3841061</a>
+                        <p class="text-white m-0 p-0"><i class="ri-phone-fill"></i> (021) 3841061</p>
                     </li>
                     <li>
-                        <a href="#" class="text-white"><i class="ri-mail-fill"></i> secretariat@mai.nag.co.id</a>
+                        <p class="text-white m-0 p-0"><i class="ri-mail-fill"></i> secretariat@mai.nag.co.id</p>
                     </li>
                     <li>
-                        <a href="#" class="text-white"><i class="ri-map-pin-2-fill"></i> Jl. Tanah Abang II
-                            No.104, Cideng, Jakarta Pusat</a>
+                        <p class="text-white m-0 p-0"><i class="ri-map-pin-2-fill"></i> Jl. Tanah Abang II
+                            No.104, Cideng, Jakarta Pusat</p>
                     </li>
                 </ul>
             </div>
