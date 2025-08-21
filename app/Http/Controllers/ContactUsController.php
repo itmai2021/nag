@@ -11,7 +11,7 @@ class ContactUsController extends Controller
 
     public function index_admin()
     {
-        $datas = ContactUs::get();
+        $datas = ContactUs::orderBy('created_at', 'DESC')->get();
 
         return view('admin.contact_us', compact('datas'));
     }

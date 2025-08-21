@@ -20,15 +20,17 @@
                                     <th class="text-center">Name</th>
                                     <th class="text-center">Email</th>
                                     <th class="text-center">Message</th>
+                                    <th class="text-center">Date</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($datas as $key => $val)
                                 <tr>
-                                    <td class="text-center">{{$key+1}}</td>
-                                    <td class="text-center">{{$val->name}}</td>
-                                    <td class="text-center">{{$val->email}}</td>
-                                    <td class="text-center">{{$val->message}}</td>
+                                    <td class="text-left">{{$key+1}}</td>
+                                    <td class="text-left">{{$val->name}}</td>
+                                    <td class="text-left">{{$val->email}}</td>
+                                    <td class="text-left">{{$val->message}}</td>
+                                    <td class="text-center">{{ \Carbon\Carbon::parse($val->created_at)->format('d/m/Y') }}</td>
                                 </tr>
                                 @endforeach
                             </tbody>
