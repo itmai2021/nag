@@ -76,7 +76,7 @@
         }
 
         .btn-login {
-            background: linear-gradient(135deg, #1d237e, #7077d5ff);
+            background: linear-gradient(135deg, #031843, #7077d5ff);
             border: none;
             border-radius: 0.5rem;
             color: #fff;

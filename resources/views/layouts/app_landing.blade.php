@@ -18,6 +18,11 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.5/leaflet.awesome-markers.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
     <style>
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
         #mapid {
             height: 600px;
         }
@@ -35,17 +40,31 @@
     <title>New Armada Group</title>
 </head>
 
-<body style="background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1))">
+<body style="background-color: rgb(249 250 251 / var(--tw-bg-opacity, 0.8))">
     <!-- Navbar -->
-    <nav id="mainNavbar" class="custom-navbar w-100">
-        <div class="container-fluid d-flex justify-content-between align-items-center py-2 px-4">
-            <a href="{{ route('home') }}" class="logo">
-                <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" style="height: 50px;">
-            </a>
-            <div class="d-flex align-items-center gap-4">
-                <ul class="nav-links d-flex gap-4 m-0">
+    <nav id="mainNavbar" class="navbar navbar-expand-xl navbar-dark w-100 custom-navbar">
+        <div class="container-fluid px-0 py-2 d-flex justify-content-between align-items-center">
+
+            <!-- Logo -->
+            <div class="d-flex justify-content-between align-items-center w-100 px-0">
+                <!-- Logo kiri -->
+                <a href="{{ route('home') }}" class="logo d-flex align-items-center ms-0">
+                    <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="logo-img">
+                </a>
+                <!-- Hamburger kanan -->
+                <button class="navbar-toggler d-xl-none me-0" type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mainNavbarOffcanvas"
+                    aria-controls="mainNavbarOffcanvas"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <!-- Menu Desktop -->
+            <div class="d-none d-xl-flex align-items-center ms-auto me-4">
+                <ul class="nav-links d-flex gap-3 m-0">
                     <li class="dropdown">
-                        <a href="" class="dropdown-toggle">Tentang Kami</a>
+                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Tentang Kami</a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ route('about_us') }}">Profil</a></li>
                             <li><a href="{{ route('home') }}#pilar">Sektor Bisnis</a></li>
@@ -56,28 +75,57 @@
                     <li><a href="{{ route('contact_us') }}#location">Hubungi Kami</a></li>
                     <li><a href="https://career.mekararmadainvestama.co.id/" target="_blank">Karir</a></li>
                 </ul>
-
                 @php
                 $currentLang = request('lang') ?? session('locale', 'id');
                 $flag = $currentLang === 'en' ? 'EN' : 'ID';
                 @endphp
-
-                <ul class="nav-links d-flex gap-4 m-0" style="margin-left:auto; margin-right:20px;">
-                    <li class="dropdown" style="position:relative;">
-                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" style="text-decoration:none;">
-                            {{ $flag }}
-                        </a>
-                        <ul class="dropdown-menu"
-                            style="right:0; left:auto; min-width:120px; text-align:left;">
+                <!-- Language Selector -->
+                <ul class="nav-links d-flex gap-2 m-0 ms-3">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">{{ $flag }}</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
                             <li><a href="?lang=id">Indonesia</a></li>
                             <li><a href="?lang=en">English</a></li>
                         </ul>
                     </li>
                 </ul>
+            </div>
 
+
+            <!-- Offcanvas (Mobile Menu) -->
+            <div class="offcanvas offcanvas-end text-light d-xl-none" tabindex="-1" id="mainNavbarOffcanvas" style="background-color: #031843;"
+                aria-labelledby="mainNavbarOffcanvasLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="mainNavbarOffcanvasLabel"><img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="logo-img"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-column gap-2">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Tentang Kami</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ route('about_us') }}">Profil</a></li>
+                                <li><a href="{{ route('home') }}#pilar">Sektor Bisnis</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ route('news') }}" class="nav-link">Berita</a></li>
+                        <li><a href="{{ route('home') }}#location" class="nav-link">Lokasi</a></li>
+                        <li><a href="{{ route('contact_us') }}#location" class="nav-link">Hubungi Kami</a></li>
+                        <li><a href="https://career.mekararmadainvestama.co.id/" class="nav-link" target="_blank">Karir</a></li>
+                        <li class="nav-item dropdown mt-3">
+                            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">{{ $flag }}</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="?lang=id">Indonesia</a></li>
+                                <li><a href="?lang=en">English</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
+
+
 
     <!-- Konten Halaman -->
     @yield('content')

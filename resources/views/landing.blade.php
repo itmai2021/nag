@@ -4,32 +4,39 @@
 <section id="Home" class="p-0 position-relative">
     <div id="carouselHeader" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <!-- Slide 1 -->
             <div class="carousel-item active">
-                <img src="{{ asset('/assets/images/gedungMAIFix.png') }}"
-                    class="d-block w-100"
-                    alt="Slide 1"
-                    style="object-fit: cover; object-position: top 20px; height: 700px;">
+                <picture>
+                    <!-- untuk mobile -->
+                    <source media="(max-width: 768px)" srcset="{{ asset('/assets/images/gedung_mai_mobile.png') }}">
 
-                <!-- Text Overlay -->
+                    <!-- default (desktop) -->
+                    <img src="{{ asset('/assets/images/gedungMAIFix.png') }}"
+                        class="hero-img"
+                        alt="Slide 1">
+                </picture>
+                <!-- Text Overlay: Desktop -->
                 <div class="carousel-caption text-start d-none d-md-block"
                     style="top: 45%; transform: translateY(-50%); left: 5%; right: auto;"
                     data-aos="fade" data-aos-once="false">
-
-                    <h1 class="staggered-inline"
-                        style="font-size: 2.5rem; font-weight: bold; color: white; text-shadow: 2px 2px 6px rgba(0,0,0,0.6); margin: 0;">
-                        <span>Together</span>
-                        <span>&nbsp;We Are</span>
-                        <span>&nbsp;Strong!</span>
+                    <h1 style="font-size: clamp(2rem, 4vw, 2.5rem); font-weight: bold; color: white; text-shadow: 2px 2px 6px rgba(0,0,0,0.6); margin: 0;">
+                        Together <span>&nbsp;We Are</span> <span>&nbsp;Strong!</span>
                     </h1>
+                </div>
 
+                <!-- Text Overlay: Mobile -->
+                <div class="carousel-caption text-start d-block d-md-none"
+                    style="top: 45%; transform: translateY(-50%); left: 5%; right: auto;"
+                    data-aos="fade" data-aos-once="false">
+                    <h1 style="font-size: 1.8rem; font-weight: bold; color: white; text-align: left; text-shadow: 2px 2px 6px rgba(0,0,0,0.6); margin: 0; line-height: 1.4;">
+                        Together<br>
+                        We Are<br>
+                        Strong!
+                    </h1>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-
 
 <section class="py-5" style="background-color: white;" id="pilar">
     <div class="section__container destination__container">
@@ -38,28 +45,28 @@
             Sektor Bisnis usaha utama kami dalam berbagai sektor industri.
         </p>
         <div class="goal-grid">
-            <div class="goal-card" id="open-automotive" data-aos="fade-up">
+            <div class="goal-card" id="open-automotive" data-aos="fade-right">
                 <img src="{{ asset('/assets/images/1.png') }}" alt="Goal 1" class="goal-img">
                 <div class="goal-text">
                     <h4 class="text-center">Automotive Trading</h4>
                 </div>
             </div>
 
-            <div class="goal-card" id="open-manufacture" data-aos="fade-up" data-aos-delay="100">
+            <div class="goal-card" id="open-manufacture" data-aos="fade-left" data-aos-delay="100">
                 <img src="{{ asset('/assets/images/2.png') }}" alt="Goal 2" class="goal-img">
                 <div class="goal-text">
                     <h4 class="text-center">Manufacture</h4>
                 </div>
             </div>
 
-            <div class="goal-card" id="open-finance" data-aos="fade-up" data-aos-delay="200">
+            <div class="goal-card" id="open-finance" data-aos="fade-right" data-aos-delay="200">
                 <img src="{{ asset('/assets/images/3.png') }}" alt="Goal 4" class="goal-img">
                 <div class="goal-text">
                     <h4 class="text-center">Financial</h4>
                 </div>
             </div>
 
-            <div class="goal-card" id="open-other" data-aos="fade-up" data-aos-delay="300">
+            <div class="goal-card" id="open-other" data-aos="fade-left" data-aos-delay="300">
                 <img src="{{ asset('/assets/images/4.png') }}" alt="Goal 4" class="goal-img">
                 <div class="goal-text">
                     <h4 class="text-center">Others</h4>
@@ -447,43 +454,41 @@
 @endforeach
 
 <!-- Berita -->
-<div> <!-- Ganti warna sesuai keinginan -->
-    <section class="container py-5">
-        <h2 class="text-left mb-3 fw-bold">Berita</h2>
-        <div class="d-flex justify-content-between text-muted mb-5">
-            <p class="mb-0">
-                Update terbaru mengenai aktivitas, berita, dan informasi menarik dari kami.
-            </p>
-            <p class="mb-0 text-end" style="cursor:pointer;">
-                <a href="{{ route('news') }}" style="text-decoration: none; color: #343a40;">Semua Berita <i
-                        class="ri-arrow-right-line"></i></a>
-            </p>
-        </div>
+<section class="container py-5" data-aos="fade-up">
+    <h2 class="text-left mb-3 fw-bold" data-aos="fade-up" data-aos-delay="100">Berita</h2>
+    <div class="d-flex flex-column flex-md-row justify-content-between text-muted mb-5" data-aos="fade-up" data-aos-delay="200">
+        <p class="mb-2 mb-md-0">
+            Update terbaru mengenai aktivitas, berita, dan informasi menarik dari kami.
+        </p>
+        <p class="mb-0 text-end" style="cursor:pointer;">
+            <a href="{{ route('news') }}" style="text-decoration: none; color: #343a40;">
+                Semua Berita <i class="ri-arrow-right-line"></i>
+            </a>
+        </p>
+    </div>
 
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            @foreach ($data['news'] as $a)
-            <!-- card 1 -->
-            <div class="col">
-                <div class="card card-trans h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                    <img src="{{ asset('assets/file/news/' . $a->image) }}" class="card-img-top news-img"
-                        alt="Berita 1">
-
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">{{ $a->subject }}</h5>
-                        <p class="card-text text-muted">
-                            {{ \Carbon\Carbon::parse($a->publication_date)->subDays(30)->locale('id')->translatedFormat('l, d F Y') }}
-                        </p>
-                        <a href="{{ route('news.show', $a->id) }}"
-                            class="text-dark text-decoration-none fw-medium mt-auto">
-                            Selengkapnya <i class="ri-arrow-right-line"></i>
-                        </a>
-                    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        @foreach ($data['news'] as $index => $a)
+        <div class="col" data-aos="fade-up" data-aos-delay="{{ 100 * ($index + 1) }}">
+            <div class="card card-trans h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                <img src="{{ asset('assets/file/news/' . $a->image) }}" class="card-img-top news-img"
+                    alt="Berita 1">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{ $a->subject }}</h5>
+                    <p class="card-text text-muted">
+                        {{ \Carbon\Carbon::parse($a->publication_date)->subDays(30)->locale('id')->translatedFormat('l, d F Y') }}
+                    </p>
+                    <a href="{{ route('news.show', $a->id) }}"
+                        class="text-dark text-decoration-none fw-medium mt-auto">
+                        Selengkapnya <i class="ri-arrow-right-line"></i>
+                    </a>
                 </div>
             </div>
-            @endforeach
         </div>
-    </section>
-</div>
+        @endforeach
+    </div>
+</section>
+
 
 <section class="container-fluid py-5" style="background-color: white;" id="location">
     <div class="container mb-4">

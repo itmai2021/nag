@@ -41,7 +41,7 @@
             top:45%;
             transform:translateY(-50%);
             width:320px;
-            background:#1d237e;
+            background:#031843;
             color:white;
             padding:30px;
             border-radius:20px;
@@ -80,7 +80,7 @@
         <div class="row align-items-center">
             <!-- Kolom Kiri: Judul -->
             <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-right">
-                <h2 style="font-size:2.5rem;font-weight:700;color:#1d237e;line-height:1.2;margin-bottom:10px;">
+                <h2 style="font-size:2.5rem;font-weight:700;color:#031843;line-height:1.2;margin-bottom:10px;">
                     Filosofi
                 </h2>
                 <h4 style="font-size:1.5rem;font-weight:500;color:#555;">New Armada Group</h4>
@@ -91,12 +91,12 @@
             <div class="col-lg-8" data-aos="fade-left">
                 <div style="position:relative;padding-left:40px;">
                     <!-- Garis Tengah -->
-                    <div style="position:absolute;top:0;left:20px;width:4px;height:100%;background:#1d237e;border-radius:2px;"></div>
+                    <div style="position:absolute;top:0;left:20px;width:4px;height:100%;background:#031843;border-radius:2px;"></div>
 
                     <!-- Item 1 -->
                     <div style="display:flex;align-items:flex-start;margin-bottom:35px;">
                         <div style="min-width:40px;display:flex;align-items:center;justify-content:center;z-index:1;">
-                            <div style="width:40px;height:40px;border-radius:50%;background:#1d237e;display:flex;align-items:center;justify-content:center;font-size:16px;color:white;font-weight:bold;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                            <div style="width:40px;height:40px;border-radius:50%;background:#031843;display:flex;align-items:center;justify-content:center;font-size:16px;color:white;font-weight:bold;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
                                 1
                             </div>
                         </div>
@@ -108,7 +108,7 @@
                     <!-- Item 2 -->
                     <div style="display:flex;align-items:flex-start;margin-bottom:35px;">
                         <div style="min-width:40px;display:flex;align-items:center;justify-content:center;z-index:1;">
-                            <div style="width:40px;height:40px;border-radius:50%;background:#1d237e;display:flex;align-items:center;justify-content:center;font-size:16px;color:white;font-weight:bold;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                            <div style="width:40px;height:40px;border-radius:50%;background:#031843;display:flex;align-items:center;justify-content:center;font-size:16px;color:white;font-weight:bold;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
                                 2
                             </div>
                         </div>
@@ -120,7 +120,7 @@
                     <!-- Item 3 -->
                     <div style="display:flex;align-items:flex-start;margin-bottom:35px;">
                         <div style="min-width:40px;display:flex;align-items:center;justify-content:center;z-index:1;">
-                            <div style="width:40px;height:40px;border-radius:50%;background:#1d237e;display:flex;align-items:center;justify-content:center;font-size:16px;color:white;font-weight:bold;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                            <div style="width:40px;height:40px;border-radius:50%;background:#031843;display:flex;align-items:center;justify-content:center;font-size:16px;color:white;font-weight:bold;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
                                 3
                             </div>
                         </div>
@@ -132,7 +132,7 @@
                     <!-- Item 4 -->
                     <div style="display:flex;align-items:flex-start;margin-bottom:35px;">
                         <div style="min-width:40px;display:flex;align-items:center;justify-content:center;z-index:1;">
-                            <div style="width:40px;height:40px;border-radius:50%;background:#1d237e;display:flex;align-items:center;justify-content:center;font-size:16px;color:white;font-weight:bold;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                            <div style="width:40px;height:40px;border-radius:50%;background:#031843;display:flex;align-items:center;justify-content:center;font-size:16px;color:white;font-weight:bold;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
                                 4
                             </div>
                         </div>
@@ -144,7 +144,7 @@
                     <!-- Item 5 -->
                     <div style="display:flex;align-items:flex-start;">
                         <div style="min-width:40px;display:flex;align-items:center;justify-content:center;z-index:1;">
-                            <div style="width:40px;height:40px;border-radius:50%;background:#1d237e;display:flex;align-items:center;justify-content:center;font-size:16px;color:white;font-weight:bold;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                            <div style="width:40px;height:40px;border-radius:50%;background:#031843;display:flex;align-items:center;justify-content:center;font-size:16px;color:white;font-weight:bold;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
                                 5
                             </div>
                         </div>
@@ -163,7 +163,7 @@
     <div style="max-width:800px;margin:auto;position:relative;height:500px;">
         <!-- Lingkaran Tengah -->
         <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-                    background:#1d237e;color:#fff;width:160px;height:160px;border-radius:50%;
+                    background:#031843;color:#fff;width:160px;height:160px;border-radius:50%;
                     display:flex;align-items:center;justify-content:center;text-align:center;
                     box-shadow:0 5px 15px rgba(0,0,0,0.1);z-index:2;"
             data-aos="zoom-in">
@@ -215,7 +215,7 @@
             }
 
             .core-card:hover {
-                background: #1d237e;
+                background: #031843;
                 transform: translateY(-5px);
             }
 

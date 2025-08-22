@@ -210,7 +210,7 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
-    background: #1d237e;
+    background: #031843;
     padding: 1.5rem;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -616,7 +616,7 @@ body {
 }
 
 .card:hover {
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 
@@ -1105,7 +1105,7 @@ header::before {
 }
 
 footer {
-    background-color: #1d237e;
+    background-color: #031843;
 
 }
 
@@ -1142,7 +1142,7 @@ footer {
 
 .footer__socials a:hover {
     background-color: white;
-    color: #1d237e;
+    color: #031843;
     /* Ganti dengan warna utama brand kamu */
 }
 
@@ -3242,8 +3242,8 @@ a {
 
 .btn-kirim {
     background-color: white;
-    color: #1d237e;
-    border: 2px solid #1d237e;
+    color: #031843;
+    border: 2px solid #031843;
     padding: 8px 20px;
     border-radius: 5px;
     font-weight: 600;
@@ -3252,7 +3252,7 @@ a {
 
 .btn-kirim:hover {
     background-color: white;
-    color: #1d237e;
+    color: #031843;
     cursor: pointer;
     font-weight: 900;
 }
@@ -3342,6 +3342,153 @@ a {
 
 .leaflet-popup-content {
     text-align: center;
+}
+
+/* Hide mobile menu by default */
+.mobile-hidden {
+    display: none;
+}
+
+/* Show on medium screen and up */
+@media (min-width: 768px) {
+    #navbar-menu {
+        display: flex !important;
+    }
+
+    #mobile-menu-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        flex-direction: row !important;
+    }
+}
+
+/* Dropdown fix */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    list-style: none;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+/* For mobile toggle dropdowns */
+.dropdown.open>.dropdown-menu {
+    display: block;
+}
+
+/* Sembunyikan menu di mobile */
+.mobile-hidden {
+    display: none !important;
+}
+
+/* Tampilkan kembali di desktop */
+@media (min-width: 768px) {
+    #navbar-menu {
+        display: flex !important;
+    }
+
+    #mobile-menu-toggle {
+        display: none !important;
+    }
+
+    .mobile-hidden {
+        display: flex !important;
+    }
+}
+
+/* Hapus bullet dan padding default */
+.navbar-nav li {
+    list-style: none;
+}
+
+.navbar-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #fff;
+}
+
+.navbar-nav .dropdown-menu a {
+    color: #031843;
+}
+
+.navbar-nav .dropdown-menu a:hover {
+    /* background-color: #495057; */
+}
+
+/* Biar menu gak wrap */
+.nav-links {
+    white-space: nowrap;
+    align-items: center;
+}
+
+/* Supaya text menu tidak turun baris */
+.nav-links a {
+    white-space: nowrap;
+}
+
+/* Kurangi jarak antar item menu */
+.nav-links.gap-4 {
+    gap: 1.25rem !important;
+    /* lebih sempit dari default gap-4 */
+}
+
+/* Optional: Biar height antar elemen rata */
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1199.98px) {
+    #mainNavbar {
+        padding-top: 0.25rem !important;
+        padding-bottom: 0.25rem !important;
+    }
+}
+
+.hero-img {
+    width: 100%;
+    height: 200vh;
+    max-height: 785px;
+    object-fit: cover;
+    /* default desktop */
+    object-position: center;
+}
+
+@media (max-width: 768px) {
+    .hero-img {
+        object-fit: fill;
+        /* kalau mobile */
+    }
+}
+
+.logo-img {
+    height: 50px;
+    /* default (desktop) */
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        height: 25px;
+        /* lebih kecil di mobile */
+    }
+
+    .logo {
+        margin-left: -10px;
+        /* geser lebih ke kiri */
+    }
 }
 
 
