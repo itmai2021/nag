@@ -296,16 +296,8 @@
 
                 if (openBtn && section && backBtn && pilar) {
                     openBtn.addEventListener("click", () => {
-                        // Scroll ke #pilar sebelum disembunyikan
-                        pilar.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-
-                        // Tambahkan delay sedikit agar scroll sempat terjadi
-                        setTimeout(() => {
-                            pilar.classList.add("d-none");
-                            section.classList.remove("d-none");
-                        }, 300); // 300ms cukup untuk animasi scroll
+                        pilar.classList.add("d-none");
+                        section.classList.remove("d-none");
                     });
 
                     backBtn.addEventListener("click", () => {
@@ -317,22 +309,6 @@
                     });
                 }
             };
-
-            setupPilarToggle("open-automotive", "automotive", "back-to-pilar");
-            setupPilarToggle("open-manufacture", "manufacture", "back-to-pilar2");
-            setupPilarToggle("open-finance", "finance", "back-to-pilar3");
-            setupPilarToggle("open-other", "other", "back-to-pilar4");
-
-            const toggler = document.querySelector(".custom-toggler");
-            const offcanvas = document.getElementById("mainNavbarOffcanvas");
-
-            toggler.addEventListener("click", function() {
-                this.classList.toggle("active");
-            });
-
-            offcanvas.addEventListener("hidden.bs.offcanvas", function() {
-                toggler.classList.remove("active");
-            });
 
             setupPilarToggle("open-automotive", "automotive", "back-to-pilar");
             setupPilarToggle("open-manufacture", "manufacture", "back-to-pilar2");
