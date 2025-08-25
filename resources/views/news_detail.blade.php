@@ -1,7 +1,7 @@
 @extends('layouts.app_landing')
 @section('content')
 <section class="py-5 bg-light mt-5">
-    <div class="container-fluid">
+    <div class="container-fluid mt-3">
         <div class="row">
             <div class="col-lg-8">
                 <h3 class="mb-3 fw-bold">{{ $data['newsdetail']->subject }}</h3>
@@ -19,6 +19,7 @@
                 <div class="fs-5" style="line-height: 1.8;">
                     {!! $data['newsdetail']->description !!}
                 </div>
+                <hr>
             </div>
             <div class="col-lg-3">
                 <div style="position: sticky; top: 20px; height: calc(100vh - 80px);">

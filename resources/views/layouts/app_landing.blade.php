@@ -36,6 +36,28 @@
         img {
             height: auto;
         }
+
+        @media (max-width: 768px) {
+            table {
+                display: block;
+                width: 100%;
+            }
+
+            table tr {
+                display: block;
+                width: 100%;
+            }
+
+            table td {
+                display: block;
+                width: 100%;
+            }
+
+            table img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
     </style>
     <title>New Armada Group</title>
 </head>
