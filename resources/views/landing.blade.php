@@ -283,7 +283,7 @@
                         alt="Logo {{ $manuf->company_shortname }}"
                         class="img-fluid logo-click"
                         data-bs-toggle="modal"
-                        data-bs-target="#imageModal{{ $manuf->id }}"
+                        data-bs-target="#imageModal2{{ $manuf->id }}"
                         style="cursor: pointer; max-height: 100px; object-fit: contain;">
                 </div>
             </div>
@@ -351,7 +351,7 @@
                         alt="Logo {{ $fn->company_shortname }}"
                         class="img-fluid logo-click"
                         data-bs-toggle="modal"
-                        data-bs-target="#imageModal{{ $fn->id }}"
+                        data-bs-target="#imageModal3{{ $fn->id }}"
                         style="cursor: pointer; max-height: 100px; object-fit: contain;">
                 </div>
             </div>
@@ -420,7 +420,7 @@
                         alt="Logo {{ $other->company_shortname }}"
                         class="img-fluid logo-click"
                         data-bs-toggle="modal"
-                        data-bs-target="#imageModal{{ $other->id }}"
+                        data-bs-target="#imageModal4{{ $other->id }}"
                         style="cursor: pointer; max-height: 100px; object-fit: contain;">
                 </div>
             </div>

@@ -112,7 +112,7 @@
                 $flag = $currentLang === 'en' ? 'EN' : 'ID';
                 @endphp
                 <!-- Language Selector -->
-                <ul class="nav-links d-flex gap-2 m-0 ms-3">
+                <ul class="nav-links d-flex m-0">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">{{ $flag }}</a>
                         <ul class="dropdown-menu lang-dropdown-custom">
