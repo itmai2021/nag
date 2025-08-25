@@ -3492,6 +3492,14 @@ a {
         /* lebih kecil di mobile */
     }
 
+    .logo-img2 {
+        height: 25px;
+        width: 50%;
+        margin-top: -2px;
+        margin-left: 10px;
+        /* lebih kecil di mobile */
+    }
+
     .logo {
         margin-left: -10px;
         /* geser lebih ke kiri */
@@ -3568,7 +3576,21 @@ a {
     transform: translateY(-10px) rotate(-45deg);
 }
 
+@media (max-width: 576px) {
+    .cont_sektor {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: flex;
+        justify-content: center;
+    }
 
+    #back-to-pilar,
+    #back-to-pilar2,
+    #back-to-pilar3,
+    #back-to-pilar4 {
+        margin-left: 0 !important;
+    }
+}
 
 
 /* .modal .btn {

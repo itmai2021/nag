@@ -88,18 +88,24 @@
             <i class="ri-arrow-left-line"></i> Kembali
         </p>
     </div>
-    <div class="container py-4" style=" margin-left: 11vh;">
-        <div class="custom-grid justify-content-center">
+    <div class="container cont_sektor py-4">
+        <div class="row justify-content-center g-4">
             @foreach ($automotive as $auto)
-            <div class="logo-item text-center">
-                <img src="{{ asset('assets/file/logo/' . $auto->logo) }}"
-                    alt="Logo {{ $auto->company_shortname }}" class="logo-click" data-bs-toggle="modal"
-                    data-bs-target="#imageModal{{ $auto->id }}"
-                    style="cursor: pointer; max-height: 100px;">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <div class="logo-item d-flex justify-content-center align-items-center" style="height: 120px;">
+                    <img src="{{ asset('assets/file/logo/' . $auto->logo) }}"
+                        alt="Logo {{ $auto->company_shortname }}"
+                        class="img-fluid logo-click"
+                        data-bs-toggle="modal"
+                        data-bs-target="#imageModal{{ $auto->id }}"
+                        style="cursor: pointer; max-height: 100px; object-fit: contain;">
+                </div>
+
             </div>
             @endforeach
         </div>
     </div>
+
 </section>
 
 @foreach ($automotive as $auto)
@@ -268,19 +274,23 @@
             <i class="ri-arrow-left-line"></i>Kembali
         </p>
     </div>
-    <div class="container py-4" style=" margin-left: 11vh;">
-        <div class="custom-grid justify-content-center">
+    <div class="container cont_sektor py-4">
+        <div class="row justify-content-center g-4">
             @foreach ($manufacture as $manuf)
-            <div class="logo-item text-center">
-                <img src="{{ asset('assets/file/logo/' . $manuf->logo) }}"
-                    alt="Logo {{ $manuf->company_shortname }}" class="logo-click" data-bs-toggle="modal"
-                    data-bs-target="#imageModal2{{ $manuf->id }}" data-id="{{ $manuf->id }}"
-                    data-logo="{{ asset('assets/file/logo/' . $manuf->logo) }}"
-                    style="cursor: pointer; max-height: 100px;">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <div class="logo-item d-flex justify-content-center align-items-center" style="height: 120px;">
+                    <img src="{{ asset('assets/file/logo/' . $manuf->logo) }}"
+                        alt="Logo {{ $manuf->company_shortname }}"
+                        class="img-fluid logo-click"
+                        data-bs-toggle="modal"
+                        data-bs-target="#imageModal{{ $manuf->id }}"
+                        style="cursor: pointer; max-height: 100px; object-fit: contain;">
+                </div>
             </div>
             @endforeach
         </div>
     </div>
+
 </section>
 @foreach ($manufacture as $manuf)
 <div class="modal fade" id="imageModal2{{ $manuf->id }}" tabindex="-1"
@@ -332,19 +342,23 @@
             <i class="ri-arrow-left-line"></i>Kembali
         </p>
     </div>
-    <div class="container py-4" style=" margin-left: 11vh;">
-        <div class="custom-grid justify-content-center">
+    <div class="container cont_sektor py-4">
+        <div class="row justify-content-center g-4">
             @foreach ($finance as $fn)
-            <div class="logo-item text-center">
-                <img src="{{ asset('assets/file/logo/' . $fn->logo) }}"
-                    alt="Logo {{ $fn->company_shortname }}" class="logo-click" data-bs-toggle="modal"
-                    data-bs-target="#imageModal3{{ $fn->id }}" data-id="{{ $fn->id }}"
-                    data-logo="{{ asset('assets/file/logo/' . $fn->logo) }}"
-                    style="cursor: pointer; max-height: 100px;">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <div class="logo-item d-flex justify-content-center align-items-center" style="height: 120px;">
+                    <img src="{{ asset('assets/file/logo/' . $fn->logo) }}"
+                        alt="Logo {{ $fn->company_shortname }}"
+                        class="img-fluid logo-click"
+                        data-bs-toggle="modal"
+                        data-bs-target="#imageModal{{ $fn->id }}"
+                        style="cursor: pointer; max-height: 100px; object-fit: contain;">
+                </div>
             </div>
             @endforeach
         </div>
     </div>
+
 </section>
 @foreach ($finance as $fnc)
 <div class="modal fade" id="imageModal3{{ $fnc->id }}" tabindex="-1"
@@ -397,19 +411,23 @@
             <i class="ri-arrow-left-line"></i>Kembali
         </p>
     </div>
-    <div class="container py-4" style=" margin-left: 11vh;">
-        <div class="custom-grid justify-content-center">
+    <div class="container cont_sektor py-4">
+        <div class="row justify-content-center g-4">
             @foreach ($others as $other)
-            <div class="logo-item text-center">
-                <img src="{{ asset('assets/file/logo/' . $other->logo) }}"
-                    alt="Logo {{ $other->company_shortname }}" class="logo-click" data-bs-toggle="modal"
-                    data-bs-target="#imageModal4{{ $other->id }}" data-id="{{ $other->id }}"
-                    data-logo="{{ asset('assets/file/logo/' . $other->logo) }}"
-                    style="cursor: pointer; max-height: 100px;">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <div class="logo-item d-flex justify-content-center align-items-center" style="height: 120px;">
+                    <img src="{{ asset('assets/file/logo/' . $other->logo) }}"
+                        alt="Logo {{ $other->company_shortname }}"
+                        class="img-fluid logo-click"
+                        data-bs-toggle="modal"
+                        data-bs-target="#imageModal{{ $other->id }}"
+                        style="cursor: pointer; max-height: 100px; object-fit: contain;">
+                </div>
             </div>
             @endforeach
         </div>
     </div>
+
 </section>
 @foreach ($others as $other)
 <div class="modal fade" id="imageModal4{{ $other->id }}" tabindex="-1"
