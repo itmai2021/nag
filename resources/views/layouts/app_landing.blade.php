@@ -40,7 +40,10 @@
     <title>New Armada Group</title>
 </head>
 
+
+
 <body style="background-color: rgb(249 250 251 / var(--tw-bg-opacity, 0.8))">
+    <!-- Navbar -->
     <!-- Navbar -->
     <nav id="mainNavbar" class="navbar navbar-expand-xl navbar-dark w-100 custom-navbar">
         <div class="container-fluid px-0 py-2 d-flex justify-content-between align-items-center">
@@ -52,14 +55,17 @@
                     <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="logo-img">
                 </a>
                 <!-- Hamburger kanan -->
-                <button class="navbar-toggler d-xl-none me-0" type="button"
+                <button class="navbar-toggler d-xl-none me-0 custom-toggler" type="button"
                     data-bs-toggle="offcanvas"
                     data-bs-target="#mainNavbarOffcanvas"
                     aria-controls="mainNavbarOffcanvas"
                     aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="toggler-icon"></span>
+                    <span class="toggler-icon"></span>
+                    <span class="toggler-icon"></span>
                 </button>
             </div>
+
             <!-- Menu Desktop -->
             <div class="d-none d-xl-flex align-items-center ms-auto me-4">
                 <ul class="nav-links d-flex gap-3 m-0">
@@ -91,17 +97,15 @@
                 </ul>
             </div>
 
-
             <!-- Offcanvas (Mobile Menu) -->
-            <div class="offcanvas offcanvas-end text-light d-xl-none" tabindex="-1" id="mainNavbarOffcanvas" style="background-color: #031843;"
+            <div class="offcanvas offcanvas-end text-light d-xl-none" tabindex="-1" id="mainNavbarOffcanvas"
+                style="background-color: #031843;"
                 aria-labelledby="mainNavbarOffcanvasLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="mainNavbarOffcanvasLabel"><img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="logo-img"></h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav flex-column gap-2">
                         <li class="nav-item dropdown">
+                            <h5 class="offcanvas-title" id="mainNavbarOffcanvasLabel"><img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="logo-img"></h5>
+
                             <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Tentang Kami</a>
                             <ul class="dropdown-menu">
                                 <li><a href="{{ route('about_us') }}">Profil</a></li>
@@ -124,7 +128,6 @@
             </div>
         </div>
     </nav>
-
 
 
     <!-- Konten Halaman -->
@@ -285,6 +288,17 @@
             setupPilarToggle("open-manufacture", "manufacture", "back-to-pilar2");
             setupPilarToggle("open-finance", "finance", "back-to-pilar3");
             setupPilarToggle("open-other", "other", "back-to-pilar4");
+
+            const toggler = document.querySelector(".custom-toggler");
+            const offcanvas = document.getElementById("mainNavbarOffcanvas");
+
+            toggler.addEventListener("click", function() {
+                this.classList.toggle("active");
+            });
+
+            offcanvas.addEventListener("hidden.bs.offcanvas", function() {
+                toggler.classList.remove("active");
+            });
         });
     </script>
 

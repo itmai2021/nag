@@ -3472,6 +3472,11 @@ a {
         object-fit: fill;
         /* kalau mobile */
     }
+
+    .navbar {
+        height: 55px;
+        padding: 1rem
+    }
 }
 
 .logo-img {
@@ -3482,6 +3487,8 @@ a {
 @media (max-width: 768px) {
     .logo-img {
         height: 25px;
+        margin-top: -2px;
+        margin-left: -10px;
         /* lebih kecil di mobile */
     }
 
@@ -3489,6 +3496,76 @@ a {
         margin-left: -10px;
         /* geser lebih ke kiri */
     }
+}
+
+.card-title {
+    font-size: 1rem;
+    /* default untuk mobile */
+}
+
+.card-text {
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .card-title {
+        font-size: 1.25rem;
+        /* tablet */
+    }
+
+    .card-text {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-title {
+        font-size: 1.5rem;
+        /* desktop */
+    }
+
+    .card-text {
+        font-size: 1.125rem;
+    }
+}
+
+/* Hilangkan ikon default */
+.navbar-toggler .navbar-toggler-icon {
+    display: none;
+}
+
+/* Custom hamburger */
+.custom-toggler {
+    border: none;
+    background: transparent;
+    padding: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    z-index: 1051;
+    /* biar selalu di atas */
+}
+
+.toggler-icon {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Animasi jadi X */
+.custom-toggler.active .toggler-icon:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.custom-toggler.active .toggler-icon:nth-child(2) {
+    opacity: 0;
+}
+
+.custom-toggler.active .toggler-icon:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
 }
 
 
