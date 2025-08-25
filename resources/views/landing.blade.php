@@ -507,16 +507,15 @@
     </div>
 </section>
 
-
 <section class="container-fluid py-5" style="background-color: white;" id="location">
-    <div class="container mb-4">
+    <div class="container mb-4 p-0">
         <h2 class="text-left mb-3 fw-bold">Lokasi</h2>
         <p class="text-muted mb-4">
             Lokasi Bisnis Unit Kami
         </p>
     </div>
 
-    <div class="container position-relative">
+    <div class="container position-relative p-0">
         <!-- Titik Tanah Abang -->
         <div class="position-relative">
             <div id="map" style="height: 500px; width: 100%;border-radius:15px"></div>
