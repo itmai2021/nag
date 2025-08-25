@@ -533,7 +533,7 @@
             once: false, // biar bisa bulak balik
         });
 
-        var map = L.map('map').setView([-6.2, 106.816666], 10);
+        var map = L.map('map').setView([-2.0, 115.816666], 5);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
