@@ -57,6 +57,10 @@
                 max-width: 100%;
                 height: auto;
             }
+
+            .footer__container {
+                gap: 0;
+            }
         }
     </style>
     <title>New Armada Group</title>
@@ -126,7 +130,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav flex-column gap-2">
                         <li class="nav-item dropdown">
-                            <h5 class="offcanvas-title" id="mainNavbarOffcanvasLabel"><img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="logo-img"></h5>
+                            <h5 class="offcanvas-title mb-2" id="mainNavbarOffcanvasLabel"><img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="logo-img"></h5>
 
                             <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Tentang Kami</a>
                             <ul class="dropdown-menu">
@@ -190,7 +194,7 @@
                 <ul class="footer__socials p-0">
                     <li><a href="https://www.instagram.com/newarmadagroup?igsh=eDB2dm9zbHQ2ejFy" target="_blank"><i
                                 class="ri-instagram-line"></i></a></li>
-                    <li><a href="https://www.linkedin.com/company/pt-mekar-armada-investama-new-armada-group/posts/?feedView=all"
+                    <li><a href="https://id.linkedin.com/company/pt-mekar-armada-investama-new-armada-group"
                             target="_blank"><i class="ri-linkedin-line"></i></a></li>
                 </ul>
             </div>
@@ -292,8 +296,16 @@
 
                 if (openBtn && section && backBtn && pilar) {
                     openBtn.addEventListener("click", () => {
-                        pilar.classList.add("d-none");
-                        section.classList.remove("d-none");
+                        // Scroll ke #pilar sebelum disembunyikan
+                        pilar.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+
+                        // Tambahkan delay sedikit agar scroll sempat terjadi
+                        setTimeout(() => {
+                            pilar.classList.add("d-none");
+                            section.classList.remove("d-none");
+                        }, 300); // 300ms cukup untuk animasi scroll
                     });
 
                     backBtn.addEventListener("click", () => {
@@ -305,6 +317,22 @@
                     });
                 }
             };
+
+            setupPilarToggle("open-automotive", "automotive", "back-to-pilar");
+            setupPilarToggle("open-manufacture", "manufacture", "back-to-pilar2");
+            setupPilarToggle("open-finance", "finance", "back-to-pilar3");
+            setupPilarToggle("open-other", "other", "back-to-pilar4");
+
+            const toggler = document.querySelector(".custom-toggler");
+            const offcanvas = document.getElementById("mainNavbarOffcanvas");
+
+            toggler.addEventListener("click", function() {
+                this.classList.toggle("active");
+            });
+
+            offcanvas.addEventListener("hidden.bs.offcanvas", function() {
+                toggler.classList.remove("active");
+            });
 
             setupPilarToggle("open-automotive", "automotive", "back-to-pilar");
             setupPilarToggle("open-manufacture", "manufacture", "back-to-pilar2");
