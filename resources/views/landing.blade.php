@@ -533,6 +533,54 @@
         });
 
         var map = L.map('map').setView([-2.0, 115.816666], 5);
+        var legend = L.control({
+            position: 'bottomright'
+        });
+
+        legend.onAdd = function(map) {
+            var div = L.DomUtil.create('div', 'info legend');
+
+            // Contoh data legend (warna dan label)
+            var legendData = [{
+                    color: '#C00000',
+                    label: 'Automotive Trading'
+                },
+                {
+                    color: '#003366',
+                    label: 'Manufacture'
+                },
+                {
+                    color: '#007F5C',
+                    label: 'Finance'
+                },
+                {
+                    color: '#FF8C42',
+                    label: 'Others'
+                },
+            ];
+
+            // Buat HTML-nya
+            legendData.forEach(function(item) {
+                div.innerHTML += `
+            <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                <div style="
+                    width: 12px;
+                    height: 12px;
+                    background-color: ${item.color};
+                    border-radius: 50%;
+                    margin-right: 8px;
+                    border: 1px solid #000;
+                "></div>
+                <span style="font-size: 12px;">${item.label}</span>
+            </div>
+        `;
+            });
+
+            return div;
+        };
+
+        legend.addTo(map);
+
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
