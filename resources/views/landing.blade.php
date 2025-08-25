@@ -534,7 +534,7 @@
 
         var map = L.map('map').setView([-2.0, 115.816666], 5);
         var legend = L.control({
-            position: 'bottomright'
+            position: 'bottomleft'
         });
 
         legend.onAdd = function(map) {
