@@ -130,7 +130,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav flex-column gap-2">
                         <li class="nav-item dropdown">
-                            <h5 class="offcanvas-title mb-2" id="mainNavbarOffcanvasLabel"><img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="logo-img"></h5>
+                            <h5 class="offcanvas-title mb-2" id="mainNavbarOffcanvasLabel"><img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="logo-img2"></h5>
 
                             <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Tentang Kami</a>
                             <ul class="dropdown-menu">
