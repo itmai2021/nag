@@ -3312,13 +3312,14 @@ a {
 /* Style link dropdown */
 .nav-links .dropdown-menu li a {
     display: block;
-    padding: 0.5rem 1rem;
+    width: 100%;
+    padding: 10px 15px;
     color: #333;
     text-decoration: none;
 }
 
 .nav-links .dropdown-menu li a:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    /* background-color: rgba(0, 0, 0, 0.05); */
     /* sedikit highlight saat hover */
 }
 
@@ -3591,6 +3592,16 @@ a {
         margin-left: 0 !important;
     }
 }
+
+/* Tambahan CSS untuk dropdown bahasa */
+.lang-dropdown-custom {
+    left: auto !important;
+    right: 0 !important;
+    transform: none !important;
+    min-width: 110px;
+}
+
+
 
 
 /* .modal .btn {

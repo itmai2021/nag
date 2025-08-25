@@ -115,12 +115,13 @@
                 <ul class="nav-links d-flex gap-2 m-0 ms-3">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">{{ $flag }}</a>
-                        <ul class="dropdown-menu dropdown-menu-end">
+                        <ul class="dropdown-menu lang-dropdown-custom">
                             <li><a href="?lang=id">Indonesia</a></li>
                             <li><a href="?lang=en">English</a></li>
                         </ul>
                     </li>
                 </ul>
+
             </div>
 
             <!-- Offcanvas (Mobile Menu) -->
