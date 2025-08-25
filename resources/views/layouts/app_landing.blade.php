@@ -142,7 +142,7 @@
                         <li><a href="{{ route('home') }}#location" class="nav-link">Lokasi</a></li>
                         <li><a href="{{ route('contact_us') }}#location" class="nav-link">Hubungi Kami</a></li>
                         <li><a href="https://career.mekararmadainvestama.co.id/" class="nav-link" target="_blank">Karir</a></li>
-                        <li class="nav-item dropdown mt-3">
+                        <li class="nav-item dropdown">
                             <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">{{ $flag }}</a>
                             <ul class="dropdown-menu">
                                 <li><a href="?lang=id">Indonesia</a></li>
