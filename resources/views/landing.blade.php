@@ -248,6 +248,107 @@
                             <p class="text-muted mb-0" style="text-align: justify;">
                                 {{ $auto->description }}
                             </p>
+                            @if($auto->company_shortname == 'AAT')
+                            <div class="mt-4">
+                                <div class="row row-cols-1 justify-content-end">
+                                    <div class="col text-end">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body p-0">
+                                                <a href="https://armadaautotara.co.id/" target="_blank" class="text-decoration-none fw-semibold">
+                                                    AAT Daihatsu
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col text-end">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body p-0">
+                                                <a href="https://daihatsuautotaratangerang.co.id/" target="_blank" class="text-decoration-none fw-semibold">
+                                                    AAT Daihatsu Cikokol
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col text-end">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body p-0">
+                                                <a href="https://daihatsuautotaradepok.co.id/" target="_blank" class="text-decoration-none fw-semibold">
+                                                    AAT Daihatsu Depok
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col text-end">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body p-0">
+                                                <a href="https://daihatsuautotarasawahbesar.co.id/" target="_blank" class="text-decoration-none fw-semibold">
+                                                    AAT Daihatsu Sawah Besar
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col text-end">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body p-0">
+                                                <a href="https://daihatsuautotarakalimalang.co.id/" target="_blank" class="text-decoration-none fw-semibold">
+                                                    AAT Daihatsu Kalimalang
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col text-end">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body p-0">
+                                                <a href="https://daihatsuautotarakstubun.co.id/" target="_blank" class="text-decoration-none fw-semibold">
+                                                    AAT Daihatsu KS Tubun
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col text-end">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body p-0">
+                                                <a href="https://autotaraisuzu.co.id/" target="_blank" class="text-decoration-none fw-semibold">
+                                                    AAT Isuzu
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @elseif($auto->company_shortname == 'AMJA')
+                            <div class="mt-4">
+                                <div class="row row-cols-1 justify-content-end">
+                                    <div class="col text-end">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body p-0">
+                                                <a href="https://www.mazdasemarang.com" target="_blank" class="text-decoration-none fw-semibold">
+                                                    Mazda Semarang
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col text-end">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body p-0">
+                                                <a href="https://www.mazdasoloofficial.com" target="_blank" class="text-decoration-none fw-semibold">
+                                                    Mazda Solo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col text-end">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body p-0">
+                                                <a href="https://www.mazdayogyakarta.com" target="_blank" class="text-decoration-none fw-semibold">
+                                                    Mazda Yogyakarta
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @else
                             @if ($auto->web_url)
                             <div class="text-end mt-3">
                                 <a href="{{ $auto->web_url }}" target="_blank"
@@ -256,6 +357,8 @@
                                 </a>
                             </div>
                             @endif
+                            @endif
+
                         </div>
                     </div>
                 </div>
