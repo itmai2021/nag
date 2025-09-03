@@ -40,9 +40,9 @@
 
 <section class="py-5" style="background-color: white;" id="pilar">
     <div class="section__container destination__container">
-        <h2 class="section__header">Sektor Bisnis</h2>
+        <h2 class="section__header">{{ __('messages.landing.sektor') }}</h2>
         <p class="section__description">
-            Sektor Bisnis usaha utama kami dalam berbagai sektor industri.
+            {{ __('messages.landing.deskripsi') }}
         </p>
         <div class="goal-grid">
             <div class="goal-card" id="open-automotive" data-aos="fade-right">
@@ -85,7 +85,7 @@
 
     <div class="text-left mb-4">
         <p class="mb-0 text-start" id="back-to-pilar" style="cursor: pointer; margin-left: 10vh;">
-            <i class="ri-arrow-left-line"></i> Kembali
+            <i class="ri-arrow-left-line"></i> {{ __('messages.landing.kembali') }}
         </p>
     </div>
     <div class="container cont_sektor py-4">
@@ -119,12 +119,12 @@
                 <h5 class="modal-title fw-bold" id="imageModalLabel{{ $auto->id }}">
                     {{ $auto->company_name }}
                 </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="{{ __('messages.landing.tutup') }}"></button>
             </div>
 
             <!-- Modal Body -->
             <div class="modal-body p-0">
-                <!-- Logo TJHMG - TETAP TERLIHAT -->
+                <!-- Logo TJHMG -->
                 <div class="text-center py-3" style="border-bottom: 1px solid #ddd;">
                     <div style="flex: 0 0 20%;">
                         <img src="{{ asset('assets/file/logo/' . $auto->logo) }}" alt="Logo"
@@ -137,229 +137,127 @@
                     <div class="overflow-auto px-4 py-3"
                         style="max-height: 48vh; display: flex; flex-direction: column; gap: 20px;">
 
-                        {{-- ATJ --}}
-                        <div class="d-flex gap-3 align-items-start">
-                            <div style="flex: 0 0 20%;">
-                                <img src="{{ asset('assets/file/logo/' . $tjhmg['atj']->logo) }}" alt="Logo ATJ"
-                                    style="max-width: 75vh; max-height: 75vh; object-fit: contain;" class="rounded shadow-sm">
-                            </div>
-                            <div style="flex: 1;">
-                                <p class="text-muted mb-0" style="text-align: justify;">
-                                    {{ $tjhmg['atj']->description }}
-                                </p>
-                                @if ($tjhmg['atj']->web_url)
-                                <div class="text-end mt-2">
-                                    <a href="{{ $tjhmg['atj']->web_url }}" target="_blank" class="text-decoration-none fw-semibold">
-                                        Selengkapnya <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                                @endif
-                            </div>
-                        </div>
+                        @php
+                        $tjhmgChildren = ['atj', 'tjma', 'lgc', 'atja'];
+                        @endphp
 
-                        {{-- TJMA --}}
+                        @foreach ($tjhmgChildren as $child)
                         <div class="d-flex gap-4 align-items-start">
                             <div style="flex: 0 0 20%;">
-                                <img src="{{ asset('assets/file/logo/' . $tjhmg['tjma']->logo) }}" alt="Logo TJMA"
+                                <img src="{{ asset('assets/file/logo/' . $tjhmg[$child]->logo) }}" alt="Logo"
                                     style="max-width: 75vh; max-height: 75vh; object-fit: contain;" class="rounded shadow-sm">
                             </div>
                             <div style="flex: 1;">
                                 <p class="text-muted mb-0" style="text-align: justify;">
-                                    {{ $tjhmg['tjma']->description }}
+                                    {{ $tjhmg[$child]->description }}
                                 </p>
-                                @if ($tjhmg['tjma']->web_url)
+                                @if ($tjhmg[$child]->web_url)
                                 <div class="text-end mt-2">
-                                    <a href="{{ $tjhmg['tjma']->web_url }}" target="_blank" class="text-decoration-none fw-semibold">
-                                        Selengkapnya <i class="ri-arrow-right-line"></i>
+                                    <a href="{{ $tjhmg[$child]->web_url }}" target="_blank" class="text-decoration-none fw-semibold">
+                                        {{ __('messages.landing.selengkapnya') }} <i class="ri-arrow-right-line"></i>
                                     </a>
                                 </div>
                                 @endif
                             </div>
                         </div>
-
-                        {{-- LGC --}}
-                        <div class="d-flex gap-4 align-items-start">
-                            <div style="flex: 0 0 20%;">
-                                <img src="{{ asset('assets/file/logo/' . $tjhmg['lgc']->logo) }}" alt="Logo LGC"
-                                    style="max-width: 75vh; max-height: 75vh; object-fit: contain;" class="rounded shadow-sm">
-                            </div>
-                            <div style="flex: 1;">
-                                <p class="text-muted mb-0" style="text-align: justify;">
-                                    {{ $tjhmg['lgc']->description }}
-                                </p>
-                                @if ($tjhmg['lgc']->web_url)
-                                <div class="text-end mt-2">
-                                    <a href="{{ $tjhmg['lgc']->web_url }}" target="_blank" class="text-decoration-none fw-semibold">
-                                        Selengkapnya <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                                @endif
-                            </div>
-                        </div>
-
-                        {{-- ATJA --}}
-                        <div class="d-flex gap-4 align-items-start">
-                            <div style="flex: 0 0 20%;">
-                                <img src="{{ asset('assets/file/logo/' . $tjhmg['atja']->logo) }}" alt="Logo ATJA"
-                                    style="max-width: 75vh; max-height: 75vh; object-fit: contain;" class="rounded shadow-sm">
-                            </div>
-                            <div style="flex: 1;">
-                                <p class="text-muted mb-0" style="text-align: justify;">
-                                    {{ $tjhmg['atja']->description }}
-                                </p>
-                                @if ($tjhmg['atja']->web_url)
-                                <div class="text-end mt-2">
-                                    <a href="{{ $tjhmg['atja']->web_url }}" target="_blank" class="text-decoration-none fw-semibold">
-                                        Selengkapnya <i class="ri-arrow-right-line"></i>
-                                    </a>
-                                </div>
-                                @endif
-                            </div>
-                        </div>
+                        @endforeach
 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    @endif
-    <div class="modal fade" id="imageModal{{ $auto->id }}" tabindex="-1"
-        aria-labelledby="imageModalLabel{{ $auto->id }}" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content shadow-lg rounded-3">
-                <div class="modal-header border-0">
-                    <h5 class="modal-title fw-bold" id="imageModalLabel{{ $auto->id }}">
-                        {{ $auto->company_name }}
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                        aria-label="Tutup"></button>
-                </div>
-                <div class="modal-body"
-                    style="min-height: 250px; display: flex; align-items: center;justify-content: center;gap: 20px;">
-                    <div class="row align-items-center">
-                        <!-- Logo -->
-                        <div class="col-md-4 text-center">
-                            <img src="{{ asset('assets/file/logo/' . $auto->logo) }}" alt="Logo"
-                                class="img-fluid rounded shadow-sm"
-                                style="max-height: 200px; object-fit: contain;">
-                        </div>
-                        <!-- Deskripsi -->
-                        <div class="col-md-8">
-                            <p class="text-muted mb-0" style="text-align: justify;">
-                                {{ $auto->description }}
-                            </p>
-                            @if($auto->company_shortname == 'AAT')
-                            <div class="mt-4">
-                                <div class="row row-cols-1 justify-content-end">
-                                    <div class="col text-end">
-                                        <div class="card shadow-sm">
-                                            <div class="card-body p-0">
-                                                <a href="https://armadaautotara.co.id/" target="_blank" class="text-decoration-none fw-semibold">
-                                                    AAT Daihatsu
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col text-end">
-                                        <div class="card shadow-sm">
-                                            <div class="card-body p-0">
-                                                <a href="https://daihatsuautotaratangerang.co.id/" target="_blank" class="text-decoration-none fw-semibold">
-                                                    AAT Daihatsu Cikokol
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col text-end">
-                                        <div class="card shadow-sm">
-                                            <div class="card-body p-0">
-                                                <a href="https://daihatsuautotaradepok.co.id/" target="_blank" class="text-decoration-none fw-semibold">
-                                                    AAT Daihatsu Depok
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col text-end">
-                                        <div class="card shadow-sm">
-                                            <div class="card-body p-0">
-                                                <a href="https://daihatsuautotarasawahbesar.co.id/" target="_blank" class="text-decoration-none fw-semibold">
-                                                    AAT Daihatsu Sawah Besar
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col text-end">
-                                        <div class="card shadow-sm">
-                                            <div class="card-body p-0">
-                                                <a href="https://daihatsuautotarakalimalang.co.id/" target="_blank" class="text-decoration-none fw-semibold">
-                                                    AAT Daihatsu Kalimalang
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col text-end">
-                                        <div class="card shadow-sm">
-                                            <div class="card-body p-0">
-                                                <a href="https://daihatsuautotarakstubun.co.id/" target="_blank" class="text-decoration-none fw-semibold">
-                                                    AAT Daihatsu KS Tubun
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col text-end">
-                                        <div class="card shadow-sm">
-                                            <div class="card-body p-0">
-                                                <a href="https://autotaraisuzu.co.id/" target="_blank" class="text-decoration-none fw-semibold">
-                                                    AAT Isuzu
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            @elseif($auto->company_shortname == 'AMJA')
-                            <div class="mt-4">
-                                <div class="row row-cols-1 justify-content-end">
-                                    <div class="col text-end">
-                                        <div class="card shadow-sm">
-                                            <div class="card-body p-0">
-                                                <a href="https://www.mazdasemarang.com" target="_blank" class="text-decoration-none fw-semibold">
-                                                    Mazda Semarang
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col text-end">
-                                        <div class="card shadow-sm">
-                                            <div class="card-body p-0">
-                                                <a href="https://www.mazdasoloofficial.com" target="_blank" class="text-decoration-none fw-semibold">
-                                                    Mazda Solo
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col text-end">
-                                        <div class="card shadow-sm">
-                                            <div class="card-body p-0">
-                                                <a href="https://www.mazdayogyakarta.com" target="_blank" class="text-decoration-none fw-semibold">
-                                                    Mazda Yogyakarta
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            @else
-                            @if ($auto->web_url)
-                            <div class="text-end mt-3">
-                                <a href="{{ $auto->web_url }}" target="_blank"
-                                    class="text-decoration-none fw-semibold">
-                                    Selengkapnya <i class="ri-arrow-right-line"></i>
-                                </a>
-                            </div>
-                            @endif
-                            @endif
+</div>
+@endif
 
+<div class="modal fade" id="imageModal{{ $auto->id }}" tabindex="-1"
+    aria-labelledby="imageModalLabel{{ $auto->id }}" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content shadow-lg rounded-3">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold" id="imageModalLabel{{ $auto->id }}">
+                    {{ $auto->company_name }}
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="{{ __('messages.landing.tutup') }}"></button>
+            </div>
+            <div class="modal-body"
+                style="min-height: 250px; display: flex; align-items: center; justify-content: center; gap: 20px;">
+                <div class="row align-items-center">
+                    <!-- Logo -->
+                    <div class="col-md-4 text-center">
+                        <img src="{{ asset('assets/file/logo/' . $auto->logo) }}" alt="Logo"
+                            class="img-fluid rounded shadow-sm"
+                            style="max-height: 200px; object-fit: contain;">
+                    </div>
+                    <!-- Deskripsi -->
+                    <div class="col-md-8">
+                        <p class="text-muted mb-0" style="text-align: justify;">
+                            {{ $auto->description }}
+                        </p>
+
+                        @if($auto->company_shortname == 'AAT')
+                        @php
+                        $aatLinks = [
+                        ['url' => 'https://armadaautotara.co.id/', 'label' => 'aat_daihatsu'],
+                        ['url' => 'https://daihatsuautotaratangerang.co.id/', 'label' => 'aat_daihatsu_cikokol'],
+                        ['url' => 'https://daihatsuautotaradepok.co.id/', 'label' => 'aat_daihatsu_depok'],
+                        ['url' => 'https://daihatsuautotarasawahbesar.co.id/', 'label' => 'aat_daihatsu_sawahbesar'],
+                        ['url' => 'https://daihatsuautotarakalimalang.co.id/', 'label' => 'aat_daihatsu_kalimalang'],
+                        ['url' => 'https://daihatsuautotarakstubun.co.id/', 'label' => 'aat_daihatsu_kstubun'],
+                        ['url' => 'https://autotaraisuzu.co.id/', 'label' => 'aat_isuzu'],
+                        ];
+                        @endphp
+                        <div class="mt-4">
+                            <div class="row row-cols-1 justify-content-end">
+                                @foreach ($aatLinks as $link)
+                                <div class="col text-end">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body p-0">
+                                            <a href="{{ $link['url'] }}" target="_blank" class="text-decoration-none fw-semibold">
+                                                {{ __('messages.landing.link_labels.' . $link['label']) }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
                         </div>
+
+                        @elseif($auto->company_shortname == 'AMJA')
+                        @php
+                        $mazdaLinks = [
+                        ['url' => 'https://www.mazdasemarang.com', 'label' => 'mazda_semarang'],
+                        ['url' => 'https://www.mazdasoloofficial.com', 'label' => 'mazda_solo'],
+                        ['url' => 'https://www.mazdayogyakarta.com', 'label' => 'mazda_yogyakarta'],
+                        ];
+                        @endphp
+                        <div class="mt-4">
+                            <div class="row row-cols-1 justify-content-end">
+                                @foreach ($mazdaLinks as $link)
+                                <div class="col text-end">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body p-0">
+                                            <a href="{{ $link['url'] }}" target="_blank" class="text-decoration-none fw-semibold">
+                                                {{ __('messages.landing.link_labels.' . $link['label']) }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+
+                        @else
+                        @if ($auto->web_url)
+                        <div class="text-end mt-3">
+                            <a href="{{ $auto->web_url }}" target="_blank"
+                                class="text-decoration-none fw-semibold">
+                                {{ __('messages.landing.selengkapnya') }} <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                        @endif
+                        @endif
                     </div>
                 </div>
             </div>
@@ -368,13 +266,14 @@
 </div>
 @endforeach
 
+
 <!-- MANUFACTURE -->
 <section class="section__container destination__container mt-5 d-none" id="manufacture"
     style="margin-bottom: 20vh;">
     <h2 class="section__header mb-5 text-center">Manufacture</h2>
     <div class="text-left mb-4 ml-4">
         <p class="mb-0 text-start" id="back-to-pilar2" style="cursor: pointer;margin-left: 10vh;">
-            <i class="ri-arrow-left-line"></i>Kembali
+            <i class="ri-arrow-left-line"></i>{{ __('messages.landing.kembali') }}
         </p>
     </div>
     <div class="container cont_sektor py-4">
@@ -425,7 +324,7 @@
                         <div class="text-end mt-3">
                             <a href="{{ $manuf->web_url }}" target="_blank"
                                 class="text-decoration-none fw-semibold">
-                                Selengkapnya <i class="ri-arrow-right-line"></i>
+                                {{ __('messages.landing.selengkapnya') }} <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
                         @endif
@@ -442,7 +341,7 @@
     <h2 class="section__header mb-5 text-center">Financial</h2>
     <div class="text-left mb-4 ml-4">
         <p class="mb-0 text-start" id="back-to-pilar3" style="cursor: pointer;margin-left: 10vh;">
-            <i class="ri-arrow-left-line"></i>Kembali
+            <i class="ri-arrow-left-line"></i>{{ __('messages.landing.kembali') }}
         </p>
     </div>
     <div class="container cont_sektor py-4">
@@ -493,7 +392,7 @@
                         <div class="text-end mt-3">
                             <a href="{{ $fnc->web_url }}" target="_blank"
                                 class="text-decoration-none fw-semibold">
-                                Selengkapnya <i class="ri-arrow-right-line"></i>
+                                {{ __('messages.landing.selengkapnya') }} <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
                         @endif
@@ -511,7 +410,7 @@
     <h2 class="section__header mb-5 text-center">Others</h2>
     <div class="text-left mb-4 ml-4">
         <p class="mb-0 text-start" id="back-to-pilar4" style="cursor: pointer;margin-left: 10vh;">
-            <i class="ri-arrow-left-line"></i>Kembali
+            <i class="ri-arrow-left-line"></i>{{ __('messages.landing.kembali') }}
         </p>
     </div>
     <div class="container cont_sektor py-4">
@@ -562,7 +461,7 @@
                         <div class="text-end mt-3">
                             <a href="{{ $other->web_url }}" target="_blank"
                                 class="text-decoration-none fw-semibold">
-                                Selengkapnya <i class="ri-arrow-right-line"></i>
+                                {{ __('messages.landing.selengkapnya') }} <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
                         @endif
@@ -576,14 +475,15 @@
 
 <!-- Berita -->
 <section class="container py-5" data-aos="fade-up">
-    <h2 class="text-left mb-3 fw-bold" data-aos="fade-up" data-aos-delay="100">Berita</h2>
+    <h2 class="text-left mb-3 fw-bold" data-aos="fade-up" data-aos-delay="100">{{ __('messages.landing.berita') }}</h2>
+
     <div class="d-flex flex-column flex-md-row justify-content-between text-muted mb-5" data-aos="fade-up" data-aos-delay="200">
         <p class="mb-2 mb-md-0">
-            Update terbaru mengenai aktivitas, berita, dan informasi menarik dari kami.
+            {{ __('messages.landing.berita_deskripsi') }}
         </p>
         <p class="mb-0 text-end" style="cursor:pointer;">
             <a href="{{ route('news') }}" style="text-decoration: none; color: #343a40;">
-                Semua Berita <i class="ri-arrow-right-line"></i>
+                {{ __('messages.landing.semua_berita') }} <i class="ri-arrow-right-line"></i>
             </a>
         </p>
     </div>
@@ -593,15 +493,21 @@
         <div class="col" data-aos="fade-up" data-aos-delay="{{ 100 * ($index + 1) }}">
             <div class="card card-trans h-100 shadow-sm border-0 rounded-4 overflow-hidden">
                 <img src="{{ asset('assets/file/news/' . $a->image) }}" class="card-img-top news-img"
-                    alt="Berita 1">
+                    alt="News Image">
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">{{ $a->subject }}</h5>
+
+                    @php
+                    \Carbon\Carbon::setLocale(app()->getLocale());
+                    @endphp
+
                     <p class="card-text text-muted">
-                        {{ \Carbon\Carbon::parse($a->publication_date)->subDays(30)->locale('id')->translatedFormat('l, d F Y') }}
+                        {{ \Carbon\Carbon::parse($a->publication_date)->subDays(30)->translatedFormat('l, d F Y') }}
                     </p>
+
                     <a href="{{ route('news.show', $a->id) }}"
                         class="text-dark text-decoration-none fw-medium mt-auto">
-                        Selengkapnya <i class="ri-arrow-right-line"></i>
+                        {{ __('messages.landing.selengkapnya') }} <i class="ri-arrow-right-line"></i>
                     </a>
                 </div>
             </div>
@@ -609,6 +515,7 @@
         @endforeach
     </div>
 </section>
+
 
 <section class="container-fluid py-5" style="background-color: white;" id="location">
     <div class="container mb-4 p-0">

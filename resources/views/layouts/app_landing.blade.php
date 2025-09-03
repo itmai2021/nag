@@ -70,7 +70,6 @@
 
 <body style="background-color: rgb(249 250 251 / var(--tw-bg-opacity, 0.8))">
     <!-- Navbar -->
-    <!-- Navbar -->
     <nav id="mainNavbar" class="navbar navbar-expand-xl navbar-dark w-100 custom-navbar">
         <div class="container-fluid px-0 py-2 d-flex justify-content-between align-items-center">
 
@@ -96,32 +95,33 @@
             <div class="d-none d-xl-flex align-items-center ms-auto me-4">
                 <ul class="nav-links d-flex gap-3 m-0">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Tentang Kami</a>
+                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">{{ __('messages.app_landing.tentang_kami') }}</a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ route('about_us') }}">Profil</a></li>
-                            <li><a href="{{ route('home') }}#pilar">Sektor Bisnis</a></li>
+                            <li><a href="{{ route('about_us') }}">{{ __('messages.app_landing.profil') }}</a></li>
+                            <li><a href="{{ route('home') }}#pilar">{{ __('messages.app_landing.sektor_bisnis') }}</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{ route('news') }}">Berita</a></li>
-                    <li><a href="{{ route('home') }}#location">Lokasi</a></li>
-                    <li><a href="{{ route('contact_us') }}#location">Hubungi Kami</a></li>
-                    <li><a href="https://career.mekararmadainvestama.co.id/" target="_blank">Karir</a></li>
+                    <li><a href="{{ route('news') }}">{{ __('messages.app_landing.berita') }}</a></li>
+                    <li><a href="{{ route('home') }}#location">{{ __('messages.app_landing.lokasi') }}</a></li>
+                    <li><a href="{{ route('contact_us') }}#location">{{ __('messages.app_landing.hubungi_kami') }}</a></li>
+                    <li><a href="https://career.mekararmadainvestama.co.id/" target="_blank">{{ __('messages.app_landing.karir') }}</a></li>
                 </ul>
+
                 @php
                 $currentLang = request('lang') ?? session('locale', 'id');
                 $flag = $currentLang === 'en' ? 'EN' : 'ID';
                 @endphp
+
                 <!-- Language Selector -->
                 <ul class="nav-links d-flex m-0">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">{{ $flag }}</a>
                         <ul class="dropdown-menu lang-dropdown-custom">
-                            <li><a href="?lang=id">Indonesia</a></li>
-                            <li><a href="?lang=en">English</a></li>
+                            <li><a href="?lang=id">{{ __('messages.app_landing.indonesia') }}</a></li>
+                            <li><a href="?lang=en">{{ __('messages.app_landing.english') }}</a></li>
                         </ul>
                     </li>
                 </ul>
-
             </div>
 
             <!-- Offcanvas (Mobile Menu) -->
@@ -131,23 +131,24 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav flex-column gap-2">
                         <li class="nav-item dropdown">
-                            <h5 class="offcanvas-title mb-2" id="mainNavbarOffcanvasLabel"><img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="logo-img2"></h5>
-
-                            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Tentang Kami</a>
+                            <h5 class="offcanvas-title mb-2" id="mainNavbarOffcanvasLabel">
+                                <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="logo-img2">
+                            </h5>
+                            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">{{ __('messages.app_landing.tentang_kami') }}</a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{ route('about_us') }}">Profil</a></li>
-                                <li><a href="{{ route('home') }}#pilar">Sektor Bisnis</a></li>
+                                <li><a href="{{ route('about_us') }}">{{ __('messages.app_landing.profil') }}</a></li>
+                                <li><a href="{{ route('home') }}#pilar">{{ __('messages.app_landing.sektor_bisnis') }}</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ route('news') }}" class="nav-link">Berita</a></li>
-                        <li><a href="{{ route('home') }}#location" class="nav-link">Lokasi</a></li>
-                        <li><a href="{{ route('contact_us') }}#location" class="nav-link">Hubungi Kami</a></li>
-                        <li><a href="https://career.mekararmadainvestama.co.id/" class="nav-link" target="_blank">Karir</a></li>
+                        <li><a href="{{ route('news') }}" class="nav-link">{{ __('messages.app_landing.berita') }}</a></li>
+                        <li><a href="{{ route('home') }}#location" class="nav-link">{{ __('messages.app_landing.lokasi') }}</a></li>
+                        <li><a href="{{ route('contact_us') }}#location" class="nav-link">{{ __('messages.app_landing.hubungi_kami') }}</a></li>
+                        <li><a href="https://career.mekararmadainvestama.co.id/" class="nav-link" target="_blank">{{ __('messages.app_landing.karir') }}</a></li>
                         <li class="nav-item dropdown">
                             <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">{{ $flag }}</a>
                             <ul class="dropdown-menu">
-                                <li><a href="?lang=id">Indonesia</a></li>
-                                <li><a href="?lang=en">English</a></li>
+                                <li><a href="?lang=id">{{ __('messages.app_landing.indonesia') }}</a></li>
+                                <li><a href="?lang=en">{{ __('messages.app_landing.english') }}</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -155,7 +156,6 @@
             </div>
         </div>
     </nav>
-
 
     <!-- Konten Halaman -->
     @yield('content')
@@ -166,37 +166,33 @@
             <!-- Kolom Logo -->
             <div class="footer__col mt-4">
                 <div class="footer__logo">
-                    <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="img-fluid"
-                        style="max-width: 70vh;">
+                    <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="img-fluid" style="max-width: 70vh;">
                 </div>
                 <p class="text-white">Together We Are Strong!</p>
             </div>
 
             <!-- Kolom Kontak -->
             <div class="footer__col mt-4">
-                <h4 class="text-white">Hubungi Kami</h4>
+                <h4 class="text-white">{{ __('messages.app_landing.hubungi_kami_judul') }}</h4>
                 <ul class="footer__links p-0">
                     <li>
-                        <p class="text-white m-0 p-0"><i class="ri-phone-fill"></i> (021) 3841061</p>
+                        <p class="text-white m-0 p-0"><i class="ri-phone-fill"></i> {{ __('messages.app_landing.telepon') }}</p>
                     </li>
                     <li>
-                        <p class="text-white m-0 p-0"><i class="ri-mail-fill"></i> secretariat@mai.nag.co.id</p>
+                        <p class="text-white m-0 p-0"><i class="ri-mail-fill"></i> {{ __('messages.app_landing.email') }}</p>
                     </li>
                     <li>
-                        <p class="text-white m-0 p-0"><i class="ri-map-pin-2-fill"></i> Jl. Tanah Abang II
-                            No.104, Cideng, Jakarta Pusat</p>
+                        <p class="text-white m-0 p-0"><i class="ri-map-pin-2-fill"></i> {{ __('messages.app_landing.alamat') }}</p>
                     </li>
                 </ul>
             </div>
 
             <!-- Kolom Sosial Media -->
             <div class="footer__col mt-4">
-                <h4 class="text-white">Ikuti Kami</h4>
+                <h4 class="text-white">{{ __('messages.app_landing.ikuti_kami') }}</h4>
                 <ul class="footer__socials p-0">
-                    <li><a href="https://www.instagram.com/newarmadagroup?igsh=eDB2dm9zbHQ2ejFy" target="_blank"><i
-                                class="ri-instagram-line"></i></a></li>
-                    <li><a href="https://id.linkedin.com/company/pt-mekar-armada-investama-new-armada-group"
-                            target="_blank"><i class="ri-linkedin-line"></i></a></li>
+                    <li><a href="https://www.instagram.com/newarmadagroup?igsh=eDB2dm9zbHQ2ejFy" target="_blank"><i class="ri-instagram-line"></i></a></li>
+                    <li><a href="https://id.linkedin.com/company/pt-mekar-armada-investama-new-armada-group" target="_blank"><i class="ri-linkedin-line"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -204,130 +200,132 @@
         <hr class="text-light m-0">
         <div class="footer__bar text-white">2025 © New Armada Group</div>
     </footer>
+</body>
 
 
-    <!-- Tombol Kembali ke Atas -->
-    <button id="scrollToTopBtn" class="btn btn-primary rounded-circle shadow"
-        style="position: fixed; bottom: 30px; right: 30px; display: none; z-index: 999; background-color:#2887ff !important">
-        ↑
-    </button>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Tombol Kembali ke Atas -->
+<button id="scrollToTopBtn" class="btn btn-primary rounded-circle shadow"
+    style="position: fixed; bottom: 30px; right: 30px; display: none; z-index: 999; background-color:#2887ff !important">
+    ↑
+</button>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.5/leaflet.awesome-markers.js"></script>
-    @yield('script')
-    <script>
-        AOS.init({
-            duration: 800, // durasi animasi
-            once: true // animasi hanya sekali
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Navbar scroll hide/show
-            let lastScrollTop = 0;
-            const navbar = document.getElementById('mainNavbar');
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-            window.addEventListener('scroll', function() {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.5/leaflet.awesome-markers.js"></script>
+@yield('script')
+<script>
+    AOS.init({
+        duration: 800, // durasi animasi
+        once: true // animasi hanya sekali
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Navbar scroll hide/show
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('mainNavbar');
 
-                if (scrollTop > lastScrollTop) {
-                    navbar.classList.add('nav-hidden');
-                } else {
-                    navbar.classList.remove('nav-hidden');
-                }
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-                if (scrollTop > 0) {
-                    navbar.classList.add('nav-scrolled-up');
-                } else {
-                    navbar.classList.remove('nav-scrolled-up');
-                }
+            if (scrollTop > lastScrollTop) {
+                navbar.classList.add('nav-hidden');
+            } else {
+                navbar.classList.remove('nav-hidden');
+            }
 
-                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            if (scrollTop > 0) {
+                navbar.classList.add('nav-scrolled-up');
+            } else {
+                navbar.classList.remove('nav-scrolled-up');
+            }
 
-                // Tombol scroll to top muncul jika scroll > 100px
-                const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-                if (scrollTop > 100) {
-                    scrollToTopBtn.style.display = "block";
-                } else {
-                    scrollToTopBtn.style.display = "none";
-                }
-            });
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 
-            // Scroll ke atas saat tombol diklik
+            // Tombol scroll to top muncul jika scroll > 100px
             const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-            scrollToTopBtn.addEventListener("click", function() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
+            if (scrollTop > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        });
+
+        // Scroll ke atas saat tombol diklik
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        scrollToTopBtn.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+        // Scroll horizontal sektor bisnis
+        const scrollContainer = document.getElementById("scrollContainer");
+        const scrollLeftBtn = document.getElementById("scrollLeftBtn");
+        const scrollRightBtn = document.getElementById("scrollRightBtn");
+
+        if (scrollContainer && scrollLeftBtn && scrollRightBtn) {
+            scrollLeftBtn.addEventListener("click", () => {
+                scrollContainer.scrollBy({
+                    left: -320,
+                    behavior: 'smooth'
                 });
             });
 
-            // Scroll horizontal sektor bisnis
-            const scrollContainer = document.getElementById("scrollContainer");
-            const scrollLeftBtn = document.getElementById("scrollLeftBtn");
-            const scrollRightBtn = document.getElementById("scrollRightBtn");
+            scrollRightBtn.addEventListener("click", () => {
+                scrollContainer.scrollBy({
+                    left: 320,
+                    behavior: 'smooth'
+                });
+            });
+        }
 
-            if (scrollContainer && scrollLeftBtn && scrollRightBtn) {
-                scrollLeftBtn.addEventListener("click", () => {
-                    scrollContainer.scrollBy({
-                        left: -320,
-                        behavior: 'smooth'
-                    });
+        // Pilar navigasi (jika ada)
+        const setupPilarToggle = (openId, sectionId, backId) => {
+            const openBtn = document.getElementById(openId);
+            const section = document.getElementById(sectionId);
+            const backBtn = document.getElementById(backId);
+            const pilar = document.getElementById("pilar");
+
+            if (openBtn && section && backBtn && pilar) {
+                openBtn.addEventListener("click", () => {
+                    pilar.classList.add("d-none");
+                    section.classList.remove("d-none");
                 });
 
-                scrollRightBtn.addEventListener("click", () => {
-                    scrollContainer.scrollBy({
-                        left: 320,
+                backBtn.addEventListener("click", () => {
+                    section.classList.add("d-none");
+                    pilar.classList.remove("d-none");
+                    pilar.scrollIntoView({
                         behavior: 'smooth'
                     });
                 });
             }
+        };
 
-            // Pilar navigasi (jika ada)
-            const setupPilarToggle = (openId, sectionId, backId) => {
-                const openBtn = document.getElementById(openId);
-                const section = document.getElementById(sectionId);
-                const backBtn = document.getElementById(backId);
-                const pilar = document.getElementById("pilar");
+        setupPilarToggle("open-automotive", "automotive", "back-to-pilar");
+        setupPilarToggle("open-manufacture", "manufacture", "back-to-pilar2");
+        setupPilarToggle("open-finance", "finance", "back-to-pilar3");
+        setupPilarToggle("open-other", "other", "back-to-pilar4");
 
-                if (openBtn && section && backBtn && pilar) {
-                    openBtn.addEventListener("click", () => {
-                        pilar.classList.add("d-none");
-                        section.classList.remove("d-none");
-                    });
+        const toggler = document.querySelector(".custom-toggler");
+        const offcanvas = document.getElementById("mainNavbarOffcanvas");
 
-                    backBtn.addEventListener("click", () => {
-                        section.classList.add("d-none");
-                        pilar.classList.remove("d-none");
-                        pilar.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    });
-                }
-            };
-
-            setupPilarToggle("open-automotive", "automotive", "back-to-pilar");
-            setupPilarToggle("open-manufacture", "manufacture", "back-to-pilar2");
-            setupPilarToggle("open-finance", "finance", "back-to-pilar3");
-            setupPilarToggle("open-other", "other", "back-to-pilar4");
-
-            const toggler = document.querySelector(".custom-toggler");
-            const offcanvas = document.getElementById("mainNavbarOffcanvas");
-
-            toggler.addEventListener("click", function() {
-                this.classList.toggle("active");
-            });
-
-            offcanvas.addEventListener("hidden.bs.offcanvas", function() {
-                toggler.classList.remove("active");
-            });
+        toggler.addEventListener("click", function() {
+            this.classList.toggle("active");
         });
-    </script>
+
+        offcanvas.addEventListener("hidden.bs.offcanvas", function() {
+            toggler.classList.remove("active");
+        });
+    });
+</script>
 
 </body>
 
