@@ -27,7 +27,7 @@
                 <div class="carousel-caption text-start d-block d-md-none"
                     style="top: 45%; transform: translateY(-50%); left: 5%; right: auto;"
                     data-aos="fade" data-aos-once="false">
-                    <h1 style="font-size: 1.8rem; font-weight: bold; color: white; text-align: left; text-shadow: 2px 2px 6px rgba(0,0,0,0.6); margin: 0; line-height: 1.4;">
+                    <h1 class="russo-one-font" style="font-size: 1.8rem; font-weight: bold; color: white; text-align: left; text-shadow: 2px 2px 6px rgba(0,0,0,0.6); margin: 0; line-height: 1.4;">
                         Together<br>
                         We Are<br>
                         Strong!
@@ -41,7 +41,7 @@
 <section class="py-5" style="background-color: white;" id="pilar">
     <div class="section__container destination__container">
         <h2 class="section__header">{{ __('messages.landing.sektor') }}</h2>
-        <p class="section__description">
+        <p class="section__description mr-0">
             {{ __('messages.landing.deskripsi') }}
         </p>
         <div class="goal-grid">
@@ -92,20 +92,17 @@
         <div class="row justify-content-center g-4">
             @foreach ($automotive as $auto)
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-                <div class="logo-item d-flex justify-content-center align-items-center" style="height: 120px;">
+                <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center"
+                    data-bs-toggle="modal"
+                    data-bs-target="#imageModal{{ $auto->id }}">
                     <img src="{{ asset('assets/file/logo/' . $auto->logo) }}"
                         alt="Logo {{ $auto->company_shortname }}"
-                        class="img-fluid logo-click"
-                        data-bs-toggle="modal"
-                        data-bs-target="#imageModal{{ $auto->id }}"
-                        style="cursor: pointer; max-height: 100px; object-fit: contain;">
+                        class="img-fluid logo-click">
                 </div>
-
             </div>
             @endforeach
         </div>
     </div>
-
 </section>
 
 @foreach ($automotive as $auto)
@@ -280,13 +277,12 @@
         <div class="row justify-content-center g-4">
             @foreach ($manufacture as $manuf)
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-                <div class="logo-item d-flex justify-content-center align-items-center" style="height: 120px;">
+                <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center"
+                    data-bs-toggle="modal"
+                    data-bs-target="#imageModal2{{ $manuf->id }}">
                     <img src="{{ asset('assets/file/logo/' . $manuf->logo) }}"
                         alt="Logo {{ $manuf->company_shortname }}"
-                        class="img-fluid logo-click"
-                        data-bs-toggle="modal"
-                        data-bs-target="#imageModal2{{ $manuf->id }}"
-                        style="cursor: pointer; max-height: 100px; object-fit: contain;">
+                        class="img-fluid logo-click">
                 </div>
             </div>
             @endforeach
@@ -348,13 +344,12 @@
         <div class="row justify-content-center g-4">
             @foreach ($finance as $fn)
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-                <div class="logo-item d-flex justify-content-center align-items-center" style="height: 120px;">
+                <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center"
+                    data-bs-toggle="modal"
+                    data-bs-target="#imageModal3{{ $fn->id }}">
                     <img src="{{ asset('assets/file/logo/' . $fn->logo) }}"
                         alt="Logo {{ $fn->company_shortname }}"
-                        class="img-fluid logo-click"
-                        data-bs-toggle="modal"
-                        data-bs-target="#imageModal3{{ $fn->id }}"
-                        style="cursor: pointer; max-height: 100px; object-fit: contain;">
+                        class="img-fluid logo-click">
                 </div>
             </div>
             @endforeach
@@ -417,13 +412,12 @@
         <div class="row justify-content-center g-4">
             @foreach ($others as $other)
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-                <div class="logo-item d-flex justify-content-center align-items-center" style="height: 120px;">
+                <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center"
+                    data-bs-toggle="modal"
+                    data-bs-target="#imageModal4{{ $other->id }}">
                     <img src="{{ asset('assets/file/logo/' . $other->logo) }}"
                         alt="Logo {{ $other->company_shortname }}"
-                        class="img-fluid logo-click"
-                        data-bs-toggle="modal"
-                        data-bs-target="#imageModal4{{ $other->id }}"
-                        style="cursor: pointer; max-height: 100px; object-fit: contain;">
+                        class="img-fluid logo-click">
                 </div>
             </div>
             @endforeach

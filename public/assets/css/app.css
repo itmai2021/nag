@@ -3602,6 +3602,38 @@ a {
 }
 
 
+.logo-card {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* bikin kotak persegi sama sisi */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    padding: 10px;
+    /* beri ruang di dalam card */
+    transition: box-shadow 0.3s ease;
+    position: relative;
+}
+
+.logo-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo-card img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-card:hover img {
+    transform: scale(1.1);
+    /* zoom in 10% */
+}
 
 
 /* .modal .btn {

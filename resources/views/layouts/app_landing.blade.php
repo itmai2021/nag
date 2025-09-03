@@ -17,6 +17,9 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.5/leaflet.awesome-markers.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <style>
         html,
         body {
@@ -62,6 +65,17 @@
                 gap: 0;
             }
         }
+
+        .russo-one-font {
+            font-family: 'Russo One', sans-serif;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-align: left;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+            margin: 0;
+            line-height: 1.4;
+        }
     </style>
     <title>New Armada Group</title>
 </head>
@@ -77,7 +91,7 @@
             <div class="d-flex justify-content-between align-items-center w-100 px-0">
                 <!-- Logo kiri -->
                 <a href="{{ route('home') }}" class="logo d-flex align-items-center ms-0">
-                    <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="logo-img">
+                    <img src="{{ asset('/assets/images/NAG-tr.png') }}" alt="Logo" class="logo-img">
                 </a>
                 <!-- Hamburger kanan -->
                 <button class="navbar-toggler d-xl-none me-0 custom-toggler" type="button"
@@ -94,13 +108,8 @@
             <!-- Menu Desktop -->
             <div class="d-none d-xl-flex align-items-center ms-auto me-4">
                 <ul class="nav-links d-flex gap-3 m-0">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">{{ __('messages.app_landing.tentang_kami') }}</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ route('about_us') }}">{{ __('messages.app_landing.profil') }}</a></li>
-                            <li><a href="{{ route('home') }}#pilar">{{ __('messages.app_landing.sektor_bisnis') }}</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="{{ route('about_us') }}">{{ __('messages.app_landing.profil') }}</a></li>
+                    <li><a href="{{ route('home') }}#pilar">{{ __('messages.app_landing.sektor_bisnis') }}</a></li>
                     <li><a href="{{ route('news') }}">{{ __('messages.app_landing.berita') }}</a></li>
                     <li><a href="{{ route('home') }}#location">{{ __('messages.app_landing.lokasi') }}</a></li>
                     <li><a href="{{ route('contact_us') }}#location">{{ __('messages.app_landing.hubungi_kami') }}</a></li>

@@ -37,6 +37,6 @@ return [
             'mazda_yogyakarta' => 'Mazda Yogyakarta',
         ],
         'sektor' => 'Business Sectors',
-        'deskripsi' => 'Our core business sectors across various industries.',
+        'deskripsi' => 'New Armada Group has four business sectors, namely the Automotive Trading Sector, Manufacturing Sector, Financial Sector and other sectors.',
     ]
 ];

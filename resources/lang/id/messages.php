@@ -37,6 +37,6 @@ return [
             'mazda_yogyakarta' => 'Mazda Yogyakarta',
         ],
         'sektor' => 'Sektor Bisnis',
-        'deskripsi' => 'Sektor Bisnis usaha utama kami dalam berbagai sektor industri.',
+        'deskripsi' => 'New Armada Group memiliki empat sektor bisnis yaitu Sektor Otomotif Trading, Sektor Manufaktur, Sektor Keuangan dan sektor lainnya.',
     ]
 ];
