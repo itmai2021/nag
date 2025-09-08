@@ -3616,6 +3616,11 @@ a {
     /* beri ruang di dalam card */
     transition: box-shadow 0.3s ease;
     position: relative;
+    outline: 1px solid #031843;
+}
+
+#card-merk {
+    cursor: default !important;
 }
 
 .logo-card:hover {
