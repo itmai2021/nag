@@ -12,7 +12,7 @@ return [
         'hubungi_kami_judul' => 'Hubungi Kami',
         'telepon' => '(021) 3841061',
         'email' => 'secretariat@mai.nag.co.id',
-        'alamat' => 'Jl. Tanah Abang II No.104, Cideng, Jakarta Pusat',
+        'alamat' => 'Jl. Tanah Abang II No.104, Jakarta Pusat 10150',
         'ikuti_kami' => 'Ikuti Kami',
         'indonesia' => 'Indonesia',
         'english' => 'Inggris',

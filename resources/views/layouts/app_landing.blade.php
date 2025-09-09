@@ -177,12 +177,12 @@
                 <div class="footer__logo">
                     <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="img-fluid" style="max-width: 70vh;">
                 </div>
-                <p class="text-white">Together We Are Strong!</p>
+                <h5 class="text-white mt-3">Together We Are Strong!</h5>
             </div>
 
             <!-- Kolom Kontak -->
             <div class="footer__col mt-4">
-                <h4 class="text-white">{{ __('messages.app_landing.hubungi_kami_judul') }}</h4>
+                <h5 class="text-white mb-3">{{ __('messages.app_landing.hubungi_kami_judul') }}</h5>
                 <ul class="footer__links p-0">
                     <li>
                         <p class="text-white m-0 p-0"><i class="ri-phone-fill"></i> {{ __('messages.app_landing.telepon') }}</p>
@@ -198,7 +198,7 @@
 
             <!-- Kolom Sosial Media -->
             <div class="footer__col mt-4">
-                <h4 class="text-white">{{ __('messages.app_landing.ikuti_kami') }}</h4>
+                <h5 class="text-white mb-3">{{ __('messages.app_landing.ikuti_kami') }}</h5>
                 <ul class="footer__socials p-0">
                     <li><a href="https://www.instagram.com/newarmadagroup?igsh=eDB2dm9zbHQ2ejFy" target="_blank"><i class="ri-instagram-line"></i></a></li>
                     <li><a href="https://id.linkedin.com/company/pt-mekar-armada-investama-new-armada-group" target="_blank"><i class="ri-linkedin-line"></i></a></li>

@@ -10,7 +10,7 @@
                     <source media="(max-width: 768px)" srcset="{{ asset('/assets/images/gedung_mai_mobile.png') }}">
 
                     <!-- default (desktop) -->
-                    <img src="{{ asset('/assets/images/gedungMAIFix.png') }}"
+                    <img src="{{ asset('/assets/images/gedungMAI.jpg') }}"
                         class="hero-img"
                         alt="Slide 1">
                 </picture>
@@ -88,23 +88,59 @@
 
 <!-- Berita -->
 <section class="container py-5" data-aos="fade-up">
+    <div class="d-flex flex-column flex-md-row justify-content-between text-muted mb-2" data-aos="fade-up" data-aos-delay="200">
+        <h2 class="text-left mb-0 fw-bold">{{ __('messages.landing.berita') }}</h2>
 
-    <div class="d-flex flex-column flex-md-row justify-content-between text-muted mb-5" data-aos="fade-up" data-aos-delay="200">
-        <h2 class="text-left mb-3 fw-bold" data-aos="fade-up" data-aos-delay="100">{{ __('messages.landing.berita') }}</h2>
-
-        <p class="mb-0 text-end" style="cursor:pointer;">
-            <a href="{{ route('news') }}" style="text-decoration: none; color: #343a40;">
-                {{ __('messages.landing.semua_berita') }} <i class="ri-arrow-right-line"></i>
-            </a>
-        </p>
     </div>
+    @if(isset($data['news'][0]))
+    @php
+    $a = $data['news'][0]; // hanya ambil berita pertama
+    \Carbon\Carbon::setLocale(app()->getLocale());
+    @endphp
+    <div class="row g-4 align-items-center mt-1">
+        <!-- Bagian Gambar (8 kolom) -->
+        <div class="col-lg-8" data-aos="fade-right" data-aos-delay="100">
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-sm">
+                <img src="{{ asset('assets/file/news/' . $a->image) }}"
+                    class="w-100 h-100"
+                    style="object-fit: cover;"
+                    alt="News Image">
+            </div>
 
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        </div>
+
+        <!-- Bagian Teks (4 kolom) -->
+        <div class="col-lg-4" data-aos="fade-left" data-aos-delay="200">
+            <div class="d-flex flex-column h-100">
+                <p class="text-muted mb-3 fw-bold">
+                    {{ \Carbon\Carbon::parse($a->publication_date)->translatedFormat('l, d F Y') }}
+                </p>
+                <h3 class="fw-bold">{{ $a->subject }}</h3>
+                <p class="text-muted mb-3">
+                    {{ \Illuminate\Support\Str::words(strip_tags($a->description), 22, '...') }}
+                </p>
+
+                <a href="{{ route('news.show', $a->id) }}" style="background-color: #031843;color:white !important"
+                    class="btn rounded-pill mt-auto align-self-start">
+                    {{ __('messages.landing.selengkapnya') }} <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    @endif
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3">
         @foreach ($data['news'] as $index => $a)
         <div class="col" data-aos="fade-up" data-aos-delay="{{ 100 * ($index + 1) }}">
             <div class="card card-trans h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                <img src="{{ asset('assets/file/news/' . $a->image) }}" class="card-img-top news-img"
-                    alt="News Image">
+
+                <!-- Bungkus gambar dengan ratio -->
+                <div class="ratio ratio-16x9">
+                    <img src="{{ asset('assets/file/news/' . $a->image) }}"
+                        class="w-100 h-100"
+                        style="object-fit: cover;"
+                        alt="News Image">
+                </div>
+
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">{{ $a->subject }}</h5>
 
@@ -112,8 +148,8 @@
                     \Carbon\Carbon::setLocale(app()->getLocale());
                     @endphp
 
-                    <p class="card-text text-muted">
-                        {{ \Carbon\Carbon::parse($a->publication_date)->subDays(30)->translatedFormat('l, d F Y') }}
+                    <p class="text-muted">
+                        {{ \Carbon\Carbon::parse($a->publication_date)->translatedFormat('l, d F Y') }}
                     </p>
 
                     <a href="{{ route('news.show', $a->id) }}"
@@ -125,14 +161,25 @@
         </div>
         @endforeach
     </div>
+
+    <!-- Tombol Selengkapnya di bawah card, center -->
+    <div class="d-flex justify-content-center mt-4">
+        <a href="{{ route('news') }}"
+            style="background-color: #031843; color:white !important"
+            class="btn rounded-pill px-4">
+            {{ __('messages.landing.semua_berita') }} <i class="ri-arrow-right-line"></i>
+        </a>
+    </div>
+
 </section>
+
 
 
 <section class="container-fluid py-5" style="background-color: white;" id="location">
     <div class="container mb-4 p-0">
         <h2 class="text-left mb-3 fw-bold">Lokasi</h2>
         <p class="text-muted mb-4">
-            Lokasi Bisnis Unit Kami
+            Lokasi Unit Bisnis Kami
         </p>
     </div>
 
