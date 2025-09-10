@@ -1115,7 +1115,7 @@ footer {
 }
 
 .footer__col p {
-    max-width: 300px;
+    max-width: 400px;
     margin-block: 2rem;
     color: var(--text-light);
 }
@@ -1456,7 +1456,7 @@ footer {
 
     .footer__container {
         display: grid;
-        grid-template-columns: 2fr 1.8fr 0.8fr;
+        grid-template-columns: 2.2fr 2fr 0.8fr;
         /* kolom 1 lebih besar */
         gap: 4rem 2rem;
     }
@@ -3609,14 +3609,16 @@ a {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(3, 24, 67, 0.25) !important;
+
+
     overflow: hidden;
     cursor: pointer;
     padding: 10px;
     /* beri ruang di dalam card */
     transition: box-shadow 0.3s ease;
     position: relative;
-    outline: 1px solid #031843;
+    /* outline: 0.5px solid #031843; */
 }
 
 #card-merk {

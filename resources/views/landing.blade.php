@@ -211,19 +211,19 @@
             // Contoh data legend (warna dan label)
             var legendData = [{
                     color: '#C00000',
-                    label: 'Automotive Trading'
+                    label: 'Automotive Trading : 103 cabang'
                 },
                 {
                     color: '#003366',
-                    label: 'Manufacture'
+                    label: 'Manufacture : 9 pabrik'
                 },
                 {
                     color: '#007F5C',
-                    label: 'Finance'
+                    label: 'Finance : 58 cabang'
                 },
                 {
                     color: '#FF8C42',
-                    label: 'Others'
+                    label: 'Others : 16 cabang'
                 },
             ];
 
