@@ -68,36 +68,80 @@
     </div>
 </section> -->
 
-<section style="padding:60px 0; background:#f8f9fa; margin-top:5vh" data-aos="fade-up">
+<section style="padding:60px 0; background:#f8f9fa; margin-top:10vh" data-aos="fade-up">
     <div style="max-width:1150px; margin:auto; padding:0 15px;">
-        <div style="
-            background:#f1f1f5;
-            border-radius:20px;
-            padding:35px;
-            display:flex;
-            flex-direction:column;
-            width:96%;
-            margin:auto;
-        " data-aos="fade-up" data-aos-delay="200">
-            <h2 class="fw-bold" style="margin-bottom:20px;">Tentang Kami</h2>
-            <div class="col-12">
-                <p style="color:#555; line-height:1.7; text-align:justify; font-size:0.95rem;">
-                    PT Mekar Armada Investama merupakan holding company dari New Armada Group. PT Mekar Armada Investama berkomitmen melakukan penyelarasan di semua anak perusahaan dalam lingkup berbagai aspek bisnis, pengelolaan sumber daya manusia, portofolio bisnis dan lain-lain. Ini merupakan tantangan menarik sekaligus berprospek tinggi mengingat New Armada Group menaungi 32 unit bisnis yang bergerak di sektor otomotif, manufaktur, keuangan, dan layanan industri. <br><br>
+        <div class="about-box" data-aos="fade-up" data-aos-delay="200">
+            <img src="{{ asset('/assets/images/mai.png') }}" alt="Logo" style="max-width: 20vh;">
+            <p class="mt-2 fw-bold" style="color:#222;font-size:0.85rem">Holding Company New Armada Group</p>
+            <h2 class="fw-bold mb-2" style="color:black">Tentang Kami</h2>
 
-                    New Armada Group didirikan pertama kali pada tahun 1974 oleh Bapak David Herman Jaya sebagai produsen karoseri kendaraan di Magelang, Jawa Tengah. Dalam perjalanannya selama lebih dari 50 tahun, New Armada Group terus berkembang menjadi salah satu perusahaan nasional bernilai tinggi, dengan dukungan lebih dari 10.000 karyawan yang tersebar di berbagai kota besar di Indonesia. <br><br>
+            <div class="content">
+                <p>
+                    New Armada Group didirikan pertama kali pada tahun 1974 oleh Bapak David Herman Jaya sebagai produsen karoseri kendaraan di Magelang, Jawa Tengah. Dalam perjalanannya selama lebih dari 50 tahun, New Armada Group terus berkembang menjadi salah satu perusahaan nasional bernilai tinggi, dengan dukungan lebih dari 10.000 karyawan yang tersebar di berbagai kota besar di Indonesia.
+                </p>
 
-                    Di bidang manufaktur, New Armada Group telah tumbuh menjadi grup dengan 6 pabrik produksi, melayani beberapa perusahaan otomotif terbesar di Indonesia. Pada sektor otomotif, terdapat 13 unit bisnis yang menjadi salah satu kekuatan utama, menawarkan beragam merek kendaraan dan layanan pendukung. <br><br>
+                <p>
+                    New Armada Group beroperasi di bawah naungan PT Mekar Armada Investama sebagai holding company. Dalam menjalankan perannya, PT Mekar Armada Investama berkomitmen untuk melakukan sinergi dan standardisasi di seluruh anak perusahaan, meliputi strategi bisnis, pengelolaan sumber daya manusia, optimalisasi portofolio bisnis, serta aspek operasional lainnya. Hal ini merupakan tantangan strategis yang menjanjikan prospek pertumbuhan tinggi, mengingat New Armada Group membawahi 32 unit bisnis yang bergerak di berbagai sektor, antara lain otomotif, manufaktur, keuangan, dan layanan industri.
+                </p>
 
-                    Untuk memperkuat dukungan terhadap pertumbuhan ekonomi nasional, khususnya pelaku UMKM, New Armada Group juga mengembangkan 4 unit bisnis di sektor keuangan, menyediakan layanan pembiayaan, kredit mikro, dan leasing otomotif yang menjangkau wilayah dari Sumatera hingga Sulawesi. <br><br>
+                <p>
+                    Di bidang manufaktur, New Armada Group telah tumbuh menjadi grup dengan 6 pabrik produksi, melayani beberapa perusahaan otomotif terbesar di Indonesia. Pada sektor otomotif, terdapat 13 unit bisnis yang menjadi salah satu kekuatan utama, menawarkan beragam merek kendaraan dan layanan pendukung.
+                </p>
 
-                    Selain itu, New Armada Group turut memperluas cakupan bisnis di sektor layanan, melalui 9 unit bisnis yang mencakup pusat perbelanjaan, hotel & resor, SPBU, hingga konstruksi. <br><br>
+                <p>
+                    Untuk memperkuat dukungan terhadap pertumbuhan ekonomi nasional, khususnya pelaku UMKM, New Armada Group juga mengembangkan 4 unit bisnis di sektor keuangan, menyediakan layanan pembiayaan, kredit mikro, dan leasing otomotif yang menjangkau wilayah dari Sumatera hingga Sulawesi.
+                </p>
 
+                <p>
+                    Selain itu, New Armada Group turut memperluas cakupan bisnis di sektor layanan, melalui 9 unit bisnis yang mencakup pusat perbelanjaan, hotel & resor, SPBU, hingga konstruksi.
+                </p>
+
+                <p>
                     Dengan semangat inovasi, komitmen terhadap kualitas, dan kepuasan pelanggan sebagai prioritas, New Armada Group terus melangkah maju sebagai grup usaha terdepan di Indonesia.
                 </p>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    .about-box {
+        position: relative;
+        border-radius: 20px;
+        padding: 35px;
+        width: 96%;
+        margin: auto;
+        color: #fff;
+        /* teks jadi putih biar kontras */
+        overflow: hidden;
+    }
+
+    /* background image */
+    .about-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("{{ asset('/assets/images/nag_50.jpg') }}") center/cover no-repeat;
+        opacity: 0.15;
+        /* atur transparansi */
+        z-index: 0;
+    }
+
+    .about-box .content {
+        position: relative;
+        z-index: 1;
+        color: black;
+        /* bisa diganti putih kalau background lebih gelap */
+        line-height: 1.7;
+        font-size: 16px;
+        text-align: justify;
+        font-weight: 600;
+    }
+</style>
+
 
 <!-- Section Visi & Misi -->
 <section style="padding:60px 0; background:#031843;" data-aos="fade-up">
@@ -141,8 +185,8 @@
                 <h2 style="font-size:2.5rem;font-weight:700;color:#031843;line-height:1.2;margin-bottom:10px;">
                     Filosofi
                 </h2>
-                <h4 style="font-size:1.5rem;font-weight:500;color:#555;">New Armada Group</h4>
-                <div class="custom-gradient-line"></div>
+                <img src="{{ asset('/assets/images/NAG-tr.png') }}" alt="Logo" class="logo-img3">
+                <!-- <div class="custom-gradient-line"></div> -->
             </div>
 
             <!-- Kolom Kanan: Timeline -->

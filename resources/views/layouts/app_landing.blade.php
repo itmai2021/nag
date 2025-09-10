@@ -84,7 +84,7 @@
 
 <body style="background-color: rgb(249 250 251 / var(--tw-bg-opacity, 0.8))">
     <!-- Navbar -->
-    <nav id="mainNavbar" class="navbar navbar-expand-xl navbar-dark w-100 custom-navbar">
+    <nav id="mainNavbar" class="navbar navbar-expand-xl navbar-dark w-100 custom-navbar {{ request()->is('/') ? 'navbar-home' : 'navbar-other' }}">
         <div class="container-fluid px-0 py-2 d-flex justify-content-between align-items-center">
 
             <!-- Logo -->
@@ -236,25 +236,18 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         // Navbar scroll hide/show
-        let lastScrollTop = 0;
         const navbar = document.getElementById('mainNavbar');
 
         window.addEventListener('scroll', function() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-            if (scrollTop > lastScrollTop) {
-                navbar.classList.add('nav-hidden');
-            } else {
+            if (scrollTop === 0) {
+                // Paling atas → navbar muncul
                 navbar.classList.remove('nav-hidden');
-            }
-
-            if (scrollTop > 0) {
-                navbar.classList.add('nav-scrolled-up');
             } else {
-                navbar.classList.remove('nav-scrolled-up');
+                // Scroll ke bawah → navbar hilang
+                navbar.classList.add('nav-hidden');
             }
-
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 
             // Tombol scroll to top muncul jika scroll > 100px
             const scrollToTopBtn = document.getElementById("scrollToTopBtn");
@@ -264,6 +257,7 @@
                 scrollToTopBtn.style.display = "none";
             }
         });
+
 
         // Scroll ke atas saat tombol diklik
         const scrollToTopBtn = document.getElementById("scrollToTopBtn");
@@ -303,20 +297,36 @@
             const pilar = document.getElementById("pilar");
 
             if (openBtn && section && backBtn && pilar) {
-                openBtn.addEventListener("click", () => {
-                    pilar.classList.add("d-none");
-                    section.classList.remove("d-none");
+                openBtn.addEventListener("click", (e) => {
+                    e.preventDefault();
+
+                    // Scroll ke atas biar section pilar keliatan full
+                    pilar.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                    // kasih jeda dikit biar scroll jalan dulu, baru hide pilar
+                    setTimeout(() => {
+                        pilar.classList.add("d-none");
+                        section.classList.remove("d-none");
+                    }, 400); // 400ms cukup smooth
                 });
 
-                backBtn.addEventListener("click", () => {
+                backBtn.addEventListener("click", (e) => {
+                    e.preventDefault();
                     section.classList.add("d-none");
                     pilar.classList.remove("d-none");
+
+                    // scroll ke atas lagi waktu balik
                     pilar.scrollIntoView({
-                        behavior: 'smooth'
+                        behavior: 'smooth',
+                        block: 'start'
                     });
                 });
             }
         };
+
 
         setupPilarToggle("open-automotive", "automotive", "back-to-pilar");
         setupPilarToggle("open-manufacture", "manufacture", "back-to-pilar2");

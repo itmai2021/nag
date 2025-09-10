@@ -18,8 +18,11 @@
                 <div class="carousel-caption text-start d-none d-md-block"
                     style="top: 45%; transform: translateY(-50%); left: 5%; right: auto;"
                     data-aos="fade" data-aos-once="false">
-                    <h1 style="font-size: clamp(2rem, 4vw, 2.5rem); font-weight: bold; color: white; text-shadow: 2px 2px 6px rgba(0,0,0,0.6); margin: 0;">
+                    <!-- <h1 style="font-size: clamp(2rem, 4vw, 2.5rem); font-weight: bold; color: white; text-shadow: 2px 2px 6px rgba(0,0,0,0.6); margin: 0;">
                         Together <span>&nbsp;We Are</span> <span>&nbsp;Strong!</span>
+                    </h1> -->
+                    <h1 class="russo-one-font" style="font-size:clamp(2rem, 4vw, 2.5rem); font-weight: bold; color: white; text-align: left; text-shadow: 2px 2px 6px rgba(0,0,0,0.6); margin: 0; line-height: 1.4;">
+                        Together We Are Strong!
                     </h1>
                 </div>
 

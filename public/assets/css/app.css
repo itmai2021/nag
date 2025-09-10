@@ -512,7 +512,7 @@ body {
 
 .custom-navbar.scrolled {
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.1);
     /* lebih gelap saat scroll */
 }
 
@@ -522,9 +522,17 @@ body {
     left: 0;
     width: 100%;
     z-index: 999;
-    background: rgba(0, 0, 0, 0.2);
     transition: background 0.3s, box-shadow 0.3s;
 }
+
+#mainNavbar.navbar-home {
+    background: rgba(0, 0, 0, 0.0);
+}
+
+#mainNavbar.navbar-other {
+    background: rgba(0, 0, 0, 0.2);
+}
+
 
 .custom-gradient-line {
     height: 4px;
@@ -1239,7 +1247,12 @@ footer {
         grid-template-columns: 1fr;
         /* jadi 1 kolom di layar kecil */
     }
+
+    .footer__col:last-child {
+        grid-area: unset;
+    }
 }
+
 
 .footer__links a {
     text-decoration: none;
@@ -3501,6 +3514,13 @@ a {
         /* lebih kecil di mobile */
     }
 
+    .logo-img3 {
+        height: 50px;
+        width: 60%;
+        margin-top: -2px;
+        /* lebih kecil di mobile */
+    }
+
     .logo {
         margin-left: -10px;
         /* geser lebih ke kiri */
@@ -3641,6 +3661,7 @@ a {
     transform: scale(1.1);
     /* zoom in 10% */
 }
+
 
 
 /* .modal .btn {
