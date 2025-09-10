@@ -49,7 +49,7 @@ $merkLogos = [
 
                     {{-- Card Merk --}}
                     <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center p-2"
-                        style="flex:0 0 45%; height:120px;">
+                        style="flex:0 0 45%; height:120px;" id="card-merk">
                         <img src="{{ asset($merkLogos[$merk] ?? 'assets/images/default.png') }}"
                             alt="Logo {{ $merk }}" class="img-fluid"
                             style="max-height: 100%; object-fit: contain;">
