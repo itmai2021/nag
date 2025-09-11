@@ -132,7 +132,7 @@
     </div>
     @endif
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3">
-        @foreach ($data['news'] as $index => $a)
+        @foreach ($data['last_news'] as $index => $a)
         <div class="col" data-aos="fade-up" data-aos-delay="{{ 100 * ($index + 1) }}">
             <div class="card card-trans h-100 shadow-sm border-0 rounded-4 overflow-hidden">
 
