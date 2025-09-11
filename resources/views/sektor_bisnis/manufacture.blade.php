@@ -9,8 +9,9 @@
     <div class="container cont_sektor py-4">
         <div class="row justify-content-center g-4">
             @foreach ($manufacture as $manuf)
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
                 <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center"
+                    style="width: 180px; height: 180px;"
                     data-bs-toggle="modal"
                     data-bs-target="#imageModal2{{ $manuf->id }}">
                     <img src="{{ asset('assets/file/logo/' . $manuf->logo) }}"
@@ -21,6 +22,7 @@
             @endforeach
         </div>
     </div>
+
 
 </section>
 @foreach ($manufacture as $manuf)
