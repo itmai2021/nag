@@ -34,8 +34,8 @@ class ContactUsController extends Controller
             'message' => $request->message,
         ];
 
-        // Mail::to('secretariat@mai.nag.co.id')->send(new ContactUsMail($data));
-        Mail::to('deniardiyansyah050@gmail.com')->send(new ContactUsMail($data));
+        Mail::to('secretariat@mai.nag.co.id')->send(new ContactUsMail($data));
+        // Mail::to('deniardiyansyah050@gmail.com')->send(new ContactUsMail($data));
 
         // Redirect atau respon sukses
         Alert::success('Success', 'Send Message Successfully.');
