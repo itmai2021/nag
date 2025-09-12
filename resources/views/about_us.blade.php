@@ -72,7 +72,9 @@
     <div style="max-width:1150px; margin:auto; padding:0 15px;">
         <div class="about-box" data-aos="fade-up" data-aos-delay="200">
             <img src="{{ asset('/assets/images/MAI.png') }}" alt="Logo" style="max-width: 20vh;">
-            <p class="mt-2 fw-bold" style="color:#222;font-size:0.85rem">Holding Company New Armada Group</p>
+            <p class="mt-2 mb-0" style="color:#222;font-size:0.7rem; line-height:1.1;"><i>holding company of</i></p>
+            <p class="fw-bold mt-0" style="color:#222;font-size:0.85rem; line-height:1.1;">New Armada Group</p>
+
             <h2 class="fw-bold mb-2" style="color:black">Tentang Kami</h2>
 
             <div class="content">
