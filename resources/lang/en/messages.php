@@ -14,7 +14,7 @@ return [
         'email' => 'secretariat@mai.nag.co.id',
         'alamat' => 'Jl. Tanah Abang II No.104, Central Jakarta 10150',
         'ikuti_kami' => 'Follow Us',
-        'indonesia' => 'Indonesia',
+        'indonesia' => 'Indonesian',
         'english' => 'English',
     ],
     'landing' => [
