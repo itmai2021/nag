@@ -154,17 +154,21 @@ $merkLogos = [
                                 <p class="text-muted mb-0" style="text-align: justify;">
                                     {{ $tjhmg[$child]->description }}
                                 </p>
-                                @if ($tjhmg[$child]->web_url)
+                                <!-- @if ($tjhmg[$child]->web_url)
                                 <div class="text-end mt-2">
                                     <a href="{{ $tjhmg[$child]->web_url }}" target="_blank" class="text-decoration-none fw-semibold">
                                         {{ __('messages.landing.selengkapnya') }} <i class="ri-arrow-right-line"></i>
                                     </a>
                                 </div>
-                                @endif
+                                @endif -->
                             </div>
                         </div>
                         @endforeach
-
+                        <div class="text-end mt-2">
+                            <a href="https://tunasjaya.com/" target="_blank" class="text-decoration-none fw-semibold">
+                                {{ __('messages.landing.selengkapnya') }} <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
