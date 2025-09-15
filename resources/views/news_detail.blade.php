@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-lg-9">
                 <p class="text-muted">Dipublikasikan pada
-                    <strong>{{ \Carbon\Carbon::parse($data['newsdetail']->publication_date)->subDays(30)->locale('id')->translatedFormat('l, d F Y') }}</strong>
+                    <strong>{{ \Carbon\Carbon::parse($data['newsdetail']->publication_date)->locale('id')->translatedFormat('l, d F Y') }}</strong>
                 </p>
                 <div class="mb-4">
                     <img src="{{ asset('assets/file/news/' . $data['newsdetail']->image) }}" alt="Pembangunan Gedung"
@@ -51,7 +51,7 @@
                                             </h5>
 
                                             <p class="card-text text-muted" style="font-size: 12px;">
-                                                {{ \Carbon\Carbon::parse($a->publication_date)->subDays(30)->locale('id')->translatedFormat('l, d F Y') }}
+                                                {{ \Carbon\Carbon::parse($a->publication_date)->locale('id')->translatedFormat('l, d F Y') }}
                                             </p>
                                         </div>
                                     </div>

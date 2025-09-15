@@ -175,7 +175,7 @@
             <!-- Kolom Logo -->
             <div class="footer__col mt-4">
                 <div class="footer__logo">
-                    <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="img-fluid" style="max-width: 70vh;">
+                    <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="img-fluid" style="max-width: 60vh;">
                 </div>
                 <h5 class="text-white mt-3">Together We Are Strong!</h5>
             </div>

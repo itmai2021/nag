@@ -6,11 +6,12 @@
             <i class="ri-arrow-left-line"></i>{{ __('messages.landing.kembali') }}
         </p>
     </div>
-    <div class="container cont_sektor py-4">
-        <div class="row justify-content-center g-4">
+    <div class="container cont_sektor py-4 px-5">
+        <div class="row gx-5 gy-5">
             @foreach ($finance as $fn)
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-                <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center"
+            <div class="col-12 col-md-6 text-center">
+                <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center p-3"
+                    style="aspect-ratio: 2/1; max-width:400px; margin:auto;"
                     data-bs-toggle="modal"
                     data-bs-target="#imageModal3{{ $fn->id }}">
                     <img src="{{ asset('assets/file/logo/' . $fn->logo) }}"
@@ -21,6 +22,8 @@
             @endforeach
         </div>
     </div>
+
+
 
 </section>
 @foreach ($finance as $fnc)

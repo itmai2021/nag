@@ -87,6 +87,7 @@ class NewsController extends Controller
     public function show(News $news, $id)
     {
         $data['newsdetail'] = News::where('id', $id)->where('is_active', TRUE)->first();
+        // dd($data['newsdetail']->publication_date);
         if (!$data['newsdetail']) {
             return redirect()->route('news');
         }

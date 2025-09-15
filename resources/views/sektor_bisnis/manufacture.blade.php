@@ -6,12 +6,12 @@
             <i class="ri-arrow-left-line"></i>{{ __('messages.landing.kembali') }}
         </p>
     </div>
-    <div class="container cont_sektor py-4">
-        <div class="row justify-content-center g-4">
+    <div class="container cont_sektor py-4 px-5">
+        <div class="row gx-5 gy-5">
             @foreach ($manufacture as $manuf)
-            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center"
-                    style="width: 180px; height: 180px;"
+            <div class="col-12 col-sm-6 col-md-4 text-center">
+                <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center p-3"
+                    style="aspect-ratio: 2 / 1; max-width: 370px; margin:auto;"
                     data-bs-toggle="modal"
                     data-bs-target="#imageModal2{{ $manuf->id }}">
                     <img src="{{ asset('assets/file/logo/' . $manuf->logo) }}"
@@ -22,6 +22,9 @@
             @endforeach
         </div>
     </div>
+
+
+
 
 
 </section>
