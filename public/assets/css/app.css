@@ -3900,6 +3900,87 @@ a {
     font-weight: 600;
 }
 
+.filosofi-section {
+    position: relative;
+    /* margin-top: 20vh; */
+    /* pindahkan ke sini, bukan di inline HTML */
+}
+
+.filosofi-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 49.9%;
+    /* geser biar pas di area kolom kanan */
+    transform: translateX(-50%);
+    width: 50px;
+    /* ketebalan garis */
+    height: 100%;
+    background-color: #031843;
+    /* warna garis */
+    z-index: 0;
+}
+
+.core-section {
+    position: relative;
+}
+
+.core-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: calc(0% - 25px);
+    /* geser biar pas di area kolom kanan */
+    transform: translateX(-50%);
+    width: 50px;
+    /* ketebalan garis */
+    height: 100%;
+    background-color: #031843;
+    /* warna garis */
+    z-index: 0;
+}
+
+
+.core-card-container {
+    display: flex;
+    flex-direction: column;
+    /* atau row tergantung layout */
+    align-items: center;
+    gap: 40px;
+    /* jarak antar card */
+    margin-top: 30px;
+    /* jarak container dari circle */
+}
+
+.core-card:first-child {
+    margin-top: 0;
+    /* biar konsisten, nggak ditarik-tarik */
+}
+
+
+
+
+.col-lg-5[data-aos="fade-left"] {
+    margin-top: 40px;
+    /* atur sesuai kebutuhan */
+}
+
+
+@media (max-width: 768px) {
+
+    .core-section::before,
+    .about-section::before,
+    .filosofi-section::before,
+    .core-center-circle::after {
+        display: none;
+    }
+
+    .col-lg-5[data-aos="fade-right"] {
+        margin-top: 2rem;
+    }
+}
+
+
 
 
 
