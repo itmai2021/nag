@@ -75,6 +75,7 @@ class CompanyController extends Controller
         $model->pilar               = $request->pilar;
         $model->web_url             = $request->web_url;
         $model->description                = $request->description;
+        $model->description_en                = $request->description_en;
         $model->is_active           = $request->is_active;
         $model->logo                = $logoPath;
         $model->building_photo      = $buildingPhotoPath;
@@ -138,6 +139,7 @@ class CompanyController extends Controller
         $company->pilar = $request->pilar;
         $company->web_url = $request->web_url;
         $company->description = $request->description;
+        $company->description_en = $request->description_en;
         $company->is_active = $request->is_active;
 
         // Handle logo upload

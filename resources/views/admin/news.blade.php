@@ -85,14 +85,24 @@
 
                                             {{-- Subject --}}
                                             <div class="mb-3">
-                                                <label>Subject</label>
+                                                <label>Subject (id)</label>
                                                 <input type="text" class="form-control" name="subject" required>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label>Subject (en)</label>
+                                                <input type="text" class="form-control" name="subject_en" required>
                                             </div>
 
                                             {{-- Description --}}
                                             <div class="mb-3">
-                                                <label>Description</label>
+                                                <label>Description (id)</label>
                                                 <textarea class="form-control editor" name="description" rows="4" required></textarea>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label>Description (en)</label>
+                                                <textarea class="form-control editor" name="description_en" rows="4" required></textarea>
                                             </div>
 
                                             {{-- Image --}}
@@ -173,15 +183,26 @@
 
                                             {{-- Subject --}}
                                             <div class="mb-3">
-                                                <label>Subject</label>
+                                                <label>Subject (id)</label>
                                                 <input type="text" class="form-control" name="subject"
                                                     value="{{ $nw->subject }}" required>
                                             </div>
 
+                                            <div class="mb-3">
+                                                <label>Subject (en)</label>
+                                                <input type="text" class="form-control" name="subject_en"
+                                                    value="{{ $nw->subject_en }}" required>
+                                            </div>
+
                                             {{-- Description --}}
                                             <div class="mb-3">
-                                                <label>Description</label>
+                                                <label>Description (id)</label>
                                                 <textarea class="form-control editor" name="description" rows="4" required>{{ $nw->description }}</textarea>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label>Description (en)</label>
+                                                <textarea class="form-control editor" name="description_en" rows="4" required>{{ $nw->description_en }}</textarea>
                                             </div>
 
                                             {{-- Image --}}

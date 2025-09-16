@@ -4,7 +4,9 @@
     <div class="container-fluid mt-3">
         <div class="row">
             <div class="col-lg-8">
-                <h3 class="mb-3 fw-bold">{{ $data['newsdetail']->subject }}</h3>
+                <h3 class="mb-3 fw-bold">{!! app()->getLocale() === 'en'
+                    ? $data['newsdetail']->subject_en
+                    : $data['newsdetail']->subject !!}</h3>
             </div>
         </div>
         <div class="row">
@@ -17,8 +19,11 @@
                         class="img-fluid rounded-4 shadow-sm w-100">
                 </div>
                 <div class="fs-5" style="line-height: 1.8;">
-                    {!! $data['newsdetail']->description !!}
+                    {!! app()->getLocale() === 'en'
+                    ? $data['newsdetail']->description_en
+                    : $data['newsdetail']->description !!}
                 </div>
+
                 <hr>
             </div>
             <div class="col-lg-3">

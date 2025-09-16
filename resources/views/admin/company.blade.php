@@ -86,8 +86,13 @@
                                             </div>
 
                                             <div class="mb-3">
-                                                <label>Description:</label>
+                                                <label>Description (id):</label>
                                                 <textarea class="form-control" name="description" rows="3"></textarea>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label>Description (en):</label>
+                                                <textarea class="form-control" name="description_en" rows="3"></textarea>
                                             </div>
 
                                             <div class="mb-3">
@@ -164,9 +169,14 @@
                                                     value="{{ old('web_url', $company->web_url) }}" placeholder="https://example.com">
                                             </div>
 
-                                            <label>Description:</label>
+                                            <label>Description (id):</label>
                                             <div class="form-group">
                                                 <textarea class="form-control" name="description" rows="3" placeholder="Description">{{ old('description', $company->description) }}</textarea>
+                                            </div>
+
+                                            <label>Description (en):</label>
+                                            <div class="form-group">
+                                                <textarea class="form-control" name="description_en" rows="3" placeholder="Description">{{ old('description_en', $company->description_en) }}</textarea>
                                             </div>
 
                                             <label>Is Active:</label>
