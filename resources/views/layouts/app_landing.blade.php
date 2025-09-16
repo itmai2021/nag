@@ -20,6 +20,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
         html,
         body {
@@ -215,7 +217,7 @@
 
 <!-- Tombol Kembali ke Atas -->
 <button id="scrollToTopBtn" class="btn btn-primary rounded-circle shadow"
-    style="position: fixed; bottom: 30px; right: 30px; display: none; z-index: 999; background-color:#2887ff !important">
+    style="position: fixed; bottom: 30px; right: 20px; display: none; z-index: 999; background-color:#2887ff !important">
     ↑
 </button>
 

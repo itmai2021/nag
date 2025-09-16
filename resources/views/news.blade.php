@@ -2,7 +2,7 @@
 @section('content')
 <div style="padding-bottom:10vh;margin-top:10vh">
     <section class="container py-5" id="news">
-        <h2 class="text-left mb-3 fw-bold">Berita</h2>
+        <h2 class="text-left mb-3 fw-bold">{{ __('messages.landing.berita') }}</h2>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4 mt-1">
             @foreach ($data['news'] as $index => $a)
             <div class="col" data-aos="fade-up" data-aos-delay="{{ 100 * ($index + 1) }}">
@@ -17,7 +17,7 @@
                     </div>
 
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">{{ $a->subject }}</h5>
+                        <h5 class="card-title">{{ (app()->getLocale() == 'en' && !empty($a->subject_en)) ? $a->subject_en : $a->subject }}</h5>
 
                         @php
                         \Carbon\Carbon::setLocale(app()->getLocale());

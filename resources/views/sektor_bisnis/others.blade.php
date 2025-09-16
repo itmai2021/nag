@@ -1,17 +1,17 @@
 <section class="section__container destination__container mt-5 d-none" id="other"
     style="margin-bottom: 20vh;">
-    <h2 class="section__header mb-5 text-center">Others</h2>
-    <div class="text-left mb-4 ml-4">
+    <h2 class="section__header mb-5 text-center label-pilar">Others</h2>
+    <div class="text-left mb-2 ml-4">
         <p class="mb-0 text-start" id="back-to-pilar4" style="cursor: pointer;margin-left: 10vh;">
             <i class="ri-arrow-left-line"></i>{{ __('messages.landing.kembali') }}
         </p>
     </div>
     <div class="container cont_sektor py-4">
-        <div class="row justify-content-center g-4">
+        <div class="row justify-content-center gx-0 gy-3">
             @foreach ($others as $other)
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
                 <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center p-3"
-                    style="aspect-ratio: 1/1; max-width: 250px; margin:auto;"
+                    style="aspect-ratio: 1/1; max-width: 160px; margin:auto;"
                     data-bs-toggle="modal"
                     data-bs-target="#imageModal4{{ $other->id }}">
                     <img src="{{ asset('assets/file/logo/' . $other->logo) }}"
@@ -49,7 +49,7 @@
                     <!-- Deskripsi -->
                     <div class="col-md-8">
                         <p class="text-muted mb-0" style="text-align: justify;">
-                            {{ $other->description }}
+                            {{ (app()->getLocale() == 'en' && !empty($other->description_en)) ? $other->description_en : $other->description }}
                         </p>
                         @if ($other->web_url)
                         <div class="text-end mt-3">

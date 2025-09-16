@@ -11,8 +11,10 @@
 
                     <!-- default (desktop) -->
                     <img src="{{ asset('/assets/images/gedungMAI.jpg') }}"
+                        alt="Slide 1"
                         class="hero-img"
-                        alt="Slide 1">
+                        style="width:100%">
+
                 </picture>
                 <!-- Text Overlay: Desktop -->
                 <div class="carousel-caption text-start d-none d-md-block"
@@ -118,11 +120,15 @@
                 <p class="text-muted mb-3 fw-bold">
                     {{ \Carbon\Carbon::parse($a->publication_date)->translatedFormat('l, d F Y') }}
                 </p>
-                <h3 class="fw-bold">{{ $a->subject }}</h3>
-                <p class="text-muted mb-3">
-                    {{ \Illuminate\Support\Str::words(strip_tags($a->description), 22, '...') }}
-                </p>
+                <h3 class="fw-bold">
+                    {{ (app()->getLocale() == 'en' && !empty($a->subject_en)) ? $a->subject_en : $a->subject }}
+                </h3>
 
+                <p class="text-muted mb-3">
+                    {{ (app()->getLocale() == 'en' && !empty($a->description_en))
+                    ? \Illuminate\Support\Str::words(strip_tags($a->description_en), 22, '...')
+                    : \Illuminate\Support\Str::words(strip_tags($a->description), 22, '...') }}
+                </p>
                 <a href="{{ route('news.show', $a->id) }}" style="background-color: #031843;color:white !important"
                     class="btn rounded-pill mt-auto align-self-start">
                     {{ __('messages.landing.selengkapnya') }} <i class="ri-arrow-right-line"></i>
@@ -145,7 +151,7 @@
                 </div>
 
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">{{ $a->subject }}</h5>
+                    <h5 class="card-title">{{ (app()->getLocale() == 'en' && !empty($a->subject_en)) ? $a->subject_en : $a->subject }}</h5>
 
                     @php
                     \Carbon\Carbon::setLocale(app()->getLocale());
@@ -180,9 +186,9 @@
 
 <section class="container-fluid py-5" style="background-color: white;" id="location">
     <div class="container mb-4 p-0">
-        <h2 class="text-left mb-3 fw-bold">Lokasi</h2>
+        <h2 class="text-left mb-3 fw-bold">{{ __('messages.landing.lokasi') }}</h2>
         <p class="text-muted mb-4">
-            Lokasi Unit Bisnis Kami
+            {{ __('messages.landing.sub_lokasi') }}
         </p>
     </div>
 

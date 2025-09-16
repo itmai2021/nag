@@ -30,7 +30,7 @@ $merkLogos = [
 
 <section class="section__container destination__container mt-5 d-none" id="automotive"
     style="margin-bottom: 20vh;">
-    <h2 class="section__header mb-5 text-center">Automotive Trading</h2>
+    <h2 class="section__header mb-5 text-center label-pilar">Automotive Trading</h2>
 
     <div class="text-left mb-4">
         <p class="mb-0 text-start" id="back-to-pilar" style="cursor: pointer; margin-left: 10vh;">
@@ -49,7 +49,7 @@ $merkLogos = [
 
                     {{-- Card Merk --}}
                     <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center p-2"
-                        style="flex:0 0 45%; height:120px;" id="card-merk">
+                        style="flex:0 0 30%; height:120px;" id="card-merk">
                         <img src="{{ asset($merkLogos[$merk] ?? 'assets/images/default.png') }}"
                             alt="Logo {{ $merk }}" class="img-fluid"
                             style="max-height: 100%; object-fit: contain;">
@@ -152,7 +152,7 @@ $merkLogos = [
                             </div>
                             <div style="flex: 1;">
                                 <p class="text-muted mb-0" style="text-align: justify;">
-                                    {{ $tjhmg[$child]->description }}
+                                    {{ (app()->getLocale() == 'en' && !empty($tjhmg[$child]->description_en)) ? $tjhmg[$child]->description_en : $tjhmg[$child]->description }}
                                 </p>
                                 <!-- @if ($tjhmg[$child]->web_url)
                                 <div class="text-end mt-2">
@@ -200,7 +200,8 @@ $merkLogos = [
                     <!-- Deskripsi -->
                     <div class="col-md-8">
                         <p class="text-muted mb-0" style="text-align: justify;">
-                            {{ $auto->description }}
+                            {{ (app()->getLocale() == 'en' && !empty($auto->description_en)) ? $auto->description_en : $auto->description }}
+
                         </p>
 
                         @if($auto->company_shortname == 'AAT')

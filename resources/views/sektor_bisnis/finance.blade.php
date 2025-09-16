@@ -1,17 +1,34 @@
 <section class="section__container destination__container mt-5 d-none" id="finance"
     style="margin-bottom: 20vh;">
-    <h2 class="section__header mb-5 text-center">Financial</h2>
-    <div class="text-left mb-4 ml-4">
+    <h2 class="section__header mb-5 text-center label-pilar">Financial</h2>
+    <div class="text-left mb-2 ml-4">
         <p class="mb-0 text-start" id="back-to-pilar3" style="cursor: pointer;margin-left: 10vh;">
             <i class="ri-arrow-left-line"></i>{{ __('messages.landing.kembali') }}
         </p>
     </div>
     <div class="container cont_sektor py-4 px-5">
-        <div class="row gx-5 gy-5">
-            @foreach ($finance as $fn)
-            <div class="col-12 col-md-6 text-center">
+        <div class="row gx-2 gy-2 mb-4 justify-content-center">
+            {{-- Item pertama (pusat) --}}
+            @if(isset($finance[0]))
+            <div class="col-12 col-md-6 col-lg-4 text-center">
                 <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center p-3"
-                    style="aspect-ratio: 2/1; max-width:400px; margin:auto;"
+                    style="aspect-ratio: 2/1; max-width:300px; margin:auto;"
+                    data-bs-toggle="modal"
+                    data-bs-target="#imageModal3{{ $finance[0]->id }}">
+                    <img src="{{ asset('assets/file/logo/' . $finance[0]->logo) }}"
+                        alt="Logo {{ $finance[0]->company_shortname }}"
+                        class="img-fluid logo-click">
+                </div>
+            </div>
+            @endif
+        </div>
+
+        <div class="row mt-2 gx-0 gy-1 justify-content-center">
+            {{-- Sisanya (3 kolom) --}}
+            @foreach ($finance->skip(1)->take(3) as $fn)
+            <div class="col-12 col-md-4 text-center">
+                <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center p-3"
+                    style="aspect-ratio: 2/1; max-width:300px; margin:auto;"
                     data-bs-toggle="modal"
                     data-bs-target="#imageModal3{{ $fn->id }}">
                     <img src="{{ asset('assets/file/logo/' . $fn->logo) }}"
@@ -22,6 +39,7 @@
             @endforeach
         </div>
     </div>
+
 
 
 
@@ -50,7 +68,7 @@
                     <!-- Deskripsi -->
                     <div class="col-md-8">
                         <p class="text-muted mb-0" style="text-align: justify;">
-                            {{ $fnc->description }}
+                            {{ (app()->getLocale() == 'en' && !empty($fn->description_en)) ? $fn->description_en : $fn->description }}
                         </p>
                         @if ($fnc->web_url)
                         <div class="text-end mt-3">

@@ -1,17 +1,17 @@
 <section class="section__container destination__container mt-5 d-none" id="manufacture"
     style="margin-bottom: 20vh;">
-    <h2 class="section__header mb-5 text-center">Manufacture</h2>
-    <div class="text-left mb-4 ml-4">
+    <h2 class="section__header mb-5 text-center label-pilar">Manufacture</h2>
+    <div class="text-left mb-2 ml-4">
         <p class="mb-0 text-start" id="back-to-pilar2" style="cursor: pointer;margin-left: 10vh;">
             <i class="ri-arrow-left-line"></i>{{ __('messages.landing.kembali') }}
         </p>
     </div>
     <div class="container cont_sektor py-4 px-5">
-        <div class="row gx-5 gy-5">
+        <div class="row gx-3 gy-3">
             @foreach ($manufacture as $manuf)
             <div class="col-12 col-sm-6 col-md-4 text-center">
                 <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center p-3"
-                    style="aspect-ratio: 2 / 1; max-width: 370px; margin:auto;"
+                    style="aspect-ratio: 2 / 1; max-width: 300px; margin:auto;"
                     data-bs-toggle="modal"
                     data-bs-target="#imageModal2{{ $manuf->id }}">
                     <img src="{{ asset('assets/file/logo/' . $manuf->logo) }}"
@@ -52,7 +52,7 @@
                     <!-- Deskripsi -->
                     <div class="col-md-8">
                         <p class="text-muted mb-0" style="text-align: justify;">
-                            {{ $manuf->description }}
+                            {{ (app()->getLocale() == 'en' && !empty($manuf->description_en)) ? $manuf->description_en : $manuf->description }}
                         </p>
                         @if ($manuf->web_url)
                         <div class="text-end mt-3">
