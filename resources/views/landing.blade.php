@@ -5,13 +5,23 @@
     .banner {
         height: 100vh;
         width: 100vw;
-        background-image: url("{{ asset('/assets/images/gedungMAI.jpg') }}");
+        background-image: url("{{ asset('/assets/images/gedungMAI.png') }}");
         background-size: 100% 100%;
         /* isi penuh tanpa ada ruang putih */
         background-repeat: no-repeat;
         background-position: center;
     }
+
+    @media (max-width: 768px) {
+        .banner {
+            background-image: url("{{ asset('/assets/images/gedung_mai_mobile.png') }}");
+        }
+    }
 </style>
+<!-- <img src="{{ asset('/assets/images/gedungMAI.jpg') }}"
+                        alt="Slide 1"
+                        class="hero-img"
+                        style="width:100%"> -->
 <section id="Home" class="p-0 position-relative">
     <div id="carouselHeader" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -19,12 +29,7 @@
                 <picture>
                     <!-- untuk mobile -->
                     <source media="(max-width: 768px)" srcset="{{ asset('/assets/images/gedung_mai_mobile.png') }}">
-
                     <!-- default (desktop) -->
-                    <!-- <img src="{{ asset('/assets/images/gedungMAI.jpg') }}"
-                        alt="Slide 1"
-                        class="hero-img"
-                        style="width:100%"> -->
                     <div class="banner"></div>
                 </picture>
                 <!-- Text Overlay: Desktop -->
