@@ -14,6 +14,7 @@
 
     @media (max-width: 768px) {
         .banner {
+            /* height: 500px; */
             background-image: url("{{ asset('/assets/images/gedung_mai_mobile.png') }}");
         }
     }

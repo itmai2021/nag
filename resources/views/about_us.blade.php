@@ -32,7 +32,7 @@
 
 
 <section class="about-section" style="padding:60px 0; background:#f8f9fa; margin-top:0" data-aos="fade-down">
-    <div style="max-width:1150px; margin:auto; padding:0 15px; position:relative;margin-top:10vh">
+    <div class="about-sub" style="max-width:1150px; margin:auto; padding:0 15px; position:relative;margin-top:10vh">
         <div class="about-box" data-aos="fade-up" data-aos-delay="200">
             <img src="{{ asset('/assets/images/MAI.png') }}" alt="Logo" style="max-width: 20vh;">
             <p class="mt-2 mb-0" style="color:#222;font-size:0.7rem; line-height:1.1;"><i>holding company of</i></p>

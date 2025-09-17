@@ -3993,6 +3993,7 @@ a {
 
 @media (max-width: 768px) {
 
+    .core-section::after,
     .core-section::before,
     .about-section::before,
     .filosofi-section::before,
@@ -4002,6 +4003,27 @@ a {
 
     .col-lg-5[data-aos="fade-right"] {
         margin-top: 2rem;
+    }
+
+    .col-lg-4[data-aos="fade-right"] {
+        margin-top: 2rem;
+    }
+
+    .col-lg-7[data-aos="fade-left"] {
+
+        margin-left: 0;
+    }
+
+    .about-sub {
+        margin-top: 3vh !important;
+    }
+
+    .about-box {
+        padding: 20px;
+    }
+
+    .about-box img {
+        max-width: 15vh !important;
     }
 }
 

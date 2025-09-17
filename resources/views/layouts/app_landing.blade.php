@@ -143,7 +143,10 @@
                 aria-labelledby="mainNavbarOffcanvasLabel">
                 <div class="offcanvas-body">
                     <ul class="navbar-nav flex-column gap-2">
-                        <li class="nav-item dropdown">
+                        <h5 class="offcanvas-title mb-2" id="mainNavbarOffcanvasLabel">
+                            <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="logo-img2">
+                        </h5>
+                        <!-- <li class="nav-item dropdown">
                             <h5 class="offcanvas-title mb-2" id="mainNavbarOffcanvasLabel">
                                 <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="logo-img2">
                             </h5>
@@ -152,7 +155,10 @@
                                 <li><a href="{{ route('about_us') }}">{{ __('messages.app_landing.profil') }}</a></li>
                                 <li><a href="{{ route('home') }}#pilar">{{ __('messages.app_landing.sektor_bisnis') }}</a></li>
                             </ul>
-                        </li>
+                        </li> -->
+                        <li><a href="{{ route('about_us') }}">{{ __('messages.app_landing.profil') }}</a></li>
+                        <li><a href="{{ route('home') }}#pilar">{{ __('messages.app_landing.sektor_bisnis') }}</a></li>
+
                         <li><a href="{{ route('news') }}" class="nav-link">{{ __('messages.app_landing.berita') }}</a></li>
                         <li><a href="{{ route('home') }}#location" class="nav-link">{{ __('messages.app_landing.lokasi') }}</a></li>
                         <li><a href="{{ route('contact_us') }}#location" class="nav-link">{{ __('messages.app_landing.hubungi_kami') }}</a></li>
