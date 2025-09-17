@@ -5,7 +5,7 @@
     .banner {
         height: 100vh;
         width: 100vw;
-        background-image: url("{{ asset('/assets/images/gedungMAI.png') }}");
+        background-image: url("{{ asset('/assets/images/gedungMAIFix.png') }}");
         background-size: 100% 100%;
         /* isi penuh tanpa ada ruang putih */
         background-repeat: no-repeat;
