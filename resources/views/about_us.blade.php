@@ -3,81 +3,33 @@
 @section('content')
 
 <!-- Tentang Kami -->
-<!-- <section style="padding:60px 0;background:#f8f9fa; margin-top:5vh" data-aos="fade-up">
-    <div style="max-width:1150px;margin:auto;padding:0 15px;position:relative;">
-
-        <div style="
-            background:#f1f1f5;
-            border-radius:20px;
-            padding:35px;
-            display:flex;
-            flex-direction:column;
-            width:96%;
-        " data-aos="fade-up" data-aos-delay="200">
-            <h2 class="fw-bold" style="margin-bottom:20px;">Tentang Kami</h2>
-            <div class="col-9">
-                <p style="color:#555;line-height:1.7;text-align:justify;font-size:0.9rem;">
-                    PT Mekar Armada Investama merupakan holding company dari New Armada Group. PT Mekar Armada Investama berkomitmen melakukan penyelarasan di semua anak perusahaan dalam lingkup berbagai aspek bisnis, pengelolaan sumber daya manusia, portofolio bisnis dan lain-lain. Ini merupakan tantangan menarik sekaligus berprospek tinggi mengingat New Armada Group menaungi 32 unit bisnis yang bergerak di sektor otomotif, manufaktur, keuangan, dan layanan industri. <br> <br>
-
-                    New Armada Group didirikan pertama kali pada tahun 1974 oleh Bapak David Herman Jaya sebagai produsen karoseri kendaraan di Magelang, Jawa Tengah. Dalam perjalanannya selama lebih dari 50 tahun, New Armada Group terus berkembang menjadi salah satu perusahaan nasional bernilai tinggi, dengan dukungan lebih dari 10.000 karyawan yang tersebar di berbagai kota besar di Indonesia. <br> <br>
-
-                    Di bidang manufaktur, New Armada Group telah tumbuh menjadi grup dengan 6 pabrik produksi, melayani beberapa perusahaan otomotif terbesar di Indonesia. Pada sektor otomotif, terdapat 13 unit bisnis yang menjadi salah satu kekuatan utama, menawarkan beragam merek kendaraan dan layanan pendukung. <br> <br>
-
-                    Untuk memperkuat dukungan terhadap pertumbuhan ekonomi nasional, khususnya pelaku UMKM, New Armada Group juga mengembangkan 4 unit bisnis di sektor keuangan, menyediakan layanan pembiayaan, kredit mikro, dan leasing otomotif yang menjangkau wilayah dari Sumatera hingga Sulawesi. <br>
-
-                    Selain itu, New Armada Group turut memperluas cakupan bisnis di sektor layanan, melalui 9 unit bisnis yang mencakup pusat perbelanjaan, hotel & resor, SPBU, hingga konstruksi. <br>
-
-                    Dengan semangat inovasi, komitmen terhadap kualitas, dan kepuasan pelanggan sebagai prioritas, New Armada Group terus melangkah maju sebagai grup usaha terdepan di Indonesia.
-                </p>
-            </div>
-
-        </div>
-        <div style="
-            position:absolute;
-            right:0;
-            top:45%;
-            transform:translateY(-50%);
-            width:320px;
-            background:#031843;
-            color:white;
-            padding:30px;
-            border-radius:20px;
-            box-shadow:0 4px 20px rgba(0,0,0,0.08);
-            min-height:260px;
-        " data-aos="fade-left" data-aos-delay="350">
-            <div style="
-                display:flex;
-                gap:20px;
-                margin-bottom:15px;
-                border-bottom:1px solid rgba(255,255,255,0.3);
-                padding-bottom:8px;
-            ">
-                <span id="tabVisi" style="font-size:1.1rem;font-weight:600;color:white;cursor:pointer;border-bottom:2px solid white;">Visi</span>
-                <span id="tabMisi" style="font-size:1.1rem;font-weight:600;color:white;cursor:pointer;">Misi</span>
-            </div>
-            
-            <div id="contentVisi" style="color:white;display:block;line-height:1.6;font-size:1.1rem;">
-                Menjadi perusahaan kelas global dengan kompetensi dan inovasi yang unggul.
-            </div>
-            <div id="contentMisi" style="color:white;display:none;line-height:1.6;font-size:1.1rem;">
-                Mengembangkan kekuatan dan daya saing dalam bidang industri, perdagangan, jasa dan menjadi pilihan utama bagi pelanggan dan mitra.
-            </div>
-
-
-        </div>
-    </div>
-</section> -->
 <audio id="bg-audio" autoplay loop muted>
     <source src="{{ asset('assets/file/MARSARMADA.mp3') }}" type="audio/mpeg">
     Browser Anda tidak mendukung pemutar audio.
 </audio>
-<button id="toggle-audio"
+
+<div id="audio-control"
     style="position:fixed; bottom:28px; right:18px; z-index:9999; 
-           background:#031843; color:#fff; border:none; border-radius:50%;
-           width:50px; height:48px; display:flex; align-items:center; justify-content:center;
-           box-shadow:0 4px 10px rgba(0,0,0,0.3); cursor:pointer;">
-    <i id="icon-audio" class="fas fa-volume-mute"></i>
-</button>
+           display:flex; align-items:center; gap:10px;">
+
+    <!-- Teks judul lagu -->
+    <span id="audio-title"
+        style="display:none; background:#f1f5ff; color:#031843; font-weight:600;
+               font-size:14px; padding:6px 12px; border-radius:20px;
+               box-shadow:0 2px 6px rgba(0,0,0,0.15); white-space:nowrap;">
+        🎵 MARS ARMADA
+    </span>
+
+    <!-- Tombol -->
+    <button id="toggle-audio"
+        style="background:#031843; color:#fff; border:none; border-radius:50%;
+               width:50px; height:48px; display:flex; align-items:center; justify-content:center;
+               box-shadow:0 4px 10px rgba(0,0,0,0.3); cursor:pointer;">
+        <i id="icon-audio" class="fas fa-volume-mute"></i>
+    </button>
+</div>
+
+
 
 <section class="about-section" style="padding:60px 0; background:#f8f9fa; margin-top:0" data-aos="fade-down">
     <div style="max-width:1150px; margin:auto; padding:0 15px; position:relative;margin-top:10vh">
@@ -94,8 +46,6 @@
         </div>
     </div>
 </section>
-
-
 
 <!-- Section Visi & Misi -->
 <section style="padding:60px 0; background:#031843;">
@@ -138,12 +88,13 @@
     <div class="container">
         <div class="row align-items-center">
             <!-- Kolom Kiri: Judul -->
-            <div class="col-lg-5 mb-4" data-aos="fade-right">
+            <div class="col-lg-4 mb-4" data-aos="fade-right">
                 <h2 style="font-size:2.5rem;font-weight:700;color:#031843;line-height:1.2;margin-bottom:10px;">
                     {{ __('messages.about_us.filosofi') }}
                 </h2>
                 <img src="{{ asset('/assets/images/NAG-tr.png') }}" alt="Logo" class="logo-img3">
             </div>
+            <!-- <div class="col-1"></div> -->
             <div class="col-lg-7" data-aos="fade-left">
                 <!-- Item 1 -->
                 <div class="timeline-item">
@@ -279,6 +230,7 @@
         const audio = document.getElementById("bg-audio");
         const btn = document.getElementById("toggle-audio");
         const icon = document.getElementById("icon-audio");
+        const title = document.getElementById("audio-title");
 
         btn.addEventListener("click", function() {
             if (audio.muted) {
@@ -286,12 +238,15 @@
                 audio.play();
                 icon.classList.remove("fa-volume-mute");
                 icon.classList.add("fa-volume-up");
+                title.style.display = "inline-block"; // tampilkan teks
             } else {
                 audio.muted = true;
                 icon.classList.remove("fa-volume-up");
                 icon.classList.add("fa-volume-mute");
+                title.style.display = "none"; // sembunyikan teks
             }
         });
+
 
         let visi = document.getElementById("contentVisi");
         let misi = document.getElementById("contentMisi");

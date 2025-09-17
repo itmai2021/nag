@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ContactUsMail;
+use App\Mail\ContactUsMailAuto;
 use App\Models\ContactUs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -34,8 +35,17 @@ class ContactUsController extends Controller
             'message' => $request->message,
         ];
 
-        Mail::to('secretariat@mai.nag.co.id')->send(new ContactUsMail($data));
+        $data_auto = [
+            'name'    => $request->name,
+            'email'   => $request->email,
+            'message' => $request->message,
+            'date'    => \Carbon\Carbon::now()->format('d/m/Y'),
+        ];
+
+
         // Mail::to('deniardiyansyah050@gmail.com')->send(new ContactUsMail($data));
+        Mail::to('secretariat@mai.nag.co.id')->send(new ContactUsMail($data));
+        Mail::to($request->email)->send(new ContactUsMailAuto($data_auto));
 
         // Redirect atau respon sukses
         Alert::success('Success', 'Send Message Successfully.');

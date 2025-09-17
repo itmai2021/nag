@@ -3983,7 +3983,10 @@ a {
 
 
 .col-lg-7[data-aos="fade-left"] {
-    margin-top: 40px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 40px;
     /* atur sesuai kebutuhan */
 }
 
