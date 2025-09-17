@@ -30,7 +30,7 @@
 
     <p>
         Salam, <br>
-        <strong>New Armada Group</strong>
+        <strong>Secretariat</strong>
     </p>
 </body>
 
