@@ -527,7 +527,8 @@ body {
 }
 
 #mainNavbar.navbar-home {
-    background: rgba(0, 0, 0, 0.0);
+    background: rgba(3, 24, 67, 0.1);
+    /* background-color: #031843; */
 }
 
 #mainNavbar.navbar-other {
@@ -2732,7 +2733,7 @@ footer {
 }
 
 .navbar {
-    height: 90px;
+    height: 75px;
     padding: 1.5rem
 }
 
@@ -3833,23 +3834,18 @@ a {
 }
 
 /* Garis ke kanan */
-.core-center-circle::after {
+
+/* .core-center-circle::before {
     content: "";
     position: absolute;
     top: -123%;
-    left: 33.5%;
-    border-radius: 0 20px;
-    /* mulai dari tepi kanan lingkaran */
+    right: calc(0% - 25px);
     transform: translateY(-50%);
     width: 120vh;
-    /* panjang ke kanan (setengah container - radius lingkaran) */
     height: 50px;
-    /* ketebalan garis */
     background-color: #031843;
-    /* warna garis */
-    z-index: -1;
-    /* biar di belakang lingkaran */
-}
+    z-index: 1;
+} */
 
 /* ---------------- */
 
@@ -3910,35 +3906,61 @@ a {
     content: "";
     position: absolute;
     top: 0;
-    left: 49.9%;
-    /* geser biar pas di area kolom kanan */
-    transform: translateX(-50%);
+    right: 0;
+    /* nempel ke pojok kanan */
     width: 50px;
     /* ketebalan garis */
     height: 100%;
+    /* penuh tinggi section */
     background-color: #031843;
-    /* warna garis */
     z-index: 0;
 }
+
 
 .core-section {
     position: relative;
 }
 
 .core-section::before {
+    /* Garis horizontal atas */
     content: "";
     position: absolute;
     top: 0;
-    right: calc(0% - 25px);
-    /* geser biar pas di area kolom kanan */
-    transform: translateX(-50%);
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #031843;
+    z-index: 0;
+}
+
+.core-section::after {
+    /* Garis vertikal kanan */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 50px;
     /* ketebalan garis */
     height: 100%;
     background-color: #031843;
-    /* warna garis */
     z-index: 0;
 }
+
+/* Tambahin pseudo-element lain untuk vertikal kiri */
+.core-section .line-left {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    /* ketebalan garis */
+    height: 100%;
+    background-color: #031843;
+    z-index: 0;
+}
+
+
+
 
 
 .core-card-container {
@@ -3960,7 +3982,7 @@ a {
 
 
 
-.col-lg-5[data-aos="fade-left"] {
+.col-lg-7[data-aos="fade-left"] {
     margin-top: 40px;
     /* atur sesuai kebutuhan */
 }

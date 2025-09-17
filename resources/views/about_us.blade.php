@@ -72,9 +72,9 @@
     Browser Anda tidak mendukung pemutar audio.
 </audio>
 <button id="toggle-audio"
-    style="position:fixed; bottom:30px; right:20px; z-index:9999; 
+    style="position:fixed; bottom:28px; right:18px; z-index:9999; 
            background:#031843; color:#fff; border:none; border-radius:50%;
-           width:45px; height:45px; display:flex; align-items:center; justify-content:center;
+           width:50px; height:48px; display:flex; align-items:center; justify-content:center;
            box-shadow:0 4px 10px rgba(0,0,0,0.3); cursor:pointer;">
     <i id="icon-audio" class="fas fa-volume-mute"></i>
 </button>
@@ -138,15 +138,13 @@
     <div class="container">
         <div class="row align-items-center">
             <!-- Kolom Kiri: Judul -->
-            <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+            <div class="col-lg-5 mb-4" data-aos="fade-right">
                 <h2 style="font-size:2.5rem;font-weight:700;color:#031843;line-height:1.2;margin-bottom:10px;">
                     {{ __('messages.about_us.filosofi') }}
                 </h2>
                 <img src="{{ asset('/assets/images/NAG-tr.png') }}" alt="Logo" class="logo-img3">
             </div>
-            <div class="col-2">
-            </div>
-            <div class="col-lg-5" data-aos="fade-left">
+            <div class="col-lg-7" data-aos="fade-left">
                 <!-- Item 1 -->
                 <div class="timeline-item">
                     <div class="timeline-number">1</div>

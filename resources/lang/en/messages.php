@@ -40,6 +40,8 @@ return [
         'lokasi' => 'Location',
         'sub_lokasi' => 'Our Business Unit Locations',
         'deskripsi' => 'New Armada Group has four business sectors, namely the Automotive Trading Sector, Manufacturing Sector, Financial Sector and other sectors.',
+        "cabang" => "branches",
+        "pabrik" => "factories"
     ],
     'about_us' => [
         'tentang_kami' => 'About Us',

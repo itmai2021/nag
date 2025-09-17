@@ -21,13 +21,11 @@
                     <source media="(max-width: 768px)" srcset="{{ asset('/assets/images/gedung_mai_mobile.png') }}">
 
                     <!-- default (desktop) -->
-                    <div class="banner"></div>
                     <!-- <img src="{{ asset('/assets/images/gedungMAI.jpg') }}"
                         alt="Slide 1"
                         class="hero-img"
                         style="width:100%"> -->
-
-
+                    <div class="banner"></div>
                 </picture>
                 <!-- Text Overlay: Desktop -->
                 <div class="carousel-caption text-start d-none d-md-block"
@@ -227,25 +225,28 @@
             position: 'bottomleft'
         });
 
+        var branchText = "{{ __('messages.landing.cabang') }}";
+        var factoryText = "{{ __('messages.landing.pabrik') }}";
+
         legend.onAdd = function(map) {
             var div = L.DomUtil.create('div', 'info legend');
 
             // Contoh data legend (warna dan label)
             var legendData = [{
                     color: '#C00000',
-                    label: 'Automotive Trading : 103 cabang'
+                    label: 'Automotive Trading : {{ app()->getLocale() === "en" ? "103 branches" : "103 cabang" }}'
                 },
                 {
                     color: '#003366',
-                    label: 'Manufacture : 9 pabrik'
+                    label: 'Manufacture : {{ app()->getLocale() === "en" ? "9 factories" : "9 pabrik" }}'
                 },
                 {
                     color: '#007F5C',
-                    label: 'Finance : 58 cabang'
+                    label: 'Finance : {{ app()->getLocale() === "en" ? "58 branches" : "58 cabang" }}'
                 },
                 {
                     color: '#FF8C42',
-                    label: 'Others : 16 cabang'
+                    label: 'Others : {{ app()->getLocale() === "en" ? "16 branches" : "16 cabang" }}'
                 },
             ];
 

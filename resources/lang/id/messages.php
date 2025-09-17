@@ -40,6 +40,8 @@ return [
         'lokasi' => 'Lokasi',
         'sub_lokasi' => 'Lokasi Unit Bisnis Kami',
         'deskripsi' => 'New Armada Group memiliki empat sektor bisnis yaitu Sektor Otomotif Trading, Sektor Manufaktur, Sektor Keuangan dan sektor lainnya.',
+        "cabang" => "cabang",
+        "pabrik" => "pabrik"
     ],
     'about_us' => [
         'tentang_kami' => 'Tentang Kami',

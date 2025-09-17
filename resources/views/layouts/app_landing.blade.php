@@ -93,8 +93,10 @@
             <div class="d-flex justify-content-between align-items-center w-100 px-0">
                 <!-- Logo kiri -->
                 <a href="{{ route('home') }}" class="logo d-flex align-items-center ms-0">
-                    <img src="{{ asset('/assets/images/NAG-tr.png') }}" alt="Logo" class="logo-img">
+                    <img src="{{ asset(request()->is('/') ? '/assets/images/NAG-tr2.png' : '/assets/images/NAG-tr.png') }}"
+                        alt="Logo" class="logo-img">
                 </a>
+
                 <!-- Hamburger kanan -->
                 <button class="navbar-toggler d-xl-none me-0 custom-toggler" type="button"
                     data-bs-toggle="offcanvas"
