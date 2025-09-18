@@ -38,9 +38,12 @@
             <p class="mt-2 mb-0" style="color:#222;font-size:0.7rem; line-height:1.1;"><i>holding company of</i></p>
             <p class="fw-bold mt-0" style="color:#222;font-size:0.85rem; line-height:1.1;">New Armada Group</p> -->
 
-            <h2 class="fw-bold mb-2" style="color:black">{{ __('messages.about_us.tentang_kami') }}</h2>
+            <h2 class="fw-bold mb-2 p-0" style="font-size:2rem;color:black; border-bottom:3px solid #031843; display:inline;">
+                {{ __('messages.about_us.tentang_kami') }}
+            </h2>
 
-            <div class="content">
+
+            <div class="content mt-3">
                 {!! __('messages.about_us.deskripsi') !!}
             </div>
         </div>
