@@ -25,9 +25,7 @@
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
 
-    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/41.2.0/classic/ckeditor.js"></script> --}}
-    {{-- <script src="https://cdn.jsdelivr.net/npm/ckeditor5-build-classic-with-image-resize@latest/build/ckeditor.js"></script> --}}
-    <script src="https://cdn.jsdelivr.net/npm/ckeditor5-classic-plus@41.3.0/build/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
 
 </head>
 @if (Auth::user())
@@ -237,8 +235,16 @@
                     'bold', 'italic', '|',
                     'link', 'bulletedList', 'numberedList', '|',
                     'uploadImage', 'blockQuote', '|',
+                    'insertTable', '|',
                     'undo', 'redo'
-                ]
+                ],
+                table: {
+                    contentToolbar: [
+                        'tableColumn',
+                        'tableRow',
+                        'mergeTableCells',
+                    ]
+                }
             })
             .then(editor => {
                 editor.model.document.on('change:data', () => {

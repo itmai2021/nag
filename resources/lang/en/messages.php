@@ -62,23 +62,23 @@ return [
     </p>
 
     <p>
-        New Armada Group operates under PT Mekar Armada Investama as the holding company. In carrying out its role, PT Mekar Armada Investama is committed to ensuring synergy and standardization across all subsidiaries, covering business strategy, human resource management, business portfolio optimization, as well as other operational aspects. This presents a strategic challenge with promising growth prospects, considering that New Armada Group oversees 32 business units operating in various sectors, including automotive, manufacturing, finance, and industrial services.
+        New Armada Group operates under the umbrella of PT Mekar Armada Investama as its holding company. In fulfilling its role, PT Mekar Armada Investama is committed to creating synergy and standardization across all subsidiaries, encompassing business strategy, human resource management, business portfolio optimization, and other operational aspects. This strategic challenge promises high growth prospects, considering that New Armada Group oversees 32 business units operating across various sectors, including automotive, manufacturing, finance, and industrial services.
     </p>
 
     <p>
-        In the manufacturing sector, New Armada Group has grown into a group with 6 production plants, serving several of the largest automotive companies in Indonesia. In the automotive sector, there are 13 business units that represent one of the main strengths, offering a variety of vehicle brands and supporting services.
+        In the manufacturing sector, New Armada Group has grown into a group with 6 production facilities serving several of Indonesia’s largest automotive companies. In the automotive sector, there are 13 business units that serve as one of the group’s main strengths, offering diverse vehicle brands and comprehensive supporting services.
     </p>
 
     <p>
-        To strengthen support for national economic growth, particularly for MSMEs, New Armada Group has also developed 4 business units in the financial sector, providing financing services, microcredit, and automotive leasing that reach regions from Sumatra to Sulawesi.
+        To strengthen support for national economic growth, particularly for SMEs (Small and Medium Enterprises), New Armada Group develops 4 business units in the financial sector. This sector provides financing services, microcredit, and automotive leasing that reaches areas from Sumatra to Sulawesi.
     </p>
 
     <p>
-        In addition, New Armada Group continues to expand its business scope in the services sector, through 9 business units that include shopping centers, hotels & resorts, gas stations, and construction.
+        Additionally, New Armada Group expands its business coverage in the service sector through 9 business units encompassing shopping centers, hotels & resorts, gas stations, and construction.
     </p>
 
     <p>
-        With a spirit of innovation, commitment to quality, and customer satisfaction as a priority, New Armada Group continues to move forward as a leading business group in Indonesia.
+        With a spirit of continuous innovation, commitment to superior quality, and customer satisfaction as the top priority, New Armada Group continues to move forward as a leading business group in Indonesia, ready to face future challenges.
     </p>'
     ]
 

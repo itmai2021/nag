@@ -62,23 +62,23 @@ return [
                 </p>
 
                 <p>
-                    New Armada Group beroperasi di bawah naungan PT Mekar Armada Investama sebagai holding company. Dalam menjalankan perannya, PT Mekar Armada Investama berkomitmen untuk melakukan sinergi dan standardisasi di seluruh anak perusahaan, meliputi strategi bisnis, pengelolaan sumber daya manusia, optimalisasi portofolio bisnis, serta aspek operasional lainnya. Hal ini merupakan tantangan strategis yang menjanjikan prospek pertumbuhan tinggi, mengingat New Armada Group membawahi 32 unit bisnis yang bergerak di berbagai sektor, antara lain otomotif, manufaktur, keuangan, dan layanan industri.
+                    New Armada Group beroperasi di bawah naungan PT Mekar Armada Investama sebagai perusahaan induk (holding company). Dalam menjalankan perannya, PT Mekar Armada Investama berkomitmen untuk menciptakan sinergi dan standardisasi di seluruh anak perusahaan, yang meliputi strategi bisnis, pengelolaan sumber daya manusia, optimalisasi portofolio bisnis, serta aspek operasional lainnya. Tantangan strategis ini menjanjikan prospek pertumbuhan yang tinggi, mengingat New Armada Group membawahi 32 unit bisnis yang beroperasi di berbagai sektor, meliputi otomotif, manufaktur, keuangan, dan layanan industri.
                 </p>
 
                 <p>
-                    Di bidang manufaktur, New Armada Group telah tumbuh menjadi grup dengan 6 pabrik produksi, melayani beberapa perusahaan otomotif terbesar di Indonesia. Pada sektor otomotif, terdapat 13 unit bisnis yang menjadi salah satu kekuatan utama, menawarkan beragam merek kendaraan dan layanan pendukung.
+                    Di bidang manufaktur, New Armada Group telah berkembang menjadi grup dengan 6 pabrik produksi yang melayani beberapa perusahaan otomotif terbesar di Indonesia. Pada sektor otomotif, terdapat 13 unit bisnis yang menjadi salah satu kekuatan utama grup, menawarkan beragam merek kendaraan dan layanan pendukung yang komprehensif.
                 </p>
 
                 <p>
-                    Untuk memperkuat dukungan terhadap pertumbuhan ekonomi nasional, khususnya pelaku UMKM, New Armada Group juga mengembangkan 4 unit bisnis di sektor keuangan, menyediakan layanan pembiayaan, kredit mikro, dan leasing otomotif yang menjangkau wilayah dari Sumatera hingga Sulawesi.
+                    Untuk memperkuat dukungan terhadap pertumbuhan ekonomi nasional, khususnya bagi pelaku UMKM, New Armada Group mengembangkan 4 unit bisnis di sektor keuangan. Sektor ini menyediakan layanan pembiayaan, kredit mikro, dan leasing otomotif yang menjangkau wilayah dari Sumatera hingga Sulawesi.
                 </p>
 
                 <p>
-                    Selain itu, New Armada Group turut memperluas cakupan bisnis di sektor layanan, melalui 9 unit bisnis yang mencakup pusat perbelanjaan, hotel & resor, SPBU, hingga konstruksi.
+                    Selain itu, New Armada Group memperluas cakupan bisnis di sektor layanan melalui 9 unit bisnis yang mencakup pusat perbelanjaan, hotel & resor, SPBU, hingga konstruksi.
                 </p>
 
                 <p>
-                    Dengan semangat inovasi, komitmen terhadap kualitas, dan kepuasan pelanggan sebagai prioritas, New Armada Group terus melangkah maju sebagai grup usaha terdepan di Indonesia.
+                    Dengan semangat inovasi berkelanjutan, komitmen terhadap kualitas unggul, dan kepuasan pelanggan sebagai prioritas utama, New Armada Group terus melangkah maju sebagai grup usaha terdepan di Indonesia yang siap menghadapi tantangan masa depan.
                 </p>'
     ]
 ];

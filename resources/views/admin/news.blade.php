@@ -97,12 +97,12 @@
                                             {{-- Description --}}
                                             <div class="mb-3">
                                                 <label>Description (id)</label>
-                                                <textarea class="form-control editor" name="description" rows="4" required></textarea>
+                                                <textarea class="form-control editor" id="add_editor" name="description" rows="4" required></textarea>
                                             </div>
 
                                             <div class="mb-3">
                                                 <label>Description (en)</label>
-                                                <textarea class="form-control editor" name="description_en" rows="4" required></textarea>
+                                                <textarea class="form-control editor" name="description_en" id="add_editor_en" rows="4" required></textarea>
                                             </div>
 
                                             {{-- Image --}}
@@ -270,6 +270,7 @@
 @section('addon-script')
 <script type="text/javascript">
     $(document).ready(function() {
+
         $('#table1').DataTable({
             responsive: true, // mode responsif
             scrollX: true, // bisa scroll horizontal

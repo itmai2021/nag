@@ -73,7 +73,7 @@
                     <!-- Deskripsi -->
                     <div class="col-md-8">
                         <p class="text-muted mb-0" style="text-align: justify;">
-                            {{ (app()->getLocale() == 'en' && !empty($fn->description_en)) ? $fn->description_en : $fn->description }}
+                            {{ (app()->getLocale() == 'en' && !empty($fnc->description_en)) ? $fnc->description_en : $fnc->description }}
                         </p>
                         @if ($fnc->web_url)
                         <div class="text-end mt-3">
