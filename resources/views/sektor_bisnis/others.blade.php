@@ -7,9 +7,9 @@
         </p>
     </div>
     <div class="container cont_sektor py-4">
-        <div class="row justify-content-center gx-0 gy-3">
+        <div class="row justify-content-center gx-2 gy-3">
             @foreach ($others as $other)
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 text-center">
                 <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center p-3"
                     style="aspect-ratio: 1/1; max-width: 160px; margin:auto;"
                     data-bs-toggle="modal"

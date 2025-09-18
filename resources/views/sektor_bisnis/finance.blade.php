@@ -7,8 +7,9 @@
         </p>
     </div>
     <div class="container cont_sektor py-4 px-5">
-        <div class="row gx-2 gy-2 mb-4 justify-content-center">
-            {{-- Item pertama (pusat) --}}
+        <div class="row justify-content-center gx-2 gy-2">
+
+            {{-- Item pertama --}}
             @if(isset($finance[0]))
             <div class="col-12 col-md-6 col-lg-4 text-center">
                 <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center p-3"
@@ -21,10 +22,11 @@
                 </div>
             </div>
             @endif
-        </div>
 
-        <div class="row mt-2 gx-0 gy-1 justify-content-center">
-            {{-- Sisanya (3 kolom) --}}
+            {{-- Break hanya muncul di desktop --}}
+            <div class="w-100 d-none d-lg-block"></div>
+
+            {{-- Sisanya --}}
             @foreach ($finance->skip(1)->take(3) as $fn)
             <div class="col-12 col-md-4 text-center">
                 <div class="logo-card shadow-sm rounded d-flex justify-content-center align-items-center p-3"
@@ -37,8 +39,11 @@
                 </div>
             </div>
             @endforeach
+
         </div>
     </div>
+
+
 
 
 

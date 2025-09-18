@@ -144,7 +144,8 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav flex-column gap-2">
                         <h5 class="offcanvas-title mb-2" id="mainNavbarOffcanvasLabel">
-                            <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="logo-img2">
+                            <a class="m-0 p-0" href="{{ route('home') }}">
+                                <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="logo-img2"></a>
                         </h5>
                         <!-- <li class="nav-item dropdown">
                             <h5 class="offcanvas-title mb-2" id="mainNavbarOffcanvasLabel">
@@ -185,7 +186,7 @@
             <!-- Kolom Logo -->
             <div class="footer__col mt-4">
                 <div class="footer__logo">
-                    <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="img-fluid" style="max-width: 60vh;">
+                    <img src="{{ asset('/assets/images/NAG.png') }}" alt="Logo" class="img-fluid">
                 </div>
                 <h5 class="text-white mt-3">Together We Are Strong!</h5>
             </div>

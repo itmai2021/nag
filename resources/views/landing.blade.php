@@ -62,19 +62,21 @@
 
 <section class="py-5" style="background-color: white;" id="pilar">
     <div class="section__container destination__container">
-        <h2 class="section__header">{{ __('messages.landing.sektor') }}</h2>
-        <p class="section__description mr-0">
+        <div class="d-flex flex-column flex-md-row justify-content-between text-muted mb-2" data-aos="fade-right" data-aos-delay="200">
+            <h2 class="text-left mb-0 fw-bold">{{ __('messages.landing.sektor') }}</h2>
+        </div>
+        <p class="section__description mr-0" data-aos="fade-up" data-aos-delay="300">
             {{ __('messages.landing.deskripsi') }}
         </p>
         <div class="goal-grid">
-            <div class="goal-card" id="open-automotive" data-aos="fade-right">
+            <div class="goal-card" id="open-automotive" data-aos="fade-right" data-aos-delay="200">
                 <img src="{{ asset('/assets/images/1.png') }}" alt="Goal 1" class="goal-img">
                 <div class="goal-text">
                     <h4 class="text-center">Automotive Trading</h4>
                 </div>
             </div>
 
-            <div class="goal-card" id="open-manufacture" data-aos="fade-left" data-aos-delay="100">
+            <div class="goal-card" id="open-manufacture" data-aos="fade-left" data-aos-delay="200">
                 <img src="{{ asset('/assets/images/2.png') }}" alt="Goal 2" class="goal-img">
                 <div class="goal-text">
                     <h4 class="text-center">Manufacture</h4>
@@ -88,7 +90,7 @@
                 </div>
             </div>
 
-            <div class="goal-card" id="open-other" data-aos="fade-left" data-aos-delay="300">
+            <div class="goal-card" id="open-other" data-aos="fade-left" data-aos-delay="200">
                 <img src="{{ asset('/assets/images/4.png') }}" alt="Goal 4" class="goal-img">
                 <div class="goal-text">
                     <h4 class="text-center">Others</h4>
@@ -112,7 +114,6 @@
 <section class="container py-5" data-aos="fade-up">
     <div class="d-flex flex-column flex-md-row justify-content-between text-muted mb-2" data-aos="fade-up" data-aos-delay="200">
         <h2 class="text-left mb-0 fw-bold">{{ __('messages.landing.berita') }}</h2>
-
     </div>
     @if(isset($data['news'][0]))
     @php
