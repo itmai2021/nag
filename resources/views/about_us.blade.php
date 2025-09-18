@@ -167,21 +167,21 @@
 
         @php
         $core_values = [
-        ['title' => 'Integritas', 'desc' => 'Konsistensi dalam tindakan, nilai-nilai, prinsip, dan kejujuran dengan karakter yang kuat.'],
-        ['title' => 'Akuntabilitas', 'desc' => 'Bertanggung jawab penuh atas tindakan dan keadaan sesuai kewenangan.'],
-        ['title' => 'Rasa Hormat', 'desc' => 'Menghormati dan menghargai kinerja serta kontribusi sesama.'],
-        ['title' => 'Rasa Memiliki', 'desc' => 'Cinta dan ikut memiliki perusahaan meski tanpa kepemilikan saham.'],
-        ['title' => 'Kepedulian', 'desc' => 'Memberi perhatian, menjaga, dan memelihara sumber daya yang ada.'],
-        ['title' => 'Perbaikan', 'desc' => 'Berani bertindak untuk meningkatkan kualitas hidup menjadi lebih baik.'],
+        ['title' => 'Integritas', 'desc' => 'Jujur dalam setiap tindakan.'],
+        ['title' => 'Akuntabilitas', 'desc' => 'Dapat mempertanggungjawabkan tugasnya.'],
+        ['title' => 'Rasa Hormat', 'desc' => 'Mempunyai rasa saling menghormati.'],
+        ['title' => 'Rasa Memiliki', 'desc' => 'Mempunyai rasa memiliki.'],
+        ['title' => 'Kepedulian', 'desc' => 'Mempunyai rasa kepedulian.'],
+        ['title' => 'Perbaikan', 'desc' => 'Perbaikan secara terus menerus dan konsisten.'],
         ];
 
         $core_values_en =[
-        ['title' => 'Integrity', 'desc' => 'Consistency in actions, values, principles, and honesty with strong character.'],
-        ['title' => 'Accountability', 'desc' => 'Taking full responsibility for actions and circumstances in accordance with authority.'],
-        ['title' => 'Respect', 'desc' => 'Appreciating and valuing the performance and contributions of others.'],
-        ['title' => 'Sense of Belonging', 'desc' => 'Loving and feeling ownership of the company even without shareholding.'],
-        ['title' => 'Caring', 'desc' => 'Providing attention, safeguarding, and maintaining existing resources.'],
-        ['title' => 'Improvement', 'desc' => 'Having the courage to take action to enhance the quality of life for the better.'],
+        ['title' => 'Integrity', 'desc' => 'Honest in every action.'],
+        ['title' => 'Accountability', 'desc' => 'Accountable for their responsibilities.'],
+        ['title' => 'Respectability', 'desc' => 'Having mutual respect.'],
+        ['title' => 'Sense of Belonging', 'desc' => 'Having a sense of ownership.'],
+        ['title' => 'Care', 'desc' => 'Having a sense of care.'],
+        ['title' => 'Improvement', 'desc' => 'Continuous and consistent improvement.'],
         ];
 
 

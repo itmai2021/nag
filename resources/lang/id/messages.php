@@ -58,7 +58,7 @@ return [
         'filo5' => 'Terus mengembangkan diri adalah kunci sukses kami',
         'nilai_inti' => 'Nilai Inti<br>Perusahaan',
         'deskripsi' => '<p>
-                    New Armada Group didirikan pertama kali pada tahun 1974 oleh Bapak David Herman Jaya sebagai produsen karoseri kendaraan di Magelang, Jawa Tengah. Dalam perjalanannya selama lebih dari 50 tahun, New Armada Group terus berkembang menjadi salah satu perusahaan nasional bernilai tinggi, dengan dukungan lebih dari 10.000 karyawan yang tersebar di berbagai kota besar di Indonesia.
+                    Pada tahun 1974, Bapak David Herman Jaya mendirikan PT Mekar Armada Jaya, sebuah perusahaan produsen karoseri kendaraan yang berlokasi di Magelang, Jawa Tengah. PT Mekar Armada Jaya menjadi perusahaan perintis dan fondasi awal dari New Armada Group. Dalam perjalanannya selama lebih dari 50 tahun, New Armada Group terus berkembang menjadi salah satu perusahaan nasional bernilai tinggi, dengan dukungan lebih dari 10.000 karyawan yang tersebar di berbagai kota besar di Indonesia.
                 </p>
 
                 <p>

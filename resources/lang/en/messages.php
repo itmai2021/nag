@@ -56,9 +56,9 @@ return [
         'filo3' => 'Teamwork is our strength',
         'filo4' => 'Suppliers, distributors and employees are our partners',
         'filo5' => 'Improvement and self development are the key of our success',
-        'nilai_inti' => 'Core Values<br>of the Company',
+        'nilai_inti' => 'Company <br> Core Values',
         'deskripsi' => '<p>
-        New Armada Group was first established in 1974 by Mr. David Herman Jaya as a vehicle body manufacturer in Magelang, Central Java. Over the course of more than 50 years, New Armada Group has continued to grow into one of the nation’s most valuable companies, supported by more than 10,000 employees spread across major cities in Indonesia.
+        In 1974, Mr. David Herman Jaya established PT Mekar Armada Jaya, a vehicle body manufacturing company located in Magelang, Central Java. PT Mekar Armada Jaya became the pioneering company and founding cornerstone of New Armada Group. Throughout its journey of more than 50 years, New Armada Group has continuously grown to become one of Indonesia’s high-value national companies, supported by over 10,000 employees spread across major cities throughout Indonesia.
     </p>
 
     <p>
