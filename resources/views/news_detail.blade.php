@@ -1,5 +1,8 @@
 @extends('layouts.app_landing')
 @section('content')
+@php
+\Carbon\Carbon::setLocale(app()->getLocale());
+@endphp
 <section class="py-5 bg-light mt-5">
     <div class="container-fluid mt-3">
         <div class="row">
@@ -12,7 +15,7 @@
         <div class="row">
             <div class="col-lg-9">
                 <p class="text-muted">{{ __('messages.news.publikasi') }}
-                    <strong>{{ \Carbon\Carbon::parse($data['newsdetail']->publication_date)->locale('id')->translatedFormat('l, d F Y') }}</strong>
+                    <strong>{{ \Carbon\Carbon::parse($data['newsdetail']->publication_date)->translatedFormat('l, d F Y') }}</strong>
                 </p>
                 <div class="mb-4">
                     <img src="{{ asset('assets/file/news/' . $data['newsdetail']->image) }}" alt="Pembangunan Gedung"
@@ -54,9 +57,7 @@
                                             <h5 class="card-title mb-0" style="font-size: 14px;">
                                                 {{ (app()->getLocale() == 'en' && !empty($a->subject_en)) ? $a->subject_en : $a->subject }}
                                             </h5>
-                                            @php
-                                            \Carbon\Carbon::setLocale(app()->getLocale());
-                                            @endphp
+
                                             <p class="card-text text-muted" style="font-size: 12px;">
                                                 {{ \Carbon\Carbon::parse($a->publication_date)->translatedFormat('l, d F Y') }}
                                             </p>
