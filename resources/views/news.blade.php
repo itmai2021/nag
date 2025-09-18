@@ -40,7 +40,11 @@
         {{-- Showing x–y of z --}}
         @if ($data['news']->total() > 0)
         <div class="text-muted small mb-2">
+            @if(app()->getLocale() === 'en')
+            Showing {{ $data['news']->firstItem() }}–{{ $data['news']->lastItem() }} of {{ $data['news']->total() }} results
+            @else
             Menampilkan {{ $data['news']->firstItem() }}–{{ $data['news']->lastItem() }} dari {{ $data['news']->total() }} hasil
+            @endif
         </div>
         @endif
 
@@ -48,6 +52,7 @@
         <div class="d-flex justify-content-center">
             {{ $data['news']->links('vendor.pagination.bootstrap-5') }}
         </div>
+
     </section>
 </div>
 @endsection

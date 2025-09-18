@@ -11,7 +11,7 @@
         </div>
         <div class="row">
             <div class="col-lg-9">
-                <p class="text-muted">Dipublikasikan pada
+                <p class="text-muted">{{ __('messages.news.publikasi') }}
                     <strong>{{ \Carbon\Carbon::parse($data['newsdetail']->publication_date)->locale('id')->translatedFormat('l, d F Y') }}</strong>
                 </p>
                 <div class="mb-4">
@@ -27,9 +27,9 @@
                 <hr>
             </div>
             <div class="col-lg-3">
-                <div style="position: sticky; top: 20px; height: calc(100vh - 80px);">
+                <div style="position: sticky; top: 20px; height: calc(130vh - 80px);">
 
-                    <h4>Berita Lainnya</h4>
+                    <h4>{{ __('messages.news.berita_lainnya') }}</h4>
 
                     <div style="
                         height: calc(100% - 40px); 
@@ -52,11 +52,13 @@
 
                                         <div class="card-body d-flex flex-column">
                                             <h5 class="card-title mb-0" style="font-size: 14px;">
-                                                {{ $a->subject }}
+                                                {{ (app()->getLocale() == 'en' && !empty($a->subject_en)) ? $a->subject_en : $a->subject }}
                                             </h5>
-
+                                            @php
+                                            \Carbon\Carbon::setLocale(app()->getLocale());
+                                            @endphp
                                             <p class="card-text text-muted" style="font-size: 12px;">
-                                                {{ \Carbon\Carbon::parse($a->publication_date)->locale('id')->translatedFormat('l, d F Y') }}
+                                                {{ \Carbon\Carbon::parse($a->publication_date)->translatedFormat('l, d F Y') }}
                                             </p>
                                         </div>
                                     </div>
@@ -65,7 +67,7 @@
                         </div>
                         @endforeach
                         <p class="mb-0 text-end" style="cursor:pointer;">
-                            <a href="{{ route('news') }}" style="text-decoration: none; color: #343a40;">Lihat Selengkapnya <i
+                            <a href="{{ route('news') }}" style="text-decoration: none; color: #343a40;">{{ __('messages.news.lihat_selengkapnya') }} <i
                                     class="ri-arrow-right-line"></i></a>
                         </p>
                     </div>

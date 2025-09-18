@@ -43,6 +43,21 @@ return [
         "cabang" => "cabang",
         "pabrik" => "pabrik"
     ],
+    'contact_us' => [
+        'hubungi_kami'  => 'Hubungi Kami',
+        'nama'  => 'Nama Lengkap',
+        'masukkan_nama' => 'Masukkan nama lengkap',
+        'email' => 'Email',
+        'masukkan_email' => 'Masukkan email',
+        'pesan' => 'Pesan',
+        'masukkan_pesan' => 'Tulis pesan',
+        'kirim' => 'Kirim'
+    ],
+    'news' => [
+        'publikasi' => 'Dipublikasikan pada',
+        'berita_lainnya' => 'Berita Lainnya',
+        'lihat_selengkapnya' => 'Lihat Selengkapnya'
+    ],
     'about_us' => [
         'tentang_kami' => 'Tentang Kami',
         'visi_misi'    => 'Visi & Misi',

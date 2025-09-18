@@ -12,23 +12,23 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                     @endif
-                    <h2 class="text-center mb-3 fw-bold">Hubungi Kami</h2>
+                    <h2 class="text-center mb-3 fw-bold">{{ __('messages.contact_us.hubungi_kami') }}</h2>
                     <form action="{{ route('contact_us.store') }}" method="POST" class="footer__form">
                         @csrf
                         <div class="form-group mb-3">
-                            <label for="name" class="form-label">Nama</label>
-                            <input type="text" name="name" id="name" class="form-control" placeholder="Masukkan nama" required>
+                            <label for="name" class="form-label">{{ __('messages.contact_us.nama') }}</label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="{{ __('messages.contact_us.masukkan_nama') }}" required>
                         </div>
                         <div class="form-group mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" name="email" id="email" class="form-control" placeholder="Masukkan email" required>
+                            <label for="email" class="form-label">{{ __('messages.contact_us.email') }}</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="{{ __('messages.contact_us.masukkan_email') }}" required>
                         </div>
                         <div class="form-group mb-4">
-                            <label for="message" class="form-label">Pesan</label>
-                            <textarea name="message" id="message" rows="4" class="form-control" placeholder="Tulis pesan" required></textarea>
+                            <label for="message" class="form-label">{{ __('messages.contact_us.pesan') }}</label>
+                            <textarea name="message" id="message" rows="4" class="form-control" placeholder="{{ __('messages.contact_us.masukkan_pesan') }}" required></textarea>
                         </div>
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-primary btn-lg">Kirim</button>
+                            <button type="submit" class="btn btn-primary btn-lg">{{ __('messages.contact_us.kirim') }}</button>
                         </div>
                     </form>
                 </div>

@@ -43,6 +43,21 @@ return [
         "cabang" => "branches",
         "pabrik" => "factories"
     ],
+    'contact_us' => [
+        'hubungi_kami'  => 'Contact Us',         // Sudah tepat
+        'nama'          => 'Full Name',          // Lebih formal daripada "Name"
+        'masukkan_nama' => 'Enter your full name', // Lebih ramah
+        'email'         => 'Email',              // Tetap sama
+        'masukkan_email' => 'Enter your email',   // Lebih natural
+        'pesan'         => 'Message',            // "Write Message" diganti "Message"
+        'masukkan_pesan' => 'Enter your message',            // "Write Message" diganti "Message"
+        'kirim'         => 'Send'                // Sudah tepat
+    ],
+    'news' => [
+        'publikasi'         => 'Published on',
+        'berita_lainnya'    => 'Other News',
+        'lihat_selengkapnya' => 'Read More'
+    ],
     'about_us' => [
         'tentang_kami' => 'About Us',
         'visi_misi'    => 'Vision & Mission',
