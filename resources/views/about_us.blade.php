@@ -29,26 +29,31 @@
     </button>
 </div>
 
+<section class="about-section"
+    style="min-height:calc(100vh - 70px); background:#f8f9fa;"
+    data-aos="fade-down">
+    <div class="about-sub" style="max-width:1150px; margin:auto; height:100%; ">
+        <div class="about-box p-0 h-100" data-aos="fade-up" data-aos-delay="200">
+            <div class="row g-0 h-100">
+                <!-- Kolom Teks -->
+                <div class="col-6 p-4" style="overflow-y:auto; max-height:calc(100vh - 140px);">
+                    <div class="content mt-0" style="text-align: justify;">
+                        {!! __('messages.about_us.deskripsi') !!}
+                    </div>
+                </div>
 
+                <!-- Kolom Gambar -->
+                <div class="col-6">
+                    <div class="about-image d-flex justify-content-center align-items-center text-center p-4 h-100">
+                        <h3 style="font-weight:600;">{{ __('messages.about_us.tentang_kami') }}</h3>
+                    </div>
+                </div>
 
-<section class="about-section" style="padding:60px 0; background:#f8f9fa; margin-top:0" data-aos="fade-down">
-    <div class="about-sub" style="max-width:1150px; margin:auto; padding:0 15px; position:relative;margin-top:10vh">
-        <div class="about-box" data-aos="fade-up" data-aos-delay="200">
-            <!-- <img src="{{ asset('/assets/images/MAI.png') }}" alt="Logo" style="max-width: 20vh;">
-            <p class="mt-2 mb-0" style="color:#222;font-size:0.7rem; line-height:1.1;"><i>holding company of</i></p>
-            <p class="fw-bold mt-0" style="color:#222;font-size:0.85rem; line-height:1.1;">New Armada Group</p> -->
-
-            <h2 class="fw-bold mb-2 p-0" style="font-size:2rem;color:black; border-bottom:3px solid #031843; display:inline;">
-                {{ __('messages.about_us.tentang_kami') }}
-            </h2>
-
-
-            <div class="content mt-3">
-                {!! __('messages.about_us.deskripsi') !!}
             </div>
         </div>
     </div>
 </section>
+
 
 <!-- Section Visi & Misi -->
 <section style="padding:60px 0; background:#031843;">

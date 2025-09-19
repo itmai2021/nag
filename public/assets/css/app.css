@@ -3861,19 +3861,26 @@ a {
 
 /* ---------------- */
 
+.about-section {
+    position: relative;
+    min-height: calc(100vh - 70px);
+    background: #f8f9fa;
+    margin-top: 100px;
+    /* jarak section dari navbar */
+}
+
 .about-section::before {
     content: "";
     position: absolute;
     left: 0;
-    /* posisi di pojok kiri */
-    top: 0;
-    height: 100%;
-    /* panjang penuh */
+    top: -70px;
+    /* ditarik ke atas biar tetap nempel navbar */
+    height: calc(100% + 70px);
+    /* perpanjang garis */
     width: 50px;
-    /* ketebalan garis */
     background-color: #031843;
-    /* biru tua */
 }
+
 
 .about-box {
     position: relative;
@@ -4092,6 +4099,25 @@ a {
         /* atur sesuai kebutuhan */
     }
 }
+
+.about-box .row {
+    display: flex;
+    align-items: stretch;
+    /* kedua kolom punya tinggi sama */
+}
+
+.about-image {
+    flex: 1;
+    background:
+        linear-gradient(rgba(3, 24, 67, 0.8), rgba(3, 24, 67, 0.8)),
+        url('/assets/images/nag_50.jpg') no-repeat center top;
+    background-size: cover;
+    /* kalau mau full tanpa ruang kosong */
+    color: white;
+}
+
+
+
 
 
 /* .modal .btn {
