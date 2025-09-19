@@ -51,8 +51,6 @@
             {{ __('messages.about_us.tentang_kami') }}
         </h3>
     </div>
-
-
     <div class="about-sub" style="max-width:1150px; margin:auto; height:100%;">
         <div class="about-box p-0 h-100" data-aos="fade-up" data-aos-delay="200">
             <div class="row g-0 h-100">
@@ -74,7 +72,15 @@
         </div>
     </div>
 </section>
-
+<style>
+    .about-image {
+        flex: 1;
+        background: linear-gradient(rgba(3, 24, 67, 0.8), rgba(3, 24, 67, 0.8)),
+        url("{{ asset('/assets/images/nag_50th.jpg') }}") no-repeat center top;
+        background-size: cover;
+        color: white;
+    }
+</style>
 
 
 
@@ -249,11 +255,6 @@
         @endforeach
     </div>
 </section>
-
-
-
-
-
 @endsection
 @section('script')
 <script>
