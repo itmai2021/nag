@@ -4045,6 +4045,10 @@ a {
     .about-box img {
         max-width: 15vh !important;
     }
+
+    .about-section {
+        margin-top: 75px;
+    }
 }
 
 @media (max-width: 768px) {
