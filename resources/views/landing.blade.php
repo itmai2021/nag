@@ -15,7 +15,7 @@
     @media (max-width: 768px) {
         .banner {
             /* height: 500px; */
-            background-image: url("{{ asset('/assets/images/gedung_mai_mobile.jpg') }}");
+            background-image: url("{{ asset('/assets/images/GedungMAIFinalMobiles.jpg') }}");
         }
     }
 </style>
@@ -49,9 +49,9 @@
 
                 <!-- Text Overlay: Mobile -->
                 <div class="carousel-caption text-start d-block d-md-none"
-                    style="top: 45%; transform: translateY(-50%); left: 5%; right: auto;"
+                    style="top: 50%; transform: translateY(-50%); left: 25%; right: auto;"
                     data-aos="fade" data-aos-once="false">
-                    <h1 class="russo-one-font" style="font-size: 1.8rem; font-weight: bold; color: white; text-align: left; text-shadow: 2px 2px 6px rgba(0,0,0,0.6); margin: 0; line-height: 1.4;">
+                    <h1 class="russo-one-font" style="font-size: 2rem; font-weight: bold; color: white; text-align: center; text-shadow: 2px 2px 6px rgba(0,0,0,0.6); margin: 0; line-height: 1.4;">
                         Together<br>
                         We Are<br>
                         Strong!

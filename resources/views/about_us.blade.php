@@ -32,27 +32,50 @@
 <section class="about-section"
     style="min-height:calc(100vh - 70px); background:#f8f9fa;"
     data-aos="fade-down">
-    <div class="about-sub" style="max-width:1150px; margin:auto; height:100%; ">
+
+    <!-- Gambar full width hanya mobile -->
+    <div class="d-block d-md-none position-relative" style="margin:0 5px;">
+        <!-- Gambar -->
+        <img src="{{ asset('/assets/images/nag_50th.jpg') }}"
+            alt="Tentang Kami"
+            style="height:75px; width:97vw;object-position:top; display:block; object-fit:cover; border-radius:8px;">
+
+        <!-- Overlay gelap transparan -->
+        <div style="position:absolute; top:0; left:0; width:100%; height:100%; 
+                background:rgba(3,24,67,0.5); border-radius:8px;">
+        </div>
+
+        <!-- Teks -->
+        <h3 class="fw-bold text-white m-0"
+            style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:1.2rem;">
+            {{ __('messages.about_us.tentang_kami') }}
+        </h3>
+    </div>
+
+
+    <div class="about-sub" style="max-width:1150px; margin:auto; height:100%;">
         <div class="about-box p-0 h-100" data-aos="fade-up" data-aos-delay="200">
             <div class="row g-0 h-100">
                 <!-- Kolom Teks -->
-                <div class="col-6 p-4" style="overflow-y:auto; max-height:calc(100vh - 140px);">
+                <div class="col-12 col-md-6 p-4" style="overflow-y:auto; max-height:calc(100vh - 140px);">
                     <div class="content mt-0" style="text-align: justify;">
                         {!! __('messages.about_us.deskripsi') !!}
                     </div>
                 </div>
-
-                <!-- Kolom Gambar -->
-                <div class="col-6">
-                    <div class="about-image d-flex justify-content-center align-items-center text-center p-4 h-100">
-                        <h3 style="font-weight:600;">{{ __('messages.about_us.tentang_kami') }}</h3>
+                <!-- Kolom Gambar (hanya tampil di desktop) -->
+                <div class="col-md-6 d-none d-md-flex">
+                    <div class="about-image d-flex justify-content-center align-items-center text-center p-4 h-100 w-100">
+                        <h3 class="fw-bold">
+                            {{ __('messages.about_us.tentang_kami') }}
+                        </h3>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </section>
+
+
 
 
 <!-- Section Visi & Misi -->
