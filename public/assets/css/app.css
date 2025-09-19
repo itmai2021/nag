@@ -4110,7 +4110,7 @@ a {
     flex: 1;
     background:
         linear-gradient(rgba(3, 24, 67, 0.8), rgba(3, 24, 67, 0.8)),
-        url('/assets/images/nag_50th.jpg') no-repeat center top;
+        url('../assets/images/nag_50th.jpg') no-repeat center top;
     background-size: cover;
     /* kalau mau full tanpa ruang kosong */
     color: white;
