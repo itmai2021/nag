@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Tentang Kami -->
-<audio id="bg-audio" autoplay loop muted>
+<audio id="bg-audio" loop muted>
     <source src="{{ asset('assets/file/MARSARMADA.mp3') }}" type="audio/mpeg">
     Browser Anda tidak mendukung pemutar audio.
 </audio>
@@ -125,11 +125,11 @@
     <div class="container">
         <div class="row align-items-center">
             <!-- Kolom Kiri: Judul -->
-            <div class="col-lg-4 mb-4" data-aos="fade-right">
-                <h2 style="font-size:2.5rem;font-weight:700;color:#031843;line-height:1.2;margin-bottom:10px;">
+            <div class="col-lg-4 mb-0" data-aos="fade-right">
+                <h2 style="font-size:2.5rem;font-weight:700;color:#031843;line-height:1.2;margin-bottom:0px;">
                     {{ __('messages.about_us.filosofi') }}
                 </h2>
-                <img src="{{ asset('/assets/images/NAG-tr.png') }}" alt="Logo" class="logo-img3">
+                <img src="{{ asset('/assets/images/NAG-tr.png') }}" width="100%" alt="Logo" class="logo-img3">
             </div>
             <!-- <div class="col-1"></div> -->
             <div class="col-lg-7" data-aos="fade-left">

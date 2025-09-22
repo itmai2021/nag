@@ -199,7 +199,7 @@ $merkLogos = [
                     </div>
                     <!-- Deskripsi -->
                     <div class="col-md-8">
-                        <p class="text-muted mb-0" style="text-align: justify;">
+                        <p class="text-muted desc-bu mb-0" style="text-align: justify;">
                             {{ (app()->getLocale() == 'en' && !empty($auto->description_en)) ? $auto->description_en : $auto->description }}
 
                         </p>

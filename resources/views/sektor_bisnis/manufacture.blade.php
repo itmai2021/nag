@@ -51,7 +51,7 @@
                     </div>
                     <!-- Deskripsi -->
                     <div class="col-md-8">
-                        <p class="text-muted mb-0" style="text-align: justify;">
+                        <p class="text-muted desc-bu mb-0" style="text-align: justify;">
                             {{ (app()->getLocale() == 'en' && !empty($manuf->description_en)) ? $manuf->description_en : $manuf->description }}
                         </p>
                         @if ($manuf->web_url)
